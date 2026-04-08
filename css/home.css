@@ -113,6 +113,7 @@
     @media screen and (max-width: 750px) {
 
         .navbar__container {
+            z-index: -2;
             display: flex;
             justify-content: space-between;
             height: 80px;
@@ -127,6 +128,7 @@
         }
 
         .navbar__menu {
+
             display: flex;
             flex-direction: column;
             grid-template-columns: none;
@@ -196,6 +198,7 @@
         }
 
         #mobile-menu {
+            z-index: -2;
             order: -1;
             align-self: flex-end;
             margin-right: 60px;
@@ -219,6 +222,38 @@
 
 
     /* Hero CSS  */
+    @keyframes slideIn1 {
+        from {
+            opacity: 0;
+            transform: translateX(-200%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    @keyframes slideIn2 {
+        from {
+            opacity: 0;
+            transform: translateX(-200%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    @keyframes slideIn3 {
+        from {
+            opacity: 0;
+            transform: translateX(-200%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+
     .main {
         background-color: #fbfbfb;
     }
@@ -247,7 +282,8 @@
         transform: translate(20%, -6%);
         z-index: 2;
         border-radius: 16px;
-
+        animation: slideIn1 1s ease-out;
+        
     }
 
     .panel2out {
@@ -258,6 +294,8 @@
         padding: 25px;
         z-index: 1;
         border-radius: 16px;
+        animation: slideIn2 1s ease-out;
+        
     }
 
     .panel3out {
@@ -266,9 +304,11 @@
         width: 310px;
         height: 370px;
         padding: 25px;
-        transform: translate(-20%, -6%);
+        transform: translate(-20%, 6%);
         z-index: 0;
         border-radius: 16px;
+        animation: slideIn3 1s ease-out;
+        
     }
 
     .panel1in,
