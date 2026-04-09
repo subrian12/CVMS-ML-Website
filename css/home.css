@@ -33,7 +33,7 @@
         justify-content: space-between;
         align-items: center;
         height: auto;
-        z-index: 1;
+        z-index: 999;
         width: 100%;
         max-width: 1000px;
         margin: 0 auto;
@@ -111,13 +111,14 @@
     }
 
     @media screen and (max-width: 750px) {
-
+        .navbar {
+            position: sticky;
+        }
         .navbar__container {
-            z-index: -2;
+            z-index: 999;
             display: flex;
             justify-content: space-between;
             height: 80px;
-            z-index: 1;
             width: 100%;
             max-width: 1000px;
             padding: 0;
@@ -140,7 +141,7 @@
             opacity: 0;
             transition: all 0.5s ease;
             /* height: 50vh; */
-            z-index: -1;
+            z-index: 999;
             background: #fbfbfb;
             padding-bottom: 30px;
             padding-top: 30px;
@@ -151,8 +152,8 @@
             top: 10px;
             opacity: 1;
             transition: all 0.5s ease;
-            z-index: 99;
-            /* height: 50vh; */
+            z-index: 999;
+            height: 50vh;
             font-size: 1.6rem;
 
         }
@@ -160,7 +161,7 @@
         .navbar__menu.active::after {
             content: "";
             position: absolute;
-            bottom: 0;
+            bottom: 20px;
             left: 20%;
             width: 60%;
             height: 2px;
@@ -175,6 +176,7 @@
         }
 
         .navbar__toggle .bar {
+
             width: 25px;
             height: 3px;
             margin: 3px auto;
@@ -187,6 +189,7 @@
 
         .navbar__item {
             width: auto;
+            margin-top: -25px;
         }
 
         .navbar__links {
@@ -198,7 +201,7 @@
         }
 
         #mobile-menu {
-            z-index: -2;
+            z-index: 999;
             order: -1;
             align-self: flex-end;
             margin-right: 60px;
@@ -222,37 +225,17 @@
 
 
     /* Hero CSS  */
-    @keyframes slideIn1 {
+    @keyframes slideIn {
         from {
             opacity: 0;
             transform: translateX(-200%);
         }
-        to {
-            opacity: 1;
-            transform: translateX(0px);
-        }
-    }
-    @keyframes slideIn2 {
-        from {
-            opacity: 0;
-            transform: translateX(-200%);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0px);
-        }
-    }
-    @keyframes slideIn3 {
-        from {
-            opacity: 0;
-            transform: translateX(-200%);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0px);
-        }
-    }
 
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
 
     .main {
         background-color: #fbfbfb;
@@ -273,20 +256,26 @@
     }
 
     .panel1out {
+        opacity: 0;
+        position: relative;
         justify-self: center;
         background: linear-gradient(135deg, #cbb87a, #f5e7b8);
         /* background-color: #bfaa72; */
         width: 310px;
         height: 370px;
         padding: 25px;
-        transform: translate(20%, -6%);
+        top: -20px;
+        left: 60px;
         z-index: 2;
         border-radius: 16px;
-        animation: slideIn1 1s ease-out;
-        
+        animation: slideIn 1s ease-out forwards;
+        animation-delay: 0.4s;
+
     }
 
     .panel2out {
+        opacity: 0;
+        position: relative;
         justify-self: center;
         background: linear-gradient(135deg, #0a8f70, #4fe0c0);
         width: 310px;
@@ -294,21 +283,25 @@
         padding: 25px;
         z-index: 1;
         border-radius: 16px;
-        animation: slideIn2 1s ease-out;
-        
+        animation: slideIn 1s ease-out forwards;
+        animation-delay: 0.2s;
+
     }
 
     .panel3out {
+        opacity: 0;
+        position: relative;
         justify-self: center;
         background: linear-gradient(135deg, #cbb87a, #f5e7b8);
         width: 310px;
         height: 370px;
         padding: 25px;
-        transform: translate(-20%, 6%);
+        bottom: -20px;
+        right: 60px;
         z-index: 0;
         border-radius: 16px;
-        animation: slideIn3 1s ease-out;
-        
+        animation: slideIn 1s ease-out forwards;
+
     }
 
     .panel1in,
@@ -345,4 +338,87 @@
         padding: 10px;
         margin-bottom: 5px;
         margin-left: 10px;
+    }
+
+    @media screen and (max-width: 1250px) {
+
+        .panel1out,
+        .panel2out,
+        .panel3out {
+            width: 290px;
+            height: 420px;
+        }
+
+
+        .panel1in,
+        .panel2in,
+        .panel3in {
+            height: 370px;
+            width: 240px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .main__container {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr;
+            height: auto;
+        }
+
+        .panel1out,
+        .panel2out,
+        .panel3out {
+            margin-top: 20px;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 650px;
+            height: 200px;
+            padding: 25px;
+        }
+
+        .panel1in,
+        .panel2in,
+        .panel3in {
+
+            width: 600px;
+            height: 150px;
+        }
+
+        .panel1in h2,
+        .panel2in h2,
+        .panel3in h2 {
+            font-size: 1.2rem;
+        }
+
+        .panel1in p,
+        .panel2in p,
+        .panel3in p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .panel1out,
+        .panel2out,
+        .panel3out {
+            margin-top: 20px;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 400px;
+            height: 250px;
+            padding: 25px;
+        }
+
+        .panel1in,
+        .panel2in,
+        .panel3in {
+
+            width: 350px;
+            height: 200px;
+        }
     }
