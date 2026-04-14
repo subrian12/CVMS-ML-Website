@@ -165,36 +165,6 @@
 
     @media screen and (max-width: 1100px) {
 
-        .navbar__links {
-            padding: 0 0.8rem;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            font-size: 1rem;
-        }
-        .button {
-            padding: 0 0.8rem;
-            font-size: 1rem;
-        }
-
-        #navbar__logo {
-            padding-left: 20px;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .navbar__logo-text {
-            font-size: 1.5rem;
-        }
-
-        .navbar__logo-img {
-            width: 70px;
-            height: 70px;
-        }
-    }
-
-    @media screen and (max-width: 1000px) {
-
         .navbar {
 
             height: 120px;
@@ -314,6 +284,7 @@
              /* background-color:rgba(0, 0, 0, 0.09); */
              background-color: #484349;
              color: #c7af6e;
+             transition: 0.2s all;
         }
         .navbar__item:hover span{
              /* background-color:rgba(0, 0, 0, 0.09); */
@@ -333,7 +304,7 @@
 
         .button {
             letter-spacing: 0.05rem;
-            background:  rgba(0, 0, 0, 0.04);;
+            background:  rgba(225, 213, 135, 0.344);;
             border: 2px solid #bfaa72;
             color: #484349;
             border-radius: 12px;
@@ -364,7 +335,33 @@
     }
 
 
-
+    .main {
+        background-color: #b6b6b673;
+        height: 80vh;
+    }
+    .main__container {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        align-items: center;
+        background-color: #ffffff;
+        justify-items: center;
+        justify-content: center;
+        z-index: 1;
+        width: 100%;
+    }
+    .main__container h1, h2 {
+        line-height: 1.5;
+        text-align: center;
+        font-family: 'Playfair Display';
+        color: #484349;
+        align-self: center;
+        font-size: 7rem;
+    }
+    .header {
+        white-space: nowrap;
+        font-size: 2rem;
+        
+    }
     /* Hero CSS  */
     /* @keyframes slideIn {
         from {
