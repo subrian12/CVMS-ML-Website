@@ -309,15 +309,17 @@
 
 
 .main {
-    background-color: #b6b6b673;
-    height: 80vh;
+    background-color: #ffffff73;
+    height: 90vh;
 }
 
 .main__container {
+    height: 90vh;
     display: grid;
     grid-template-rows: auto auto auto;
     align-items: center;
-    background-color: #eeeeee;
+    /* background-color: #fcfbfb; */
+    background-color: #121212;
     justify-items: center;
     justify-content: center;
     z-index: 1;
@@ -329,19 +331,25 @@
     text-align: center;
     font-family: 'Playfair Display', sans-serif;
     letter-spacing: 0.3rem;
-    color: #484349;
+    background: linear-gradient(to right, #c7af6e, #bfaa72);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* color: #c7af6e; */
     align-self: center;
     font-size: clamp(4rem, 10vw, 8rem);
 }
 
 .main__container h2 {
-    color: #484349;
+    background: linear-gradient(to right, #6ec77d, #498160);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     line-height: 1.5;
     text-align: center;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Bebas Neue', serif;
     align-self: center;
-    font-size: clamp(4rem, 10vw, 8rem);
-    letter-spacing: 0.3rem;
+    font-size: clamp(4.5rem, 10vw, 10rem);
+    letter-spacing: 0.6rem;
 }
 
 .header {
@@ -350,7 +358,8 @@
     text-align: center;
     padding: 5rem;
     padding-bottom: 1rem;
-    color: #2d6a4f;
+    /* color: #484349; */
+    color: #fefefe;
     /* letter-spacing: 0.35em;
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
@@ -369,7 +378,8 @@
     width: 5vw;
     max-width: 100px;
     font-size: clamp(1rem, 4vw, 1.5rem);
-    color: #2d6a4f;
+    /* color: #484349; */
+    color: #fbfbfb;
 }
 
 .main__container .buttons {
@@ -377,6 +387,7 @@
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
+    margin-bottom: 5vh;
 }
 
 .main__container .buttons a {
