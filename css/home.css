@@ -151,7 +151,7 @@
     }
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1000px) {
 
     .navbar {
         height: 12vh;
@@ -171,11 +171,10 @@
         margin: 0 auto;
         display: flex;
         align-items: center;
-
     }
 
     .navbar__menu {
-        background-color: #1e1e1e;
+        background-color: #fdf9f2;
         padding-right: 0;
         left: 0;
         right: 0;
@@ -192,16 +191,17 @@
     }
 
     .navbar__menu.active {
-
+        padding-top: 0.5rem;
+        height: 40vh;
         display: flex;
-        background: #101d31;
+        background: #fdf9f2;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 0;
         font-size: 1.6rem;
         pointer-events: auto;
         transform: translateY(0);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.274);
+        border-bottom: 1px solid rgba(70, 70, 70, 0.274);
     }
 
     .navbar__toggle {
@@ -217,7 +217,7 @@
         height: 3px;
         margin: 0.4vh auto;
         transition: all 0.3s ease-in-out;
-        background: #fefefe;
+        background: #1c1a16;
         display: block;
         cursor: pointer;
     }
@@ -230,17 +230,15 @@
         padding-right: 4vw;
         display: inline;
         font-size: 2rem;
-        color: #fefefe;
+        color: #1c1a16;
         line-height: 1;
     }
 
     .navbar__links {
-        border: 1px solid rgb(255, 255, 255);
+        font-size: 0.9rem;
         text-align: center;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        padding-left: 5rem;
-        padding-right: 1.5rem;
+        padding: 0.6rem;
+        padding-left: 1.3rem;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -282,10 +280,10 @@
         letter-spacing: 0.05rem;
         background: transparent;
         border: 2px solid #bfaa72;
-        color: #fefefe;
+        color: #1c1a16;
         border-radius: 12px;
-        padding: 1.5rem;
-        font-size: 1rem;
+        padding: 0.7rem;
+        font-size: 0.9rem;
         width: 100%;
     }
 
@@ -332,8 +330,8 @@
     background-image:
     radial-gradient(circle at 98% 7%, rgba(246, 220, 91, 0.296) 380px, transparent 380px),
     radial-gradient(circle at 69% -29%, rgba(247, 229, 138, 0.327) 380px, transparent 380px),
-    radial-gradient(circle at 7% 54%,rgba(138, 232, 157, 0.277) 300px, transparent 300px),
-    radial-gradient(circle at 25% 103%,rgba(178, 238, 169, 0.451) 280px, transparent 280px);
+    radial-gradient(circle at 5% 54%,rgba(138, 232, 157, 0.277) 300px, transparent 300px),
+    radial-gradient(circle at 22% 103%,rgba(178, 238, 169, 0.451) 280px, transparent 280px);
 }
 
 .main__container h1 {
@@ -347,7 +345,7 @@
     -webkit-text-fill-color: transparent;
     /* color: #c7af6e; */
     align-self: center;
-    font-size: clamp(4rem, 10vw, 8rem);
+    font-size: clamp(5rem, 10vw, 8rem);
 }
 
 .main__container h2 {
@@ -358,7 +356,7 @@
     text-align: center;
     font-family: 'Bebas Neue', serif;
     align-self: center;
-    font-size: clamp(4.5rem, 10vw, 10rem);
+    font-size: clamp(5rem, 10vw, 10rem);
     letter-spacing: 0.6rem;
 }
 
@@ -368,19 +366,13 @@
     text-align: center;
     padding: 5rem;
     padding-bottom: 1rem;
-    /* color: #484349; */
     color: #1c1a16;
-    /* letter-spacing: 0.35em;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    white-space: nowrap;
-    font-size: clamp(1rem, 3vw, 2rem);  */
-
     font-family: 'DM Sans', sans-serif;
     letter-spacing: 0.35em;
     font-size: clamp(1rem, 1vw, 1.5rem);
     text-transform: uppercase;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .header span {
@@ -390,6 +382,7 @@
     font-size: clamp(1rem, 4vw, 1.5rem);
     /* color: #484349; */
     color: #1c1a16;
+    white-space: nowrap;
 }
 
 .main__container .buttons {
@@ -434,4 +427,15 @@
     border: 2px solid #bfaa72;
     color: #bfaa72;
     background: white;
+}
+
+@media screen and (max-width: 800px) {
+    .main__container .header, .header span {
+        font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+        font-weight: 550;
+    }
+
+    .main__container h1, .main__container h2 {
+        font-size: clamp(3rem, 10vw, 6rem);
+    }
 }
