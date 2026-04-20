@@ -197,13 +197,14 @@
     .navbar__menu.active {
 
         display: flex;
-        background: #111111;
+        background:#101d31;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 0;
         font-size: 1.6rem;
         pointer-events: auto;
         transform: translateY(0);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.274);
     }
 
     .navbar__toggle {
@@ -237,6 +238,7 @@
     }
 
     .navbar__links {
+        border: 1px solid rgb(255, 255, 255);
         text-align: center;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
