@@ -3,12 +3,10 @@
     margin: 0;
     padding: 0;
     font-family: 'DM Sans', sans-serif;
-
 }
 
 .navbar {
-    background-color: #101d31;
-    padding-top: 0;
+    background-color: #fdf9f2;
     height: 10vh;
     display: flex;
     justify-content: space-between;
@@ -21,7 +19,7 @@
 }
 
 .navbar__container {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(31, 30, 30, 0.08);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -44,10 +42,7 @@
     font-weight: 750;
     letter-spacing: 0.1vw;
     font-family: 'Playfair Display', sans-serif;
-    /* background: linear-gradient(to right, #c7af6e, #bfaa72);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    color: #fbfbfb;
+    color: #1c1a16;
     cursor: pointer;
     font-size: 1.7rem;
     padding: 0.1em 0.05em;
@@ -83,7 +78,7 @@
 }
 
 .navbar__links {
-    color: #fbfbfb;
+    color: #1c1a16;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,7 +112,9 @@
 .button:hover {
     background: white;
     color: #bfaa72;
+    border: 2px solid #bfaa72;
     transition: all 0.3s ease;
+
 }
 
 .navbar__links:hover {
@@ -197,7 +194,7 @@
     .navbar__menu.active {
 
         display: flex;
-        background:#101d31;
+        background: #101d31;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 0;
@@ -317,7 +314,7 @@
 
 
 .main {
-    background-color: #0f1f3d;
+    background-color: #faf8f3;
     height: 90vh;
 
 }
@@ -326,32 +323,35 @@
     height: 90vh;
     display: grid;
     grid-template-rows: auto auto auto;
-    align-items: center;    
-    background-color: #0f1f3d;
+    align-items: center;
+    background-color: #faf8f3;
     justify-items: center;
     justify-content: center;
     z-index: 1;
     width: 100%;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.214) 1px, transparent 1px);
-    background-size: 28px 28px;
+    background-image:
+    radial-gradient(circle at 98% 7%, rgba(246, 220, 91, 0.296) 380px, transparent 380px),
+    radial-gradient(circle at 69% -29%, rgba(247, 229, 138, 0.327) 380px, transparent 380px),
+    radial-gradient(circle at 7% 54%,rgba(138, 232, 157, 0.277) 300px, transparent 300px),
+    radial-gradient(circle at 25% 103%,rgba(178, 238, 169, 0.451) 280px, transparent 280px);
 }
 
 .main__container h1 {
     line-height: 1.5;
     text-align: center;
     font-family: 'Playfair Display', sans-serif;
+    font-weight: 900;
     letter-spacing: 0.3rem;
-    background: linear-gradient(to right, #c7af6e, #bfaa72);
+    background: linear-gradient(to right, #dec64e, #e1b659);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
     /* color: #c7af6e; */
     align-self: center;
     font-size: clamp(4rem, 10vw, 8rem);
 }
 
 .main__container h2 {
-    background: linear-gradient(to right, #6ec77d, #498160);
+    background: linear-gradient(to right, #4a9460, #88c17a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1.5;
@@ -369,7 +369,7 @@
     padding: 5rem;
     padding-bottom: 1rem;
     /* color: #484349; */
-    color: #fefefe;
+    color: #1c1a16;
     /* letter-spacing: 0.35em;
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
@@ -389,7 +389,7 @@
     max-width: 100px;
     font-size: clamp(1rem, 4vw, 1.5rem);
     /* color: #484349; */
-    color: #fbfbfb;
+    color: #1c1a16;
 }
 
 .main__container .buttons {
@@ -423,14 +423,15 @@
     color: #bfaa72;
     background: white;
 }
+
 .main__container .buttons .button1:hover {
     border: 2px solid white;
     color: white;
     background: #bfaa72;
 }
+
 .main__container .buttons .button2:hover {
     border: 2px solid #bfaa72;
     color: #bfaa72;
     background: white;
 }
-
