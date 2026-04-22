@@ -12,69 +12,53 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1.1rem;
-    top: 0;
-    z-index: 999;
     position: relative;
+    z-index: 999;
     line-height: 1;
 }
 
 .navbar__container {
     border-bottom: 1px solid rgba(31, 30, 30, 0.08);
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    z-index: 999;
     width: 100%;
-    margin: 0 auto;
+    z-index: 999;
 }
 
 #navbar__logo {
     padding-left: 2vw;
     display: flex;
     align-items: center;
-    align-self: center;
     text-decoration: none;
 }
 
 .navbar__logo-text {
-    font-weight: 750;
-    letter-spacing: 0.1vw;
     font-family: 'Playfair Display', sans-serif;
+    font-weight: 750;
+    font-size: 1.7rem;
+    letter-spacing: 0.1vw;
     color: #1c1a16;
     cursor: pointer;
-    font-size: 1.7rem;
     padding: 0.1em 0.05em;
 }
 
 .navbar__logo-img {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+    display: block;
     width: 6vw;
     height: 6vw;
     max-width: 100px;
     max-height: 100px;
     object-fit: contain;
-    display: block;
+    cursor: pointer;
 }
 
 .navbar__menu {
-    align-self: center;
     display: flex;
     align-items: center;
     list-style: none;
-    text-align: center;
     padding-right: 2vw;
-}
-
-.navbar__item {
-    height: auto;
-}
-
-.navbar__links span {
-    display: none;
 }
 
 .navbar__links {
@@ -84,7 +68,10 @@
     justify-content: center;
     text-decoration: none;
     padding: 0 0.85rem;
-    height: auto;
+}
+
+.navbar__links span {
+    display: none;
 }
 
 .navbar__button {
@@ -100,10 +87,7 @@
     align-items: center;
     text-decoration: none;
     padding: 1vh 1.5vw;
-    height: 100%;
-    width: 100%;
     border: none;
-    outline: none;
     border-radius: 15px;
     background: #bfaa72;
     color: white;
@@ -114,7 +98,6 @@
     color: #bfaa72;
     border: 2px solid #bfaa72;
     transition: all 0.3s ease;
-
 }
 
 .navbar__links:hover {
@@ -122,16 +105,9 @@
     transition: all 0.35s ease-out;
 }
 
-.navbar__links:hover::after {
-    width: 100%;
-}
-
 @media screen and (max-width: 1400px) {
     #navbar__logo {
         padding-left: 1.5vw;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
     }
 
     .navbar__links {
@@ -144,64 +120,47 @@
     }
 
     .button {
-        padding: 0 0.7rem;
-        padding-top: 1vh;
-        padding-bottom: 1vh;
+        padding: 1vh 0.7rem;
         font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 1000px) {
-
     .navbar {
         height: 12vh;
         z-index: 1000;
-        position: relative;
     }
 
     .navbar.menu-open {
-        top: 0;
         position: sticky;
-    }
-
-    .navbar__container {
-        padding: 0;
-        width: 100%;
-        max-width: 1600px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
+        top: 0;
     }
 
     .navbar__menu {
         background-color: #fdf9f2;
-        padding-right: 0;
-        left: 0;
-        right: 0;
         position: absolute;
         top: 100%;
+        left: 0;
+        right: 0;
         width: 100%;
-        display: flex;
         flex-direction: column;
-        z-index: 0;
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.3s ease, transform 0.3s ease;
         transform: translateY(-5vh);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 0;
+        padding-right: 0;
     }
 
     .navbar__menu.active {
-        padding-top: 0.5rem;
         height: 40vh;
-        display: flex;
-        background: #fdf9f2;
         opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 0;
-        font-size: 1.6rem;
         pointer-events: auto;
         transform: translateY(0);
+        font-size: 1.6rem;
+        padding-top: 0.5rem;
         border-bottom: 1px solid rgba(70, 70, 70, 0.274);
+        transition: all 0.5s ease;
     }
 
     .navbar__toggle {
@@ -212,39 +171,35 @@
     }
 
     .navbar__toggle .bar {
+        display: block;
         width: 2.5vw;
         min-width: 25px;
         height: 3px;
         margin: 0.4vh auto;
-        transition: all 0.3s ease-in-out;
         background: #1c1a16;
-        display: block;
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
     }
 
     .navbar__item {
-        width: 80%;
-    }
-
-    .navbar__links span {
-        padding-right: 4vw;
-        display: inline;
-        font-size: 2rem;
-        color: #1c1a16;
-        line-height: 1;
+        width: 85%;
     }
 
     .navbar__links {
         font-size: 0.9rem;
-        text-align: center;
-        padding: 0.6rem;
-        padding-left: 1.3rem;
+        padding: 0.6rem 0.6rem 0.6rem 1.3rem;
         width: 100%;
-        display: flex;
         justify-content: space-between;
         border-radius: 20px;
         background-color: rgba(0, 0, 0, 0.04);
         margin: 0.5vh 0;
+    }
+
+    .navbar__links span {
+        display: inline;
+        font-size: 2rem;
+        color: #1c1a16;
+        padding-right: 4vw;
     }
 
     .navbar__links:hover {
@@ -254,15 +209,14 @@
     }
 
     .navbar__item:hover span {
-        background-color: transparent;
         color: #c7af6e;
     }
 
     .navbar__logo-img {
-        max-height: 100vh;
-        max-width: 100vh;
         height: 70px;
         width: 70px;
+        max-height: unset;
+        max-width: unset;
     }
 
     .navbar__logo-text {
@@ -270,14 +224,13 @@
     }
 
     .navbar__button {
+        width: 85%;
         border-radius: 20px;
-        width: 80%;
         padding: 0.5vh 0;
         margin: 0.5vh 0;
     }
 
     .button {
-        letter-spacing: 0.05rem;
         background: transparent;
         border: 2px solid #bfaa72;
         color: #1c1a16;
@@ -285,6 +238,7 @@
         padding: 0.7rem;
         font-size: 0.9rem;
         width: 100%;
+        letter-spacing: 0.05rem;
     }
 
     #mobile-menu {
@@ -308,13 +262,9 @@
     }
 }
 
-
-
-
 .main {
     background-color: #faf8f3;
     height: 90vh;
-
 }
 
 .main__container {
@@ -322,56 +272,49 @@
     display: grid;
     grid-template-rows: auto auto auto;
     align-items: center;
-    background-color: #faf8f3;
     justify-items: center;
     justify-content: center;
-    z-index: 1;
     width: 100%;
+    background-color: #faf8f3;
     background-image:
-    radial-gradient(circle at 98% 7%, rgba(246, 220, 91, 0.296) 380px, transparent 380px),
-    radial-gradient(circle at 69% -29%, rgba(247, 229, 138, 0.327) 380px, transparent 380px),
-    radial-gradient(circle at 5% 54%,rgba(138, 232, 157, 0.277) 300px, transparent 300px),
-    radial-gradient(circle at 22% 103%,rgba(178, 238, 169, 0.451) 280px, transparent 280px);
+        radial-gradient(circle at 98% 7%, rgba(246, 220, 91, 0.296) 380px, transparent 380px),
+        radial-gradient(circle at 69% -29%, rgba(247, 229, 138, 0.327) 380px, transparent 380px),
+        radial-gradient(circle at 5% 54%, rgba(138, 232, 157, 0.277) 300px, transparent 300px),
+        radial-gradient(circle at 22% 103%, rgba(178, 238, 169, 0.451) 280px, transparent 280px);
 }
 
 .main__container h1 {
-    line-height: 1.5;
-    text-align: center;
     font-family: 'Playfair Display', sans-serif;
+    font-size: clamp(5rem, 10vw, 8rem);
     font-weight: 900;
     letter-spacing: 0.3rem;
+    line-height: 1.5;
+    text-align: center;
     background: linear-gradient(to right, #dec64e, #e1b659);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* color: #c7af6e; */
-    align-self: center;
-    font-size: clamp(5rem, 10vw, 8rem);
 }
 
 .main__container h2 {
+    font-family: 'Bebas Neue', serif;
+    font-size: clamp(5rem, 10vw, 10rem);
+    letter-spacing: 0.6rem;
+    line-height: 1.5;
+    text-align: center;
     background: linear-gradient(to right, #4a9460, #88c17a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    line-height: 1.5;
-    text-align: center;
-    font-family: 'Bebas Neue', serif;
-    align-self: center;
-    font-size: clamp(5rem, 10vw, 10rem);
-    letter-spacing: 0.6rem;
 }
 
 .header {
-    align-self: center;
-    align-items: center;
-    text-align: center;
-    padding: 5rem;
-    padding-bottom: 1rem;
+    padding: 5rem 5rem 1rem;
     color: #1c1a16;
     font-family: 'DM Sans', sans-serif;
-    letter-spacing: 0.35em;
     font-size: clamp(1rem, 1vw, 1.5rem);
-    text-transform: uppercase;
     font-weight: 500;
+    letter-spacing: 0.35em;
+    text-align: center;
+    text-transform: uppercase;
     white-space: nowrap;
 }
 
@@ -380,7 +323,6 @@
     width: 5vw;
     max-width: 100px;
     font-size: clamp(1rem, 4vw, 1.5rem);
-    /* color: #484349; */
     color: #1c1a16;
     white-space: nowrap;
 }
@@ -394,17 +336,13 @@
 }
 
 .main__container .buttons a {
-    margin-right: 2vh;
-    margin-left: 2vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     padding: 2vh 3vw;
-    height: 100%;
-    width: 100%;
+    margin: 0 2vh;
     border: 2px solid white;
-    outline: none;
     border-radius: 15px;
     background: #bfaa72;
     color: white;
@@ -412,30 +350,33 @@
 }
 
 .main__container .buttons .button1 {
-    border: 2px solid #bfaa72;
+    border-color: #bfaa72;
     color: #bfaa72;
     background: white;
 }
 
 .main__container .buttons .button1:hover {
-    border: 2px solid white;
+    border-color: white;
     color: white;
     background: #bfaa72;
 }
 
 .main__container .buttons .button2:hover {
-    border: 2px solid #bfaa72;
+    border-color: #bfaa72;
     color: #bfaa72;
     background: white;
 }
 
 @media screen and (max-width: 800px) {
-    .main__container .header, .header span {
+
+    .main__container .header,
+    .header span {
         font-size: clamp(0.9rem, 1.5vw, 1.1rem);
         font-weight: 550;
     }
 
-    .main__container h1, .main__container h2 {
+    .main__container h1,
+    .main__container h2 {
         font-size: clamp(3rem, 10vw, 6rem);
     }
 }
