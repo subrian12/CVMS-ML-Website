@@ -1,9 +1,5 @@
-.main {
-    background-color: #faf8f3;
-    height: 25vh;
-}
-
-.main__container {
+.header {
+    grid-template-rows: auto auto;
     height: 25vh;
     background-color: #faf8f3;
     display: flex;
@@ -12,7 +8,7 @@
     
 }
 
-h1 {
+.h1 {
     margin-bottom: 5vh;
     font-family: 'Playfair Display', sans-serif;
     font-size: clamp(5rem, 10vw, 8rem);
@@ -21,4 +17,11 @@ h1 {
     line-height: 1.5;
     text-align: center;
     color: #c7a149;;
+}
+
+.header__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
 }
