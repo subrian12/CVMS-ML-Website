@@ -262,6 +262,7 @@
         transform: translateY(-0.6vh) rotate(-45deg);
     }
 }
+
 .header {
     grid-template-rows: auto auto;
     height: auto;
@@ -293,6 +294,7 @@
     border-radius: 20px;
     margin-bottom: 2vh;
 }
+
 h1 {
     font-family: 'Playfair Display', sans-serif;
     font-size: clamp(4rem, 10vw, 7rem);
@@ -317,10 +319,13 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 0.07rem;
 }
+
 /*  */
 .section1 {
     padding: 7vh 12.5vw;
     background-color: rgba(233, 232, 228, 0.434);
+    display: flex;
+    grid-template-columns: auto auto;
 }
 
 .section2 {
@@ -328,26 +333,58 @@ h1 {
     background-color: rgba(233, 232, 228, 0.434);
 }
 
+.section__content1 {
+    max-width: 40vw;
+}
+
 h2 {
     font-family: 'Playfair Display', sans-serif;
     font-size: clamp(2rem, 10vw, 3rem);
     font-weight: 900;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     line-height: 1.5;
     text-align: left;
     color: #195923c1;
 }
+
 h3 {
     font-family: 'Playfair Display', sans-serif;
     font-size: clamp(1rem, 10vw, 2rem);
     font-weight: 900;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     line-height: 1.5;
     text-align: left;
-    color: #236e2ea9;
+    color: #1b6927a9;
 }
+
+h4 {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: clamp(0.8rem, 10vw, 1.6rem);
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    line-height: 1.5;
+    text-align: left;
+    color: #399346a9;
+}
+
 p {
     font-size: clamp(0.85rem, 1.2vw, 1rem);
     line-height: 1.5;
     text-align: left;
+}
+
+.section__images1 {
+    margin-left: auto;
+    /* background-color: #195923c1; */
+    text-align: right;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-self: right;
+}
+
+#main__img {
+    height: 90%;
+    width: 90%;
+    border: 0.5px solid rgba(109, 109, 109, 0.241);
 }
