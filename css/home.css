@@ -37,7 +37,7 @@
     font-family: 'Bebas Neue', serif;
     font-size: clamp(5rem, 10vw, 10rem);
     letter-spacing: 0.6rem;
-    line-height: 1.5;
+    line-height: 1.2;
     text-align: center;
     background: linear-gradient(to right, #4a9460, #88c17a);
     -webkit-background-clip: text;
