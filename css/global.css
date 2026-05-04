@@ -281,7 +281,7 @@
 
 .subtext {
     width: 75vw;
-    background-color: rgba(214, 188, 103, 0.568);
+    background-color: rgba(229, 203, 117, 0.671);
     height: 5vh;
     font-size: clamp(0.6rem, 1.5vw, 0.9rem);
     line-height: 1.5;
@@ -302,7 +302,7 @@ h1 {
     letter-spacing: 0.3rem;
     line-height: 1.5;
     text-align: center;
-    color: #c7a149d0;
+    color: rgb(220, 194, 109);
 }
 
 .header__links {
@@ -320,4 +320,7 @@ h1 {
     letter-spacing: 0.07rem;
 }
 
-/*  */
+.header__links a:hover {
+    color: #9c7c13;
+    transition: all 0.35s ease-out;
+}
