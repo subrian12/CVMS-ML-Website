@@ -11,48 +11,35 @@
 
 .section2 {
     padding: 7vh 12.5vw;
-    background-color: rgba(230, 230, 229, 0.434);
+    background-color: rgb(248, 248, 248);
     border-bottom: 0.5px solid rgba(109, 109, 109, 0.241);
 }
 
 .section3 {
     padding: 7vh 12.5vw;
-    background-color: rgba(233, 232, 228, 0.434);
+    background-color: rgb(248, 248, 248);
 }
 
-.section1__container,
-.section2__container,
-.section3__container {
+.section1__container {
     padding-bottom: 1.5rem;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 2fr;
     gap: 1vw;
 }
 
 .section__content1 {
-    border-left: 0.5px solid rgba(109, 109, 109, 0.241); 
+    border-left: 0.5px solid rgba(109, 109, 109, 0.241);
     padding-left: 5vw;
     margin-left: auto;
-    max-width: 40vw;
+    /* max-width: 40vw; */
     align-self: right;
     gap: 2vh;
 }
 
 .section__content2 {
     padding-bottom: 1.5rem;
-}
-
-.classes__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-
-}
-
-.class__card {
-    border: 0.5px solid rgb(146, 142, 79);
-    border-radius: 8px;
-    padding: 1.5rem;
+    grid-template-columns: auto auto;
 }
 
 .eyebrow {
@@ -85,7 +72,7 @@ h3 {
     color: #1b6927a9;
 }
 
-h4 {
+/* h4 {
     font-family: 'Playfair Display', sans-serif;
     font-size: clamp(0.8rem, 10vw, 1.6rem);
     font-weight: 900;
@@ -106,7 +93,7 @@ h5 {
     padding-left: 0.75rem;
     margin: 0.2rem 0;
     margin-bottom: 0.5rem;
-}
+} */
 
 p {
     font-size: clamp(0.85rem, 1.2vw, 1rem);
@@ -133,16 +120,63 @@ p {
     border-radius: 20px;
 }
 
-.dates {
-    display: flex;
-    grid-template-columns: auto auto;
-    gap: 15vw;
-}
 
 .block {
     /* background-color: white; */
     margin-top: 0.5rem;
     padding-bottom: 1rem;
-    
-    border-bottom: 0.5px solid rgba(109, 109, 109, 0.241); 
+    border-bottom: 0.5px solid rgba(109, 109, 109, 0.241);
 }
+
+.block:last-child {
+    border-bottom: none;
+}
+
+.class__block {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    padding-right: 2rem;
+    width: 33.5vw;
+}
+
+.classes__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.class__card {
+    border: 0.5px solid rgb(0, 0, 0);
+    border-radius: 28px;
+    padding: 1.5rem;
+    margin-right: 3rem;
+    justify-items: center;
+    height: 25rem;
+}
+
+.class__number {
+    font-family: 'Bebas Neue', serif;
+    font-size: clamp(1rem, 10vw, 2rem);
+    font-weight: 400;
+}
+
+.class__title {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: clamp(1rem, 10vw, 2rem);
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+}
+
+:nth-child(1 of .class__number.class__title) {
+    color: #195923c1;
+}
+
+/* :nth-child(2 of .highlight) {
+  
+}
+:nth-child(2 of .highlight) {
+  
+}
+:nth-child(2 of .highlight) {
+  
+} */
