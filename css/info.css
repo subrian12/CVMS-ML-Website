@@ -46,7 +46,7 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(1.2rem, 2vw, 1.9rem);
     font-weight: 900;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     line-height: 1.5;
     /* text-align: left; */
     color: #195923c1;
@@ -113,11 +113,22 @@ p {
 }
 
 #main__img {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     height: auto;
     width: 85%;
     border: 0.5px solid rgba(109, 109, 109, 0.241);
     border-radius: 20px;
+}
+.map__caption {
+    border-radius: 16px;
+    padding: 0.5rem 0rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    background-color: #205228b7;
+    color: white;
+    margin-top: 0.6rem;
+    text-align: center;
+    width: 85%; 
 }
 
 
@@ -149,15 +160,16 @@ p {
     border: 0.5px solid rgb(0, 0, 0);
     border-radius: 28px;
     padding: 1.5rem;
-    margin-right: 3rem;
+    margin-right: 2rem;
     justify-items: center;
-    height: 25rem;
+    height: auto;
 }
 
 .class__number {
     font-family: 'Bebas Neue', serif;
     font-size: clamp(1rem, 10vw, 2rem);
-    font-weight: 400;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
 }
 
 .class__title {
@@ -167,8 +179,38 @@ p {
     letter-spacing: 0.2rem;
 }
 
-:nth-child(1 of .class__number.class__title) {
-    color: #195923c1;
+.class__card.class__card:nth-child(1) {
+    border: 2px solid #195936c1;
+}
+
+.class__card:nth-child(1) .class__number,
+.class__card:nth-child(1) .class__title {
+    color: #195936c1;
+}
+
+.class__card.class__card:nth-child(2) {
+    border: 2px solid #1f702bc1;
+}
+
+.class__card:nth-child(2) .class__number,
+.class__card:nth-child(2) .class__title {
+    color: #1f702bc1;
+}
+.class__card.class__card:nth-child(3) {
+    border: 2px solid #4b9b20c1;
+}
+
+.class__card:nth-child(3) .class__number,
+.class__card:nth-child(3) .class__title {
+    color: #4b9b20c1;
+}
+.class__card.class__card:nth-child(4) {
+    border: 2px solid #63561365;
+}
+
+.class__card:nth-child(4) .class__number,
+.class__card:nth-child(4) .class__title {
+    color: #cdb938;
 }
 
 /* :nth-child(2 of .highlight) {
