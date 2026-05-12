@@ -3,7 +3,7 @@
     background-color: rgb(248, 248, 248);
     border-bottom: 0.5px solid rgba(109, 109, 109, 0.241);
     background-image:
-        radial-gradient(circle at 108% -7%, rgba(246, 220, 91, 0.296) 25rem, transparent 25rem),
+        radial-gradient(circle at 110% -7%, rgba(246, 220, 91, 0.296) 25rem, transparent 25rem),
         radial-gradient(circle at 78% -27%, rgba(244, 225, 131, 0.296) 20rem, transparent 20rem),
         radial-gradient(circle at -2% 45%, rgba(178, 238, 169, 0.451) 12rem, transparent 12rem),
         radial-gradient(circle at 4% 64%, rgba(138, 232, 157, 0.277) 15rem, transparent 15rem);
@@ -13,11 +13,19 @@
     padding: 7vh 12.5vw;
     background-color: rgb(248, 248, 248);
     border-bottom: 0.5px solid rgba(109, 109, 109, 0.241);
+    background-image:
+        radial-gradient(circle at 108% 43%, rgba(246, 213, 51, 0.296) 15rem, transparent 15rem),
+        radial-gradient(circle at 101% 67%, rgba(244, 225, 131, 0.296) 14rem, transparent 14rem),
+        radial-gradient(circle at -10% 55%, rgba(178, 238, 169, 0.451) 15rem, transparent 15rem),
+        radial-gradient(circle at -4% 34%, rgba(138, 232, 157, 0.277) 14rem, transparent 14rem);
 }
 
 .section3 {
     padding: 7vh 12.5vw;
     background-color: rgb(248, 248, 248);
+    background-image:
+        radial-gradient(circle at 105% 65%, rgba(178, 238, 169, 0.451) 15rem, transparent 15rem),
+        radial-gradient(circle at 100% 94%, rgba(138, 232, 157, 0.277) 16rem, transparent 16rem);
 }
 
 .section1__container {
@@ -25,21 +33,27 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 1vw;
+    margin-top: 1rem;
 }
 
 .section__content1 {
-    border-left: 0.5px solid rgba(109, 109, 109, 0.241);
+    /* border-left: 0.5px solid rgba(109, 109, 109, 0.241); */
     padding-left: 5vw;
     margin-left: auto;
     /* max-width: 40vw; */
     align-self: right;
-    gap: 2vh;
 }
 
 .section__content2 {
     padding-bottom: 1.5rem;
     display: grid;
     grid-template-columns: auto auto;
+}
+
+.section__content3 {
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .eyebrow {
@@ -102,39 +116,39 @@ p {
 }
 
 .section__images1 {
-
-    text-align: left;
-    /* background-color: #195923c1; */
-    /* justify-content: center;
-    align-items: center;
-    align-content: center; */
-    justify-self: left;
+    background-color: rgb(253, 253, 253);
+    border: 0.5px solid rgba(109, 109, 109, 0.241);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     border-radius: 25px;
+    padding: 1.5rem;
 }
 
 #main__img {
-    margin-top: 1.5rem;
     height: auto;
-    width: 85%;
+    width: 100%;
     border: 0.5px solid rgba(109, 109, 109, 0.241);
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
+    display: block;
 }
-.map__caption {
-    border-radius: 16px;
+
+.img__caption {
+    border-radius: 0 0 20px 20px;
     padding: 0.5rem 0rem;
     font-family: 'DM Sans', sans-serif;
-    font-size: clamp(1rem, 5vw, 1.2rem);
-    background-color: #205228b7;
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    letter-spacing: 0.05rem;
+    background-color: #64946b;
     color: white;
-    margin-top: 0.6rem;
     text-align: center;
-    width: 85%; 
+    width: 100%;
 }
 
 
 .block {
     /* background-color: white; */
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 0.5px solid rgba(109, 109, 109, 0.241);
 }
@@ -147,20 +161,21 @@ p {
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 0;
-    padding-right: 2rem;
+    padding-right: 2.5rem;
     width: 33.5vw;
 }
 
 .classes__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
 }
 
 .class__card {
+    width: auto;
     border: 0.5px solid rgb(0, 0, 0);
     border-radius: 28px;
     padding: 1.5rem;
-    margin-right: 2rem;
     justify-items: center;
     height: auto;
 }
@@ -196,6 +211,7 @@ p {
 .class__card:nth-child(2) .class__title {
     color: #1f702bc1;
 }
+
 .class__card.class__card:nth-child(3) {
     border: 2px solid #4b9b20c1;
 }
@@ -204,6 +220,7 @@ p {
 .class__card:nth-child(3) .class__title {
     color: #4b9b20c1;
 }
+
 .class__card.class__card:nth-child(4) {
     border: 2px solid #63561365;
 }
@@ -213,12 +230,107 @@ p {
     color: #cdb938;
 }
 
-/* :nth-child(2 of .highlight) {
-  
+.date__title {
+    margin-top: 1rem;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: clamp(1rem, 10vw, 2rem);
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    line-height: 1.5;
+    text-align: left;
+    color: #1b6927a9;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(91, 91, 91, 0.57);
 }
-:nth-child(2 of .highlight) {
-  
+
+.date__item {
+    display: flex;
+    align-items: center;
+    margin-top: 0.8rem;
+    gap: 1rem;
 }
-:nth-child(2 of .highlight) {
-  
-} */
+
+.date__item .number {
+    border-radius: 16px;
+    padding: 0.3rem 0.7rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    letter-spacing: 0.05rem;
+    background-color: #205228b7;
+    color: white;
+    text-align: center;
+    width: 10vw;
+}
+
+.dates:last-child .date__title {
+    color: #d3bb1f;
+}
+
+
+.dates:last-child .date__item .number {
+    background-color: #ceb721;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* section 1 */
+    .section1, .section2, .section3 {
+        padding: 5vh 6vw;
+    }
+
+    .section1__container {
+        grid-template-columns: 1fr;
+    }
+
+    .section__content1 {
+        padding-left: 0;
+    }
+
+    .section__images1 .img-card {
+        flex: 1;
+    }
+
+    /* section 2 */
+    .section__content2 {
+        grid-template-columns: 1fr;
+    }
+
+    .class__block {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .classes__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .class__card {
+        margin-right: 0;
+    }
+
+    /* section 3 */
+    .section__content3 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .date__item .number {
+        width: 130px;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .classes__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section__images1 {
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+}
