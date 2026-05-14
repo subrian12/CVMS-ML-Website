@@ -33,7 +33,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 1vw;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .section__content1 {
@@ -74,6 +74,7 @@ h2 {
     line-height: 1.3;
     text-align: left;
     color: #195923c1;
+    margin-bottom: 1rem;
 }
 
 h3 {
@@ -86,16 +87,14 @@ h3 {
     color: #1b6927a9;
 }
 
-/* h4 {
-    font-family: 'Playfair Display', sans-serif;
-    font-size: clamp(0.8rem, 10vw, 1.6rem);
-    font-weight: 900;
-    letter-spacing: 0.2rem;
+h4 {
+    max-width: 45vw;
+    font-size: clamp(0.85rem, 10vw, 1rem);
+    font-weight: 400;
     line-height: 1.5;
     text-align: left;
-    color: #d8c920;
 }
-
+/* 
 h5 {
     font-family: 'DM Sans', sans-serif;
     font-size: clamp(0.8rem, 1.2vw, 0.95rem);
