@@ -23,7 +23,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/side.css" />
+    <link rel="stylesheet" href="/css/resources.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
@@ -87,12 +87,143 @@
       </div>
 
       <div class="main">
-        <div class="section1" id = "general">
+        <div class="section1" id="material">
+          <div class="eyebrow">01 - CLASS MATERIAL</div>
+          <h2>Class Material</h2>
+          <h4>
+            Select your class below to view topics covered so far and access
+            your Google Drive folder.
+          </h4>
+          <div class="class-tabs">
+            <button
+              class="class-tab active"
+              data-class="1"
+              onclick="switchTab(1)"
+            >
+              01 — Factorial
+            </button>
+            <button class="class-tab" data-class="2" onclick="switchTab(2)">
+              02 — Power
+            </button>
+            <button class="class-tab" data-class="3" onclick="switchTab(3)">
+              03 — Integral
+            </button>
+            <button class="class-tab" data-class="4" onclick="switchTab(4)">
+              04 — Infinity
+            </button>
+          </div>
 
+          <!-- Factorial -->
+          <div class="class-panel active" data-panel="1">
+            <div class="class-panel-inner">
+              <div class="panel-topics">
+                <div class="panel-topics-title">Topics Covered So Far</div>
+                <ul class="topic-list">
+                  <li>Nothing so far :)</li>
+                  <!-- <li>Introduction to algebra and variables</li>
+                  <li>Basic number theory and divisibility</li>
+                  <li>Logical thinking and pattern recognition</li>
+                  <li>Counting fundamentals and basic combinations</li>
+                  <li>Geometry basics — angles, triangles, area</li>
+                  <li>Translating word problems into equations</li> -->
+                </ul>
+              </div>
+              <div class="panel-drive">
+                <div class="drive-icon">📁</div>
+                <div class="drive-label">Factorial Drive</div>
+                <div class="drive-sub">
+                  All handouts, mock tests, and practice problems for the
+                  Factorial class.
+                </div>
+                <a href="#" class="drive-btn">Open Google Drive ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Power -->
+          <div class="class-panel" data-panel="2">
+            <div class="class-panel-inner">
+              <div class="panel-topics">
+                <div class="panel-topics-title">Topics Covered So Far</div>
+                <ul class="topic-list">
+                  <li>Nothing so far :)</li>
+                  <!-- <li>Intermediate algebra — systems and inequalities</li>
+                  <li>Divisibility rules and prime factorization</li>
+                  <li>Introduction to combinatorics</li>
+                  <li>Angle relationships and triangle congruence</li>
+                  <li>Problem-solving strategies and proof techniques</li>
+                  <li>AMC 8 format and practice problems</li> -->
+                </ul>
+              </div>
+              <div class="panel-drive">
+                <div class="drive-icon">📁</div>
+                <div class="drive-label">Power Drive</div>
+                <div class="drive-sub">
+                  All handouts, mock tests, and practice problems for the
+                  Power class.
+                </div>
+                <a href="#" class="drive-btn">Open Google Drive ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Integral -->
+          <div class="class-panel" data-panel="3">
+            <div class="class-panel-inner">
+              <div class="panel-topics">
+                <div class="panel-topics-title">Topics Covered So Far</div>
+                <ul class="topic-list">
+                  <li>Nothing so far :)</li>
+                  <!-- <li>Polynomials, factoring, and quadratic equations</li>
+                  <li>Counting and probability</li>
+                  <li>Euclidean geometry and circle theorems</li>
+                  <li>Modular arithmetic and number bases</li>
+                  <li>AMC 10 strategies and time management</li>
+                  <li>Mock competition and review</li> -->
+                </ul>
+              </div>
+              <div class="panel-drive">
+                <div class="drive-icon">📁</div>
+                <div class="drive-label">Integral Drive</div>
+                <div class="drive-sub">
+                  All handouts, mock tests, and practice problems for the
+                  Integral class.
+                </div>
+                <a href="#" class="drive-btn">Open Google Drive ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Infinity -->
+          <div class="class-panel" data-panel="4">
+            <div class="class-panel-inner">
+              <div class="panel-topics">
+                <div class="panel-topics-title">Topics Covered So Far</div>
+                <ul class="topic-list">
+                  <li>Nothing so far :)</li>
+                  <!-- <li>Advanced algebra — polynomials and complex numbers</li>
+                  <li>Olympiad geometry — power of a point, radical axes</li>
+                  <li>
+                    Combinatorics — generating functions, inclusion-exclusion
+                  </li>
+                  <li>Number theory — CRT and Euler's theorem</li>
+                  <li>AIME preparation and proof writing</li>
+                  <li>Mock AIME and olympiad problem sets</li> -->
+                </ul>
+              </div>
+              <div class="panel-drive">
+                <div class="drive-icon">📁</div>
+                <div class="drive-label">Infinity Drive</div>
+                <div class="drive-sub">
+                  All handouts, mock tests, and practice problems for the
+                  Infinity class.
+                </div>
+                <a href="#" class="drive-btn">Open Google Drive ↗</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      
     </div>
     <script src="/js/home.js"></script>
   </body>

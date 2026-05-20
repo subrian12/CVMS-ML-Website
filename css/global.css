@@ -8,6 +8,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 .navbar {
     background-color: #fdf9f2;
     height: 10vh;
@@ -107,6 +108,45 @@ html {
 .navbar__links:hover {
     color: #c7af6e;
     transition: all 0.35s ease-out;
+}
+
+.eyebrow {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.2rem, 2vw, 1.9rem);
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    line-height: 1.5;
+    /* text-align: left; */
+    color: #195923c1;
+}
+
+h2 {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    line-height: 1.3;
+    text-align: left;
+    color: #195923c1;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: clamp(1rem, 10vw, 2rem);
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    line-height: 1.5;
+    text-align: left;
+    color: #1b6927a9;
+}
+
+h4 {
+    max-width: 45vw;
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
 }
 
 @media screen and (max-width: 1400px) {
@@ -244,8 +284,9 @@ html {
         letter-spacing: 0.05rem;
     }
 
-    .button:hover{
-        background-color: rgba(0, 0, 0, 0.04);;
+    .button:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+        ;
     }
 
     #mobile-menu {
@@ -340,8 +381,11 @@ h1 {
     h1 {
         font-size: clamp(3rem, 12vw, 5rem);
     }
+    h4 {
+        max-width: 100vw;
+    }
 
-    .header__links a{
+    .header__links a {
         text-align: center;
         font-size: clamp(0.6rem, 10vw, 1.5rem);
     }
@@ -355,5 +399,9 @@ h1 {
         height: auto;
         padding: 10px 16px;
         font-size: clamp(0.5rem, 3vw, 0.8rem);
+    }
+
+    h2 {
+        font-size: clamp(2rem, 8vw, 2.5rem);
     }
 }

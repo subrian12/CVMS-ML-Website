@@ -10,4 +10,10 @@ menu.addEventListener('click', function(){
 }) 
 
 
+function switchTab(num) {
+  document.querySelectorAll('.class-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.class-tab').forEach(t => t.classList.remove('active'));
+  document.querySelector('.class-panel[data-panel="' + num + '"]').classList.add('active');
+  document.querySelector('.class-tab[data-class="' + num + '"]').classList.add('active');
+}
 

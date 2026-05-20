@@ -1,0 +1,167 @@
+.section1 {
+  padding: 7vh 12.5vw;
+  background-color: #f8f8f8;
+  border-bottom: 0.5px solid rgba(109,109,109,0.241);
+  background-image:
+    radial-gradient(circle at 110% -7%, rgba(246,220,91,0.296) 25rem, transparent 25rem),
+    radial-gradient(circle at 78% -27%, rgba(244,225,131,0.296) 20rem, transparent 20rem),
+    radial-gradient(circle at -2% 45%, rgba(178,238,169,0.451) 12rem, transparent 12rem),
+    radial-gradient(circle at 4% 64%, rgba(138,232,157,0.277) 15rem, transparent 15rem);
+}
+
+.section__caption {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.75rem, 1vw, 0.85rem);
+  color: rgba(0,0,0,0.4);
+  letter-spacing: 0.03rem;
+  line-height: 1.5;
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+}
+
+.class-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.class-tab {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+  font-weight: 500;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  border: 1.5px solid rgba(25,89,35,0.3);
+  background: transparent;
+  color: #195923c1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.04rem;
+}
+
+.class-tab:hover { background: rgba(32,82,40,0.06); }
+.class-tab.active { background: #205228b7; color: white; border-color: #205228b7; }
+.class-tab[data-class="4"].active { background: #cdb938; border-color: #cdb938; }
+
+.class-panel { display: none; }
+.class-panel.active { display: block; }
+
+.class-panel-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: white;
+  border: 0.5px solid rgba(109,109,109,0.241);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.panel-topics { padding: 2rem; }
+
+.panel-topics-title {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-weight: 900;
+  color: #1b6927a9;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(91,91,91,0.2);
+}
+
+.topic-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+
+.topic-list li {
+  font-size: clamp(0.82rem, 1.1vw, 0.95rem);
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  line-height: 1.5;
+}
+
+.topic-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #205228b7;
+  flex-shrink: 0;
+}
+
+.class-panel[data-panel="4"] .topic-list li::before { background: #cdb938; }
+
+.panel-drive {
+  background: rgba(32,82,40,0.03);
+  border-left: 0.5px solid rgba(109,109,109,0.2);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.class-panel[data-panel="4"] .panel-drive { background: rgba(205,185,56,0.04); }
+
+.drive-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(32,82,40,0.08);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.class-panel[data-panel="4"] .drive-icon { background: rgba(205,185,56,0.12); }
+
+.drive-label {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  font-weight: 900;
+  color: #195923c1;
+  letter-spacing: 0.05rem;
+}
+
+.drive-sub {
+  font-size: 0.8rem;
+  color: rgba(0,0,0,0.4);
+  line-height: 1.5;
+  max-width: 22ch;
+}
+
+.drive-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.4rem;
+  border-radius: 20px;
+  background: #205228b7;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.8rem, 1.1vw, 0.9rem);
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.04rem;
+  /* transition: background 0.2s ease; */
+}
+
+.drive-btn:hover { background: #195923; }
+.class-panel[data-panel="4"] .drive-btn { background: #cdb938; }
+.class-panel[data-panel="4"] .drive-btn:hover { background: #b8a530; }
+
+@media screen and (max-width: 900px) {
+  .class-panel-inner { grid-template-columns: 1fr; }
+  .panel-drive {
+    border-left: none;
+    border-top: 0.5px solid rgba(109,109,109,0.2);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section1 { padding: 5vh 6vw; }
+}
