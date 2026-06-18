@@ -4,8 +4,8 @@
 }
 
 .main__container {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     height: 90vh;
     display: grid;
     grid-template-rows: auto auto auto;
@@ -37,7 +37,7 @@
     font-family: 'Bebas Neue', serif;
     font-size: clamp(5rem, 10vw, 10rem);
     letter-spacing: 0.6rem;
-    line-height: 1.2;
+    line-height: 1.1;
     text-align: center;
     background: linear-gradient(to right, #4a9460, #88c17a);
     -webkit-background-clip: text;

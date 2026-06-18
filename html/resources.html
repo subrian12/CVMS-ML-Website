@@ -1,335 +1,276 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CVMS ML</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/resources.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CVMS ML</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/global.css" />
-  <link rel="stylesheet" href="/css/resources.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
-</head>
-
-<body>
-  <div class="container">
-    <!--Navbar section -->
-    <nav class="navbar">
-      <div class="navbar__container">
-        <a href="index.html" id="navbar__logo">
-          <img src="/images/logo.png" class="navbar__logo-img" />
-          <span class="navbar__logo-text">CVMS Math League</span>
-        </a>
-        <div class="navbar__toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a href="index.html" class="navbar__links">
-              Home <span>›</span></a>
-          </li>
-          <li class="navbar__item">
-            <a href="info.html" class="navbar__links">
-              Information <span>›</span></a>
-          </li>
-          <li class="navbar__item">
-            <a href="resources.html" class="navbar__links">
-              Resources <span>›</span></a>
-          </li>
-          <li class="navbar__item">
-            <a href="about.html" class="navbar__links"> 
-              About Us <span>›</span></a>
-          </li>
-          <li class="navbar__item">
-            <a href="support.html" class="navbar__links">
-              Support Us<span>›</span> </a>
-          </li>
-          <li class="navbar__button">
-            <a href="/" class="button"> Register </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="header">
-      <h1>Resources</h1>
-      <div class="header__links">
-        <a href="#material">Class Material</a>
-        <a href="#competitions">Competitions</a>
-        <a href="#study">Study Resources</a>
-      </div>
-      <div class="subtext">
-        All resources our mathletes need, including class material, a list of
-        the competitions we take part in, and additional training resources.
-      </div>
-    </div>
-
-    <div class="main">
-      <div class="section1" id="material">
-        <div class="eyebrow">01 - CLASS MATERIAL</div>
-        <h2>Class Material</h2>
-        <h4>
-          Select your class below to view topics covered so far and access
-          your Google Drive folder.
-        </h4>
-        <div class="class-tabs">
-          <button class="class-tab active" data-class="1" onclick="switchTab(1)">
-            01 — Factorial
-          </button>
-          <button class="class-tab" data-class="2" onclick="switchTab(2)">
-            02 — Power
-          </button>
-          <button class="class-tab" data-class="3" onclick="switchTab(3)">
-            03 — Integral
-          </button>
-          <button class="class-tab" data-class="4" onclick="switchTab(4)">
-            04 — Infinity
-          </button>
-        </div>
-
-        <!-- Factorial -->
-        <div class="class-panel active" data-panel="1">
-          <div class="class-panel-inner">
-            <div class="panel-topics">
-              <div class="panel-topics-title">Topics Covered So Far</div>
-              <ul class="topic-list">
-                <li>Nothing so far :)</li>
-                <!-- <li>Introduction to algebra and variables</li>
-                  <li>Basic number theory and divisibility</li>
-                  <li>Logical thinking and pattern recognition</li>
-                  <li>Counting fundamentals and basic combinations</li>
-                  <li>Geometry basics — angles, triangles, area</li>
-                  <li>Translating word problems into equations</li> -->
-              </ul>
-            </div>
-            <div class="panel-drive">
-              <div class="drive-label">Factorial Drive</div>
-              <div class="drive-sub">
-                All handouts, mock tests, and practice problems for the
-                Factorial class.
-              </div>
-              <a href="#" class="drive-btn">Open Google Drive ↗</a>
-            </div>
+  <body>
+    <div class="container">
+      <!--Navbar section -->
+      <nav class="navbar">
+        <div class="navbar__container">
+          <a href="index.html" id="navbar__logo">
+            <img src="/images/logo.png" class="navbar__logo-img" />
+            <span class="navbar__logo-text">CVMS Math League</span>
+          </a>
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
           </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="index.html" class="navbar__links">
+                Home <span>›</span></a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="info.html" class="navbar__links">
+                Information <span>›</span></a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="resources.html" class="navbar__links">
+                Resources <span>›</span></a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="about.html" class="navbar__links">
+                About Us <span>›</span></a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="support.html" class="navbar__links">
+                Support Us<span>›</span>
+              </a>
+            </li>
+            <li class="navbar__button">
+              <a href="register.html" class="button"> Register </a>
+            </li>
+          </ul>
         </div>
+      </nav>
 
-        <!-- Power -->
-        <div class="class-panel" data-panel="2">
-          <div class="class-panel-inner">
-            <div class="panel-topics">
-              <div class="panel-topics-title">Topics Covered So Far</div>
-              <ul class="topic-list">
-                <li>Nothing so far :)</li>
-                <!-- <li>Intermediate algebra — systems and inequalities</li>
-                  <li>Divisibility rules and prime factorization</li>
-                  <li>Introduction to combinatorics</li>
-                  <li>Angle relationships and triangle congruence</li>
-                  <li>Problem-solving strategies and proof techniques</li>
-                  <li>AMC 8 format and practice problems</li> -->
-              </ul>
-            </div>
-            <div class="panel-drive">
-              <div class="drive-label">Power Drive</div>
-              <div class="drive-sub">
-                All handouts, mock tests, and practice problems for the Power
-                class.
-              </div>
-              <a href="#" class="drive-btn">Open Google Drive ↗</a>
-            </div>
-          </div>
+      <div class="header">
+        <h1>Resources</h1>
+        <div class="header__links">
+          <a href="#material">Class Material</a>
+          <a href="#competitions">Competitions</a>
         </div>
-
-        <!-- Integral -->
-        <div class="class-panel" data-panel="3">
-          <div class="class-panel-inner">
-            <div class="panel-topics">
-              <div class="panel-topics-title">Topics Covered So Far</div>
-              <ul class="topic-list">
-                <li>Nothing so far :)</li>
-                <!-- <li>Polynomials, factoring, and quadratic equations</li>
-                  <li>Counting and probability</li>
-                  <li>Euclidean geometry and circle theorems</li>
-                  <li>Modular arithmetic and number bases</li>
-                  <li>AMC 10 strategies and time management</li>
-                  <li>Mock competition and review</li> -->
-              </ul>
-            </div>
-            <div class="panel-drive">
-              <div class="drive-label">Integral Drive</div>
-              <div class="drive-sub">
-                All handouts, mock tests, and practice problems for the
-                Integral class.
-              </div>
-              <a href="#" class="drive-btn">Open Google Drive ↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Infinity -->
-        <div class="class-panel" data-panel="4">
-          <div class="class-panel-inner">
-            <div class="panel-topics">
-              <div class="panel-topics-title">Topics Covered So Far</div>
-              <ul class="topic-list">
-                <li>Nothing so far :)</li>
-                <!-- <li>Advanced algebra — polynomials and complex numbers</li>
-                  <li>Olympiad geometry — power of a point, radical axes</li>
-                  <li>
-                    Combinatorics — generating functions, inclusion-exclusion
-                  </li>
-                  <li>Number theory — CRT and Euler's theorem</li>
-                  <li>AIME preparation and proof writing</li>
-                  <li>Mock AIME and olympiad problem sets</li> -->
-              </ul>
-            </div>
-            <div class="panel-drive">
-              <div class="drive-label">Infinity Drive</div>
-              <div class="drive-sub">
-                All handouts, mock tests, and practice problems for the
-                Infinity class.
-              </div>
-              <a href="#" class="drive-btn">Open Google Drive ↗</a>
-            </div>
-          </div>
+        <div class="subtext">
+          All resources our mathletes need, including class material, a list of
+          the competitions we take part in, and additional training resources.
         </div>
       </div>
-      <div class="section2" id="competitions">
-        <div class="eyebrow">02 - COMPETITIONS</div>
-        <h2>Competitions</h2>
 
-        <h4>
-          A guide to the competitions our students participate in throughout
-          the year — what to expect, when they are, and who can compete.
-        </h4>
+      <div class="main">
+        <div class="section1" id="material">
+          <div class="eyebrow">01 - MATERIAL</div>
+          <h2>Class Material</h2>
+          <h4>
+            Access your class Google Drive folder below. Materials are updated
+            regularly throughout the year.
+          </h4>
 
-        <div class="competitions-grid">
-          <div class="competition-card">
-            <div class="comp-badge" style="background: #205228b7">
-              AMC<br />10A
+          <div class="material-grid">
+            <div class="material-card">
+              <div class="material-title material-title--1">Factorial</div>
+              <div class="material-desc">
+                Handouts, worksheets, and practice problems for the Factorial
+                class. Beginner-friendly material covering core fundamentals and
+                logical thinking.
+              </div>
+              <a href="#" class="material-btn material-btn--1"
+                >Open Google Drive ↗</a
+              >
             </div>
-            <div>
-              <div class="comp-name">AMC 10A</div>
-              <div class="comp-desc">
-                A 25-question, 75-minute multiple choice exam for students in
-                grade 10 or below. Covers algebra, geometry, number theory,
-                and combinatorics. Top scorers qualify for the AIME.
+            <div class="material-card">
+              <div class="material-title material-title--2">Power</div>
+              <div class="material-desc">
+                Handouts, worksheets, and practice problems for the Power class.
+                Covers intermediate algebra, combinatorics, and geometry.
               </div>
-              <div class="comp-pills">
-                <span class="comp-pill">Nov 5, 2026</span>
-                <span class="comp-pill">25 questions</span>
-                <span class="comp-pill">75 minutes</span>
-                <span class="comp-pill">Grade 10 and below</span>
-              </div>
+              <a href="#" class="material-btn material-btn--2"
+                >Open Google Drive ↗</a
+              >
             </div>
-          </div>
-          <div class="competition-card">
-            <div class="comp-badge" style="background: #1f702bc1">
-              AMC<br />10B
+            <div class="material-card">
+              <div class="material-title material-title--3">Integral</div>
+              <div class="material-desc">
+                Handouts, worksheets, and practice problems for the Integral
+                class. Topics include counting, probability, and AMC 10
+                preparation.
+              </div>
+              <a href="#" class="material-btn material-btn--3"
+                >Open Google Drive ↗</a
+              >
             </div>
-            <div>
-              <div class="comp-name">AMC 10B</div>
-              <div class="comp-desc">
-                An alternate sitting of the AMC 10 with a different problem
-                set. Students may take both sittings. Top scorers qualify for
-                the AIME.
+            <div class="material-card">
+              <div class="material-title material-title--4">Infinity</div>
+              <div class="material-desc">
+                Handouts, worksheets, and practice problems for the Infinity
+                class. Advanced topics including olympiad geometry and number
+                theory.
               </div>
-              <div class="comp-pills">
-                <span class="comp-pill">Nov 12, 2026</span>
-                <span class="comp-pill">25 questions</span>
-                <span class="comp-pill">75 minutes</span>
-                <span class="comp-pill">Grade 10 and below</span>
-              </div>
-            </div>
-          </div>
-          <div class="competition-card">
-            <div class="comp-badge" style="background: #4b9b20c1">
-              AMC<br />8
-            </div>
-            <div>
-              <div class="comp-name">AMC 8</div>
-              <div class="comp-desc">
-                A 25-question, 40-minute competition for students in grade 8
-                or below. A great entry point into competitive math covering
-                arithmetic, algebra, geometry, and logical reasoning.
-              </div>
-              <div class="comp-pills">
-                <span class="comp-pill">Jan 25, 2027</span>
-                <span class="comp-pill">25 questions</span>
-                <span class="comp-pill">40 minutes</span>
-                <span class="comp-pill">Grade 8 and below</span>
-              </div>
+              <a href="#" class="material-btn material-btn--4"
+                >Open Google Drive ↗</a
+              >
             </div>
           </div>
-          <div class="competition-card">
-            <div class="comp-badge" style="background: #cdb938">
-              MC<br />CHAP
-            </div>
-            <div>
-              <div class="comp-name">Mathcounts Chapter</div>
-              <div class="comp-desc">
-                The regional qualifying round of Mathcounts. Features Sprint,
-                Target, and Team rounds. Top performers advance to the state
-                competition.
+        </div>
+        <div class="section2" id="competitions">
+          <div class="eyebrow">02 - COMPETITIONS</div>
+          <h2>Competitions</h2>
+
+          <h4>
+            A guide to the competitions our students participate in throughout
+            the year — what to expect, when they are, and who can compete.
+          </h4>
+
+          <div class="competitions-grid">
+            <div class="competition-card">
+              <div class="comp-badge" style="background: #205228b7">
+                AMC<br />10A
               </div>
-              <div class="comp-pills">
-                <span class="comp-pill">Mar 7, 2027</span>
-                <span class="comp-pill">Sprint, Target, Team</span>
-                <span class="comp-pill">Grade 8 and below</span>
-              </div>
-            </div>
-          </div>
-          <div class="competition-card">
-            <div class="comp-badge" style="background: #cdb938">
-              MC<br />STATE
-            </div>
-            <div>
-              <div class="comp-name">Mathcounts State</div>
-              <div class="comp-desc">
-                The state-level Mathcounts competition for top scorers from
-                chapter. The most prestigious event on our calendar — students
-                who advance represent our region and compete for a spot at
-                nationals.
-              </div>
-              <div class="comp-pills">
-                <span class="comp-pill">Apr 10, 2027</span>
-                <span class="comp-pill">Sprint, Target, Team, Countdown</span>
-                <span class="comp-pill">Top chapter scorers only</span>
+              <div>
+                <div class="comp-name">AMC 10A</div>
+                <div class="comp-desc">
+                  A 25-question, 75-minute multiple choice exam for students in
+                  grade 10 or below. Covers algebra, geometry, number theory,
+                  and combinatorics. Top scorers qualify for the AIME.
+                </div>
+                <div class="comp-pills">
+                  <span class="comp-pill">Nov 5, 2026</span>
+                  <span class="comp-pill">25 questions</span>
+                  <span class="comp-pill">75 minutes</span>
+                  <span class="comp-pill">Grade 10 and below</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="competition-card">
-            <div class="comp-badge" style="background: #635613">
-              MC<br />NATL
-            </div>
-            <div>
-              <div class="comp-name">Mathcounts National</div>
-              <div class="comp-desc">
-                The national Mathcounts competition held annually in
-                Washington D.C. The most elite level of middle school math
-                competition in the country — only the top state scorers
-                advance. Features Sprint, Target, Team, and Countdown rounds.
+            <div class="competition-card">
+              <div class="comp-badge" style="background: #1f702bc1">
+                AMC<br />10B
               </div>
-              <div class="comp-pills">
-                <span class="comp-pill">May 11, 2027</span>
-                <span class="comp-pill">Sprint, Target, Team, Countdown</span>
-                <span class="comp-pill">Top state scorers only</span>
-                <span class="comp-pill">Washington D.C.</span>
+              <div>
+                <div class="comp-name">AMC 10B</div>
+                <div class="comp-desc">
+                  An alternate sitting of the AMC 10 with a different problem
+                  set. Students may take both sittings. Top scorers qualify for
+                  the AIME.
+                </div>
+                <div class="comp-pills">
+                  <span class="comp-pill">Nov 12, 2026</span>
+                  <span class="comp-pill">25 questions</span>
+                  <span class="comp-pill">75 minutes</span>
+                  <span class="comp-pill">Grade 10 and below</span>
+                </div>
+              </div>
+            </div>
+            <div class="competition-card">
+              <div class="comp-badge" style="background: #4b9b20c1">
+                AMC<br />8
+              </div>
+              <div>
+                <div class="comp-name">AMC 8</div>
+                <div class="comp-desc">
+                  A 25-question, 40-minute competition for students in grade 8
+                  or below. A great entry point into competitive math covering
+                  arithmetic, algebra, geometry, and logical reasoning.
+                </div>
+                <div class="comp-pills">
+                  <span class="comp-pill">Jan 25, 2027</span>
+                  <span class="comp-pill">25 questions</span>
+                  <span class="comp-pill">40 minutes</span>
+                  <span class="comp-pill">Grade 8 and below</span>
+                </div>
+              </div>
+            </div>
+            <div class="competition-card">
+              <div class="comp-badge" style="background: #cdb938">
+                MC<br />CHAP
+              </div>
+              <div>
+                <div class="comp-name">Mathcounts Chapter</div>
+                <div class="comp-desc">
+                  The regional qualifying round of Mathcounts. Features Sprint,
+                  Target, and Team rounds. Top performers advance to the state
+                  competition.
+                </div>
+                <div class="comp-pills">
+                  <span class="comp-pill">Mar 7, 2027</span>
+                  <span class="comp-pill">Sprint, Target, Team</span>
+                  <span class="comp-pill">Grade 8 and below</span>
+                </div>
+              </div>
+            </div>
+            <div class="competition-card">
+              <div class="comp-badge" style="background: #cdb938">
+                MC<br />STATE
+              </div>
+              <div>
+                <div class="comp-name">Mathcounts State</div>
+                <div class="comp-desc">
+                  The state-level Mathcounts competition for top scorers from
+                  chapter. The most prestigious event on our calendar — students
+                  who advance represent our region and compete for a spot at
+                  nationals.
+                </div>
+                <div class="comp-pills">
+                  <span class="comp-pill">Apr 10, 2027</span>
+                  <span class="comp-pill">Sprint, Target, Team, Countdown</span>
+                  <span class="comp-pill">Top chapter scorers only</span>
+                </div>
+              </div>
+            </div>
+            <div class="competition-card">
+              <div class="comp-badge" style="background: #635613">
+                MC<br />NATL
+              </div>
+              <div>
+                <div class="comp-name">Mathcounts National</div>
+                <div class="comp-desc">
+                  The national Mathcounts competition held annually in
+                  Washington D.C. The most elite level of middle school math
+                  competition in the country — only the top state scorers
+                  advance. Features Sprint, Target, Team, and Countdown rounds.
+                </div>
+                <div class="comp-pills">
+                  <span class="comp-pill">May 11, 2027</span>
+                  <span class="comp-pill">Sprint, Target, Team, Countdown</span>
+                  <span class="comp-pill">Top state scorers only</span>
+                  <span class="comp-pill">Washington D.C.</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="section3" id="study">
+        <!-- <div class="section3" id="study">
         <div class="eyebrow">03 - STUDY RESOURCES</div>
         <h2>Study Resources</h2>
         <h4>
@@ -408,13 +349,12 @@
                 going back decades.
               </div>
               <div class="resource-item-link">artofproblemsolving.com ↗</div>
-            </a>
-          </div>
+            </a> -->
+        <!-- </div>
         </div>
+      </div> -->
       </div>
     </div>
-  </div>
-  <script src="/js/home.js"></script>
-</body>
-
+    <script src="/js/home.js"></script>
+  </body>
 </html>

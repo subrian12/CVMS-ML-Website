@@ -1,0 +1,75 @@
+.section1 {
+  padding: 7vh 12.5vw;
+  background-color: #f8f8f8;
+  background-image:
+    radial-gradient(circle at 110% -7%, rgba(246,220,91,0.296) 25rem, transparent 25rem),
+    radial-gradient(circle at 78% -27%, rgba(244,225,131,0.296) 20rem, transparent 20rem),
+    radial-gradient(circle at -2% 45%, rgba(178,238,169,0.451) 12rem, transparent 12rem),
+    radial-gradient(circle at 4% 64%, rgba(138,232,157,0.277) 15rem, transparent 15rem);
+}
+
+.reg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.reg-card {
+  background: white;
+  border: 0.5px solid rgba(109,109,109,0.241);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.reg-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.reg-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #205228b7;
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.reg-title {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  font-weight: 900;
+  color: #1b6927a9;
+  letter-spacing: 0.08rem;
+}
+
+.reg-text {
+  font-size: clamp(0.82rem, 1.1vw, 0.95rem);
+  color: #444;
+  line-height: 1.75;
+  flex: 1;
+}
+
+.reg-text a {
+  color: #205228b7;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media screen and (max-width: 900px) {
+  .reg-grid { grid-template-columns: 1fr; }
+}
+
+@media screen and (max-width: 600px) {
+  .section1 { padding: 5vh 6vw; }
+}
