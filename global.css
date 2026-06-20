@@ -11,7 +11,7 @@ html {
 
 .navbar {
     background-color: #fdf9f2;
-    height: 10vh;
+    height: 64px; /* fixed px instead of vh */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,7 +95,7 @@ html {
     border-radius: 15px;
     background: #cda63ba9;
     color: white;
-    border: 2px solid #cda63ba9
+    border: 2px solid #cda63ba9;
 }
 
 .button:hover {
@@ -116,7 +116,6 @@ html {
     font-weight: 900;
     letter-spacing: 0.2rem;
     line-height: 1.5;
-    /* text-align: left; */
     color: #195923c1;
 }
 
@@ -148,33 +147,19 @@ h4 {
     text-align: left;
 }
 
+/* ── 1400px ── */
 @media screen and (max-width: 1400px) {
-    #navbar__logo {
-        padding-left: 1.5vw;
-    }
-
-    .navbar__links {
-        padding: 0 0.7rem;
-        font-size: 1rem;
-    }
-
-    .navbar__logo-text {
-        font-size: 1.3rem;
-    }
-
-    .button {
-        padding: 1vh 0.7rem;
-        font-size: 1rem;
-    }
+    #navbar__logo { padding-left: 1.5vw; }
+    .navbar__links { padding: 0 0.7rem; font-size: 1rem; }
+    .navbar__logo-text { font-size: 1.3rem; }
+    .button { padding: 1vh 0.7rem; font-size: 1rem; }
 }
 
+/* ── Mobile navbar ── */
 @media screen and (max-width: 1000px) {
     .navbar {
-        height: 12vh;
+        height: 64px;
         z-index: 1000;
-    }
-
-    .navbar.menu-open {
         position: sticky;
         top: 0;
     }
@@ -182,29 +167,29 @@ h4 {
     .navbar__menu {
         background-color: #fdf9f2;
         position: absolute;
-        top: 100%;
+        top: 64px; /* matches navbar height */
         left: 0;
         right: 0;
         width: 100%;
         flex-direction: column;
+        align-items: center;
         opacity: 0;
         pointer-events: none;
-        transform: translateY(-5vh);
+        transform: translateY(-8px);
         transition: opacity 0.3s ease, transform 0.3s ease;
-        z-index: 0;
+        z-index: 999;
         padding-right: 0;
+        padding-bottom: 0;
     }
 
     .navbar__menu.active {
-        height: auto;
         opacity: 1;
         pointer-events: auto;
         transform: translateY(0);
-        font-size: 1.6rem;
         padding-top: 0.5rem;
         padding-bottom: 1rem;
         border-bottom: 1px solid rgba(70, 70, 70, 0.274);
-        transition: all 0.5s ease;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     }
 
     .navbar__toggle {
@@ -216,13 +201,13 @@ h4 {
 
     .navbar__toggle .bar {
         display: block;
-        width: 2.5vw;
-        min-width: 25px;
+        width: 25px;
         height: 3px;
-        margin: 0.4vh auto;
+        margin: 4px auto;
         background: #1c1a16;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
+        border-radius: 2px;
     }
 
     .navbar__item {
@@ -235,41 +220,38 @@ h4 {
         width: 100%;
         justify-content: space-between;
         border-radius: 20px;
+        background-color: rgba(0,0,0,0.03);
+        margin: 0.25rem 0;
     }
 
     .navbar__links span {
         display: inline;
-        font-size: 2rem;
+        font-size: 1.4rem;
         color: #1c1a16;
         padding-right: 4vw;
     }
 
     .navbar__links:hover {
-        background-color: rgba(0, 0, 0, 0.04);
+        background-color: rgba(0, 0, 0, 0.06);
         color: #c7af6e;
         transition: 0.2s all;
     }
 
-    .navbar__item:hover span {
-        color: #c7af6e;
-    }
+    .navbar__item:hover span { color: #c7af6e; }
 
     .navbar__logo-img {
-        height: 70px;
-        width: 70px;
+        height: 44px;
+        width: 44px;
         max-height: unset;
         max-width: unset;
     }
 
-    .navbar__logo-text {
-        font-size: 1.7rem;
-    }
+    .navbar__logo-text { font-size: 1.3rem; }
 
     .navbar__button {
         width: 85%;
-        border-radius: 20px;
-        padding: 0.5vh 0;
-        margin: 0.5vh 0;
+        padding: 0.4rem 0;
+        margin: 0.4rem 0;
     }
 
     .button {
@@ -281,36 +263,26 @@ h4 {
         font-size: 0.9rem;
         width: 100%;
         letter-spacing: 0.05rem;
+        text-align: center;
     }
 
-    .button:hover {
-        background-color: rgba(0, 0, 0, 0.04);
-        ;
-    }
+    .button:hover { background-color: rgba(0, 0, 0, 0.04); }
 
     #mobile-menu {
         order: 1;
         margin-left: auto;
-        margin-right: 2.5vw;
-        padding: 0.8vh;
+        margin-right: 16px;
+        padding: 8px;
         cursor: pointer;
     }
 
-    #mobile-menu.is-active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    #mobile-menu.is-active .bar:nth-child(1) {
-        transform: translateY(0.6vh) rotate(45deg);
-    }
-
-    #mobile-menu.is-active .bar:nth-child(3) {
-        transform: translateY(-0.6vh) rotate(-45deg);
-    }
+    #mobile-menu.is-active .bar:nth-child(2) { opacity: 0; }
+    #mobile-menu.is-active .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    #mobile-menu.is-active .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 }
 
+/* ── Header ── */
 .header {
-    grid-template-rows: auto auto;
     height: auto;
     padding: 4vh 0;
     background-color: #f5f2e9;
@@ -328,17 +300,17 @@ h4 {
 .subtext {
     width: 75vw;
     background-color: rgba(229, 203, 117, 0.671);
-    height: 5vh;
+    height: auto;
+    min-height: 5vh;
     font-size: clamp(0.6rem, 1.5vw, 0.9rem);
     line-height: 1.5;
     text-align: center;
     align-content: center;
-    justify-content: center;
-    align-items: center;
     color: #1c1a16;
     letter-spacing: 0.02rem;
     border-radius: 20px;
     margin-bottom: 2vh;
+    padding: 8px 16px;
 }
 
 h1 {
@@ -356,6 +328,7 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 6vw;
+    flex-wrap: wrap;
 }
 
 .header__links a {
@@ -371,23 +344,18 @@ h1 {
     transition: all 0.35s ease-out;
 }
 
+/* ── Mobile header ── */
 @media screen and (max-width: 880px) {
     .header {
         padding: 4vh 6vw;
         gap: 1rem;
     }
 
-    h1 {
-        font-size: clamp(3rem, 12vw, 5rem);
-    }
-    h4 {
-        max-width: 100vw;
-    }
+    h1 { font-size: clamp(3rem, 12vw, 5rem); }
+    h2 { font-size: clamp(2rem, 8vw, 2.5rem); }
+    h4 { max-width: 100vw; }
 
-    .header__links a {
-        text-align: center;
-        font-size: clamp(0.6rem, 10vw, 1.5rem);
-    }
+    .header__links { gap: 4vw; }
 
     .header__links a {
         font-size: clamp(0.75rem, 3vw, 0.9rem);
@@ -395,12 +363,7 @@ h1 {
 
     .subtext {
         width: 90vw;
-        height: auto;
         padding: 10px 16px;
         font-size: clamp(0.5rem, 3vw, 0.8rem);
-    }
-
-    h2 {
-        font-size: clamp(2rem, 8vw, 2.5rem);
     }
 }

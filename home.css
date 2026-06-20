@@ -1,12 +1,12 @@
 .main {
     background-color: #faf8f3;
-    height: 90vh;
+    min-height: 90vh; /* changed from height to min-height — fixes white space */
 }
 
 .main__container {
     padding-top: 5rem;
     padding-bottom: 5rem;
-    height: 90vh;
+    min-height: 90vh; /* changed from height to min-height */
     display: grid;
     grid-template-rows: auto auto auto;
     align-items: center;
@@ -47,9 +47,9 @@
 .main__header {
     color: #1c1a16;
     font-family: 'DM Sans', sans-serif;
-    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-size: clamp(0.7rem, 2.5vw, 1.5rem); /* more responsive on mobile */
     font-weight: 500;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.15em; /* reduced — less likely to overflow on small screens */
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
@@ -59,7 +59,7 @@
     display: inline-block;
     width: 5vw;
     max-width: 100px;
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: clamp(0.7rem, 4vw, 1.5rem);
     color: #1c1a16;
     white-space: nowrap;
 }
@@ -69,6 +69,8 @@
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
+    flex-wrap: wrap; /* buttons stack on very small screens */
+    gap: 0.5rem;
 }
 
 .main__container .buttons a {
@@ -77,12 +79,13 @@
     align-items: center;
     text-decoration: none;
     padding: 2vh 3vw;
-    margin: 0 2vh;
+    margin: 0 1vh;
     border: 2px solid white;
     border-radius: 15px;
     background: #bfaa72;
     color: white;
     white-space: nowrap;
+    font-size: clamp(0.8rem, 2vw, 1rem); /* scales on mobile */
 }
 
 .main__container .buttons .button1 {
@@ -104,24 +107,55 @@
 }
 
 @media screen and (max-width: 800px) {
+    .main {
+        min-height: auto; /* let content determine height on mobile */
+    }
+
     .main__container {
+        min-height: auto;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
         background-image:
-        radial-gradient(circle at 98% -7%, rgba(246, 220, 91, 0.296) 280px, transparent 280px),
-        radial-gradient(circle at 49% -23%, rgba(247, 229, 138, 0.327) 280px, transparent 280px),
-        radial-gradient(circle at 5% 78%, rgba(138, 232, 157, 0.277) 200px, transparent 200px),
-        radial-gradient(circle at 22% 103%, rgba(178, 238, 169, 0.451) 280px, transparent 280px);
+            radial-gradient(circle at 98% -7%, rgba(246, 220, 91, 0.296) 280px, transparent 280px),
+            radial-gradient(circle at 49% -23%, rgba(247, 229, 138, 0.327) 280px, transparent 280px),
+            radial-gradient(circle at 5% 78%, rgba(138, 232, 157, 0.277) 200px, transparent 200px),
+            radial-gradient(circle at 22% 103%, rgba(178, 238, 169, 0.451) 280px, transparent 280px);
     }
-    .main__container .main__header,
-    .header span {
-        font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-        font-weight: 550;
-    }
-    .main__container h1{
+
+    .main__container h1 {
         letter-spacing: 0;
-        font-size: clamp(4.4rem, 10vw, 9rem);
+        font-size: clamp(3.5rem, 14vw, 6rem);
+        line-height: 1.2;
     }
+
     .main__container h2 {
-        font-size: clamp(4.5rem, 10vw, 9rem);
-        letter-spacing: 0.1rem;
+        font-size: clamp(3.5rem, 14vw, 6rem);
+        letter-spacing: 0.05rem;
+        line-height: 1;
+    }
+
+    .main__container .main__header {
+        font-size: clamp(0.65rem, 3vw, 0.9rem);
+        letter-spacing: 0.1em;
+    }
+
+    .main__container .buttons a {
+        padding: 1.2vh 5vw;
+        font-size: clamp(0.8rem, 3vw, 1rem);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main__container h1 {
+        font-size: clamp(3rem, 16vw, 4rem);
+    }
+
+    .main__container h2 {
+        font-size: clamp(3rem, 16vw, 4rem);
+    }
+
+    .main__header {
+        font-size: 0.65rem;
+        letter-spacing: 0.08em;
     }
 }
