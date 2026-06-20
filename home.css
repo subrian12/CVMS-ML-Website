@@ -108,13 +108,13 @@
 
 @media screen and (max-width: 800px) {
     .main {
-        min-height: auto; /* let content determine height on mobile */
+        min-height: auto;
     }
 
     .main__container {
         min-height: auto;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
         background-image:
             radial-gradient(circle at 98% -7%, rgba(246, 220, 91, 0.296) 280px, transparent 280px),
             radial-gradient(circle at 49% -23%, rgba(247, 229, 138, 0.327) 280px, transparent 280px),
@@ -123,39 +123,29 @@
     }
 
     .main__container h1 {
+        font-size: clamp(2.5rem, 13vw, 5rem);
         letter-spacing: 0;
-        font-size: clamp(3.5rem, 14vw, 6rem);
         line-height: 1.2;
     }
 
     .main__container h2 {
-        font-size: clamp(3.5rem, 14vw, 6rem);
-        letter-spacing: 0.05rem;
-        line-height: 1;
+        font-size: clamp(2.2rem, 11vw, 5rem);
+        letter-spacing: 0.02rem;
+        line-height: 1.1;
     }
 
     .main__container .main__header {
-        font-size: clamp(0.65rem, 3vw, 0.9rem);
+        font-size: clamp(0.6rem, 2.8vw, 0.9rem);
         letter-spacing: 0.1em;
     }
 
     .main__container .buttons a {
-        padding: 1.2vh 5vw;
+        padding: 1rem 5vw;
         font-size: clamp(0.8rem, 3vw, 1rem);
     }
 }
 
 @media screen and (max-width: 400px) {
-    .main__container h1 {
-        font-size: clamp(3rem, 16vw, 4rem);
-    }
-
-    .main__container h2 {
-        font-size: clamp(3rem, 16vw, 4rem);
-    }
-
-    .main__header {
-        font-size: 0.65rem;
-        letter-spacing: 0.08em;
-    }
+    .main__container h1 { font-size: clamp(2rem, 12vw, 3rem); }
+    .main__container h2 { font-size: clamp(2rem, 11vw, 3rem); }
 }
