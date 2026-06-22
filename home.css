@@ -1,12 +1,12 @@
 .main {
     background-color: #faf8f3;
-    min-height: 90vh; /* changed from height to min-height — fixes white space */
+    height: 100dvh;
 }
 
 .main__container {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    min-height: 90vh; /* changed from height to min-height */
+    height: 100dvh;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     display: grid;
     grid-template-rows: auto auto auto;
     align-items: center;
@@ -47,9 +47,11 @@
 .main__header {
     color: #1c1a16;
     font-family: 'DM Sans', sans-serif;
-    font-size: clamp(0.7rem, 2.5vw, 1.5rem); /* more responsive on mobile */
+    font-size: clamp(0.7rem, 2.5vw, 1.5rem);
+    /* more responsive on mobile */
     font-weight: 500;
-    letter-spacing: 0.15em; /* reduced — less likely to overflow on small screens */
+    letter-spacing: 0.15em;
+    /* reduced — less likely to overflow on small screens */
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
@@ -69,7 +71,8 @@
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
-    flex-wrap: wrap; /* buttons stack on very small screens */
+    flex-wrap: wrap;
+    /* buttons stack on very small screens */
     gap: 0.5rem;
 }
 
@@ -85,7 +88,8 @@
     background: #bfaa72;
     color: white;
     white-space: nowrap;
-    font-size: clamp(0.8rem, 2vw, 1rem); /* scales on mobile */
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    /* scales on mobile */
 }
 
 .main__container .buttons .button1 {
@@ -106,6 +110,18 @@
     background: white;
 }
 
+@media screen and (max-width: 1000px) {
+    .navbar__logo-text {
+        font-size: 1.1rem;
+    }
+
+    .navbar__toggle .bar {
+        width: 20px;
+        height: 2px;
+        margin: 3px auto;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .main {
         min-height: auto;
@@ -123,7 +139,7 @@
     }
 
     .main__container h1 {
-        font-size: clamp(2.5rem, 13vw, 5rem);
+        font-size: clamp(2.2rem, 10vw, 4rem);
         letter-spacing: 0;
         line-height: 1.2;
     }
@@ -146,6 +162,11 @@
 }
 
 @media screen and (max-width: 400px) {
-    .main__container h1 { font-size: clamp(2rem, 12vw, 3rem); }
-    .main__container h2 { font-size: clamp(2rem, 11vw, 3rem); }
+    .main__container h1 {
+        font-size: clamp(2rem, 12vw, 3rem);
+    }
+
+    .main__container h2 {
+        font-size: clamp(2rem, 11vw, 3rem);
+    }
 }
