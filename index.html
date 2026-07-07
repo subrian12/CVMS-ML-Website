@@ -1,27 +1,20 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>CVMS ML</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="home.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
 </head>
-
 <body>
   <div class="container">
-    <!--Navbar section -->
     <nav class="navbar">
       <div class="navbar__container">
         <a href="index.html" id="navbar__logo">
@@ -34,109 +27,39 @@
           <span class="bar"></span>
         </div>
         <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a href="index.html" class="navbar__links">
-              Home <span>›</span></a>
-          </li>
-          <li class="navbar__item">
-            <a href="info.html" class="navbar__links">
-              Information <span>›</span></a>
-          </li>
-          <li class="navbar__item">
-            <a href="resources.html" class="navbar__links">
-              Resources <span>›</span></a>
-          </li>
-          <li class="navbar__item">
-            <a href="about.html" class="navbar__links">
-              About Us <span>›</span></a>
-          </li>
-          <li class="navbar__item">
-            <a href="support.html" class="navbar__links"> Support Us<span>›</span> </a>
-          </li>
-          <li class="navbar__button">
-            <a href="register.html" class="button"> Register </a>
-          </li>
+          <li class="navbar__item"><a href="index.html" class="navbar__links">Home <span>›</span></a></li>
+          <li class="navbar__item"><a href="info.html" class="navbar__links">Information <span>›</span></a></li>
+          <li class="navbar__item"><a href="resources.html" class="navbar__links">Resources <span>›</span></a></li>
+          <li class="navbar__item"><a href="about.html" class="navbar__links">About Us <span>›</span></a></li>
+          <li class="navbar__item"><a href="support.html" class="navbar__links">Support Us <span>›</span></a></li>
+          <li class="navbar__button"><a href="register.html" class="button">Register</a></li>
         </ul>
       </div>
     </nav>
+
     <div class="main">
       <div class="main__container">
-        <p class="main__header">
+
+        <!-- Desktop -->
+        <p class="main__header desktop-only">
           <span>-</span> CARMEL VALLEY MIDDLE SCHOOL <span>-</span>
         </p>
-        <h1>Building New</h1>
-        <h2>Problem Solvers</h2>
+        <h1 class="desktop-only main__h1">Building New</h1>
+        <h2 class="desktop-only main__h2">Problem Solvers</h2>
+
+        <!-- Mobile -->
+        <h1 class="mobile-only mobile__h1">CVMS</h1>
+        <h2 class="mobile-only mobile__h2">Math</h2>
+        <h2 class="mobile-only mobile__h2">League</h2>
+
         <div class="buttons">
-          <a href="register.html" class="button1"> Registration </a>
-          <a href="about.html" class="button2"> Our Coaches </a>
+          <a href="register.html" class="button1">Registration</a>
+          <a href="about.html" class="button2">Our Coaches</a>
         </div>
       </div>
     </div>
-    
+
   </div>
   <script src="home.js"></script>
 </body>
-
 </html>
-
-
-<!-- <div class="about">
-        <div class="mission">
-          <div class="h1"> Our Mission </div>
-          <div class="content">
-            Mathematics is the best playground to learn pattern recognition,
-            problem-solving, and abstract thinking. Our mission is to
-            provide the needed friendly environment for students to explore
-            mathematics together under the guidance of our experienced coaches.
-            We foster curiosity, confidence, and creativity in our students.
-          </div>
-        </div>
-        <div class="testimonials">
-          <div class="h1"> Testimonials </div>
-            <div class="t1">"I love CVMS ML"</div>
-            <div class="t2">"I learned a lot"</div>
-        </div>
-      </div> -->
-<!-- <div class="main">
-        <div class="main__container">
-          <div class="panel1out">
-            <div class="panel1in">
-              <h2>Our coaches</h2>
-              <p>
-                Our coaching staff is made up of highly qualified CVMS Math
-                League alumni with backgrounds in competitive mathematics. All
-                have participated in a wide range of math contests, gaining
-                experience and learning advanced problem-solving techniques. As
-                former members of the program, they are able to provide informed
-                and relevant guidance.
-              </p>
-            </div>
-          </div>
-          <div class="panel2out">
-            <div class="panel2in">
-              <h2>Our mission</h2>
-              <p>
-                Mathematics is the best playground to learn pattern recognition,
-                problem-solving, and abstract thinking. Our mission is to
-                provide the needed friendly environment for students to explore
-                mathematics together under the guidance of our experienced
-                coaches. We foster curiosity, confidence, and creativity in our
-                students.
-              </p>
-            </div>
-          </div>
-          <div class="panel3out">
-            <div class="panel3in">
-              <h2>Achievements</h2>
-              <p>
-                Our team is consistently one of the top-performing groups in
-                both the San Diego and Southern California Mathcounts
-                competitions. Our students also excel on national competitions
-                like the American Mathematics Competitions (AMC) and perform
-                well in state contests such as the California Association of
-                Mathematics Leagues (CAML).
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> -->
