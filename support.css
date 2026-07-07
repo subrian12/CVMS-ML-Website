@@ -6,7 +6,7 @@
         radial-gradient(circle at 110% -7%, rgba(246, 220, 91, 0.296) 25rem, transparent 25rem),
         radial-gradient(circle at 78% -27%, rgba(244, 225, 131, 0.296) 20rem, transparent 20rem),
         radial-gradient(circle at -2% 45%, rgba(178, 238, 169, 0.451) 12rem, transparent 12rem),
-        radial-gradient(circle at 4% 64%, rgba(138, 232, 157, 0.277) 15rem, transparent 15rem);
+        radial-gradient(circle at -10% 64%, rgba(138, 232, 157, 0.277) 15rem, transparent 15rem);
 }
 
 .volunteer-blocks {
@@ -29,7 +29,7 @@
     border-bottom: none;
 }
 
-.volunteer-block-title {
+/* .volunteer-block-title {
     font-family: 'Playfair Display', sans-serif;
     font-size: clamp(0.9rem, 1.3vw, 1.1rem);
     font-weight: 900;
@@ -42,7 +42,7 @@
     font-size: clamp(0.82rem, 1.1vw, 0.95rem);
     color: #444;
     line-height: 1.75;
-}
+} */
 
 .volunteer-steps {
     display: flex;

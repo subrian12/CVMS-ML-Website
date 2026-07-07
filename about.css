@@ -78,10 +78,8 @@
     background-color: #f8f8f8;
     border-bottom: 0.5px solid rgba(109,109,109,0.241);
     background-image:
-        radial-gradient(circle at 108% 43%, rgba(246,213,51,0.296) 15rem, transparent 15rem),
         radial-gradient(circle at 101% 67%, rgba(244,225,131,0.296) 14rem, transparent 14rem),
-        radial-gradient(circle at -10% 55%, rgba(178,238,169,0.451) 15rem, transparent 15rem),
-        radial-gradient(circle at -4% 34%, rgba(138,232,157,0.277) 14rem, transparent 14rem);
+        radial-gradient(circle at -10% 55%, rgba(178,238,169,0.451) 15rem, transparent 15rem);
 }
 
 .volunteer-grid {
