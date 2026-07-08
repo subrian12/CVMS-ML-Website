@@ -140,7 +140,7 @@
         font-size: 72px !important;
         font-weight: 900 !important;
         letter-spacing: -0.01em !important;
-        line-height: 1.0 !important;
+        line-height: 1.2 !important;
         text-align: left !important;
         background: linear-gradient(to right, #dec64e, #c9a832) !important;
         -webkit-background-clip: text !important;
@@ -149,20 +149,25 @@
     }
 
     .mobile__h2 {
-        /* font-family: 'Playfair Display', serif !important;
-        font-size: 62px !important;
-        letter-spacing: 0.12em !important;
-        line-height: 1.0 !important;
-        text-align: left !important;
-        background: linear-gradient(to right, #4a9460, #6bb87e) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        color: transparent !important; */
         font-family: 'Playfair Display', sans-serif !important;
         font-size: 72px !important;
         font-weight: 900 !important;
         letter-spacing: -0.01em !important;
-        line-height: 1.0 !important;
+        line-height: 1.2 !important;
+        text-align: left !important;
+        background: linear-gradient(to right, #4a9460, #6bb87e) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        color: transparent !important;
+        margin-bottom: 0;
+    }
+
+    .mobile__h3 {
+        font-family: 'Playfair Display', sans-serif !important;
+        font-size: 72px !important;
+        font-weight: 900 !important;
+        letter-spacing: -0.01em !important;
+        line-height: 1.2 !important;
         text-align: left !important;
         background: linear-gradient(to right, #4a9460, #6bb87e) !important;
         -webkit-background-clip: text !important;
