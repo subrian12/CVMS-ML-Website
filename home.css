@@ -130,7 +130,7 @@
         gap: 0;
         background-image:
             radial-gradient(circle at 105% 5%, rgba(246, 220, 91, 0.35) 160px, transparent 160px),
-            radial-gradient(circle at 85% -10%, rgba(247, 229, 138, 0.3) 130px, transparent 130px),
+            radial-gradient(circle at 80% -10%, rgba(247, 229, 138, 0.3) 140px, transparent 130px),
             radial-gradient(circle at -5% 72%, rgba(138, 232, 157, 0.3) 130px, transparent 130px),
             radial-gradient(circle at 10% 100%, rgba(178, 238, 169, 0.45) 140px, transparent 140px);
     }
@@ -150,7 +150,7 @@
 
     .mobile__h2 {
         font-family: 'Playfair Display', sans-serif !important;
-        font-size: 72px !important;
+        font-size: 64px !important;
         font-weight: 900 !important;
         letter-spacing: -0.01em !important;
         line-height: 1.2 !important;
@@ -160,19 +160,6 @@
         -webkit-text-fill-color: transparent !important;
         color: transparent !important;
         margin-bottom: 0;
-    }
-
-    .mobile__h3 {
-        font-family: 'Playfair Display', sans-serif !important;
-        font-size: 72px !important;
-        font-weight: 900 !important;
-        letter-spacing: -0.01em !important;
-        line-height: 1.2 !important;
-        text-align: left !important;
-        background: linear-gradient(to right, #4a9460, #6bb87e) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        color: transparent !important;
     }
 
     .main__container .buttons {
@@ -191,5 +178,5 @@
 
 @media screen and (max-width: 400px) {
     .mobile__h1 { font-size: 58px !important; }
-    .mobile__h2 { font-size: 54px !important; }
+    .mobile__h2 { font-size: 52px !important; }
 }
