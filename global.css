@@ -7,17 +7,19 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: #faf8f3;
 }
 
-html,
 body {
+    margin: 0;
+    padding: 0;
     background-color: #faf8f3;
+    min-height: 100%;
 }
 
 .navbar {
     background-color: #fdf9f2;
     height: 64px;
-    /* fixed px instead of vh */
     display: flex;
     justify-content: space-between;
     align-items: center;
