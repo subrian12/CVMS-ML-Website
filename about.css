@@ -21,10 +21,12 @@
     border: 0.5px solid rgba(109,109,109,0.241);
     border-radius: 16px;
     padding: 1.5rem 1.2rem;
-    display: grid;
-    grid-template-rows: 56px 1fr;
-    gap: 1rem;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+    transition: box-shadow 0.2s ease;
 }
 
 .coach-card:hover {
@@ -32,26 +34,25 @@
 }
 
 .coach-avatar {
-    width: 56px;
-    height: 56px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     background: rgba(32,82,40,0.08);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+    font-size: 28px;
     flex-shrink: 0;
     border: 1.5px solid rgba(32,82,40,0.12);
-    margin: 0 auto;
 }
 
 .coach-name {
-    font-family: 'Playfair Display', sans-serif;
-    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
-    font-weight: 900;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.8rem, 1.1vw, 0.9rem);
     color: #195923c1;
-    letter-spacing: 0.05rem;
-    margin-bottom: 4px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     line-height: 1.2;
 }
 
@@ -59,9 +60,6 @@
     font-size: 0.78rem;
     color: rgba(0,0,0,0.45);
     line-height: 1.55;
-}
-.coach-info .coach-name{
-    text-align: center;
 }
 
 @media screen and (max-width: 900px) {

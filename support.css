@@ -28,6 +28,16 @@
 .volunteer-block:nth-child(3) {
     border-bottom: none;
 }
+.donate-link {
+    color: #cdb938;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.donate-link:hover {
+    color: #b39308ea;
+}
 
 /* .volunteer-block-title {
     font-family: 'Playfair Display', sans-serif;

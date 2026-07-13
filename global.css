@@ -142,7 +142,7 @@ h3 {
     font-family: 'Playfair Display', sans-serif;
     font-size: clamp(1rem, 10vw, 1.5rem);
     font-weight: 900;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
     line-height: 1.5;
     text-align: left;
     color: #1b6927a9;
@@ -182,7 +182,7 @@ p {
     }
 }
 
-/* ── Mobile navbar ── */
+/* ── Mobile navbar — minimal style ── */
 @media screen and (max-width: 1000px) {
     .navbar {
         height: 64px;
@@ -195,29 +195,35 @@ p {
         background-color: #fdf9f2;
         position: absolute;
         top: 64px;
-        /* matches navbar height */
         left: 0;
         right: 0;
         width: 100%;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         opacity: 0;
         pointer-events: none;
         transform: translateY(-8px);
         transition: opacity 0.3s ease, transform 0.3s ease;
         z-index: 999;
-        padding-right: 0;
-        padding-bottom: 0;
+        padding: 6px 20px 20px;
     }
 
     .navbar__menu.active {
         opacity: 1;
         pointer-events: auto;
         transform: translateY(0);
-        padding-top: 0.5rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid rgba(70, 70, 70, 0.274);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        border-bottom: 0.5px solid rgba(31, 30, 30, 0.08);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #1c1a16;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border-radius: 2px;
     }
 
     .navbar__toggle {
@@ -225,48 +231,36 @@ p {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    .navbar__toggle .bar {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 4px auto;
-        background: #1c1a16;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        border-radius: 2px;
+        gap: 5px;
     }
 
     .navbar__item {
-        width: 85%;
+        width: 100%;
     }
 
     .navbar__links {
         font-size: 0.9rem;
-        padding: 0.6rem 0.6rem 0.6rem 1.3rem;
+        font-weight: 400;
+        padding: 13px 0;
         width: 100%;
-        justify-content: space-between;
-        border-radius: 20px;
-        background-color: rgba(0, 0, 0, 0.03);
-        margin: 0.25rem 0;
+        justify-content: flex-start;
+        border-radius: 0;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.06);
+        background-color: transparent;
+        margin: 0;
+    }
+
+    .navbar__item:last-of-type .navbar__links {
+        border-bottom: none;
     }
 
     .navbar__links span {
-        display: inline;
-        font-size: 1.4rem;
-        color: #1c1a16;
-        padding-right: 4vw;
+        display: none;
     }
 
     .navbar__links:hover {
-        background-color: rgba(0, 0, 0, 0.06);
-        color: #c7af6e;
+        color: #9c7c13;
         transition: 0.2s all;
-    }
-
-    .navbar__item:hover span {
-        color: #c7af6e;
     }
 
     .navbar__logo-img {
@@ -281,25 +275,27 @@ p {
     }
 
     .navbar__button {
-        width: 85%;
-        padding: 0.4rem 0;
-        margin: 0.4rem 0;
+        width: 100%;
+        padding: 0;
+        margin-top: 16px;
     }
 
     .button {
-        background: transparent;
+        background: #bfaa72;
         border: 2px solid #bfaa72;
-        color: #1c1a16;
-        border-radius: 18px;
-        padding: 0.7rem;
+        color: white;
+        border-radius: 12px;
+        padding: 0.75rem;
         font-size: 0.9rem;
+        font-weight: 500;
         width: 100%;
-        letter-spacing: 0.05rem;
+        letter-spacing: 0.03rem;
         text-align: center;
     }
 
     .button:hover {
-        background-color: rgba(0, 0, 0, 0.04);
+        background: white;
+        color: #bfaa72;
     }
 
     #mobile-menu {

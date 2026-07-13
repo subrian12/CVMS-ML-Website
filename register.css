@@ -66,6 +66,43 @@
   text-underline-offset: 2px;
 }
 
+/* ── Color variants ── */
+.reg-card:nth-child(1) {
+  border-top: 3px solid #205228b7;
+}
+
+.reg-card:nth-child(1) .reg-num {
+  background: #205228b7;
+}
+
+.reg-card:nth-child(1) .reg-title {
+  color: #205228b7;
+}
+
+.reg-card:nth-child(2) {
+  border-top: 3px solid #4b9b20c1;
+}
+
+.reg-card:nth-child(2) .reg-num {
+  background: #4b9b20c1;
+}
+
+.reg-card:nth-child(2) .reg-title {
+  color: #4b9b20c1;
+}
+
+.reg-card:nth-child(3) {
+  border-top: 3px solid #cdb938;
+}
+
+.reg-card:nth-child(3) .reg-num {
+  background: #cdb938;
+}
+
+.reg-card:nth-child(3) .reg-title {
+  color: #beab32;
+}
+
 @media screen and (max-width: 900px) {
   .reg-grid { grid-template-columns: 1fr; }
 }
