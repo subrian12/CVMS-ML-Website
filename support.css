@@ -29,14 +29,14 @@
     border-bottom: none;
 }
 .donate-link {
-    color: #cdb938;
+    color: #14511da9;
     font-weight: 500;
     text-decoration: underline;
     text-underline-offset: 2px;
 }
 
 .donate-link:hover {
-    color: #b39308ea;
+    color: #2c903ba9;
 }
 
 /* .volunteer-block-title {
