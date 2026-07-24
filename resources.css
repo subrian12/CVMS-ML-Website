@@ -48,6 +48,7 @@
 .material-btn {
   display: inline-flex;
   align-items: center;
+  gap: 0.4rem;
   padding: 0.4rem 1.2rem;
   border-radius: 20px;
   color: white;
@@ -59,6 +60,10 @@
   width: fit-content;
   transition: opacity 0.2s ease;
   margin-top: 4px;
+}
+
+.material-btn i {
+  font-size: 0.75em;
 }
 
 .material-btn:hover { opacity: 0.85; }
@@ -166,102 +171,5 @@
 @media screen and (max-width: 600px) {
   .section2 {
     padding: 5vh 6vw;
-  }
-}
-
-.section3 {
-  padding: 7vh 12.5vw;
-  background-color: #f8f8f8;
-  background-image:
-    radial-gradient(circle at 105% 65%, rgba(178, 238, 169, 0.451) 15rem, transparent 15rem),
-    radial-gradient(circle at 100% 94%, rgba(138, 232, 157, 0.277) 16rem, transparent 16rem);
-}
-
-.resource-category {
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.resource-category-title {
-  font-family: 'Playfair Display', sans-serif;
-  font-size: clamp(1rem, 1.5vw, 1.3rem);
-  font-weight: 900;
-  color: #1b6927a9;
-  letter-spacing: 0.1rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(91, 91, 91, 0.2);
-}
-
-.resource-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-}
-
-.resource-list--two {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.resource-item {
-  background: white;
-  border: 0.5px solid rgba(109, 109, 109, 0.241);
-  border-radius: 14px;
-  padding: 1rem 1.1rem;
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  transition: box-shadow 0.2s ease;
-}
-
-.resource-item:hover {
-  box-shadow: 0 4px 14px rgba(25, 89, 35, 0.09);
-}
-
-.resource-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  margin-bottom: 4px;
-}
-
-.resource-item-name {
-  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
-  font-weight: 500;
-  color: #195923c1;
-}
-
-.resource-item-desc {
-  font-size: 0.78rem;
-  color: rgba(0, 0, 0, 0.45);
-  line-height: 1.5;
-}
-
-.resource-item-link {
-  font-size: 0.75rem;
-  color: #205228b7;
-  margin-top: 0.2rem;
-}
-
-@media screen and (max-width: 900px) {
-  .resource-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .resource-list--two {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .section3 {
-    padding: 5vh 6vw;
-  }
-
-  .resource-list,
-  .resource-list--two {
-    grid-template-columns: 1fr;
   }
 }

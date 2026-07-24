@@ -31,28 +31,24 @@
 .donate-link {
     color: #14511da9;
     font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.donate-link-text {
     text-decoration: underline;
     text-underline-offset: 2px;
+}
+
+.donate-link i {
+    font-size: 0.8em;
 }
 
 .donate-link:hover {
     color: #2c903ba9;
 }
-
-/* .volunteer-block-title {
-    font-family: 'Playfair Display', sans-serif;
-    font-size: clamp(0.9rem, 1.3vw, 1.1rem);
-    font-weight: 900;
-    color: #1b6927a9;
-    letter-spacing: 0.08rem;
-    margin-bottom: 6px;
-}
-
-.volunteer-block-text {
-    font-size: clamp(0.82rem, 1.1vw, 0.95rem);
-    color: #444;
-    line-height: 1.75;
-} */
 
 .volunteer-steps {
     display: flex;

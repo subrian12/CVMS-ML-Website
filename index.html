@@ -1,64 +1,198 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>CVMS ML</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="global.css" />
-  <link rel="stylesheet" href="home.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
-</head>
-<body>
-  <div class="container">
-    <nav class="navbar">
-      <div class="navbar__container">
-        <a href="index.html" id="navbar__logo">
-          <img src="images/logo.png" class="navbar__logo-img" />
-          <span class="navbar__logo-text">CVMS Math League</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>CVMS ML</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar__container">
+          <a href="index.html" id="navbar__logo">
+            <img src="images/logo.png" class="navbar__logo-img" />
+            <span class="navbar__logo-text">CVMS Math League</span>
+          </a>
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="index.html" class="navbar__links">Home </a>
+            </li>
+            <li class="navbar__item">
+              <a href="info.html" class="navbar__links">Information </a>
+            </li>
+            <li class="navbar__item">
+              <a href="resources.html" class="navbar__links">Resources </a>
+            </li>
+            <li class="navbar__item">
+              <a href="about.html" class="navbar__links">About Us </a>
+            </li>
+            <li class="navbar__item">
+              <a href="support.html" class="navbar__links">Support Us </a>
+            </li>
+            <li class="navbar__button">
+              <a href="register.html" class="button">Register</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="main">
+        <div class="main__container">
+          <!-- Desktop -->
+          <p class="main__header desktop-only">
+            <span>-</span> CARMEL VALLEY MIDDLE SCHOOL <span>-</span>
+          </p>
+          <h1 class="desktop-only main__h1">Building New</h1>
+          <h2 class="desktop-only main__h2">Problem Solvers</h2>
+
+          <!-- Mobile -->
+          <h1 class="mobile-only mobile__h1">CVMS</h1>
+          <h2 class="mobile-only mobile__h2">Math League</h2>
+
+          <div class="buttons">
+            <a href="register.html" class="button1">Registration</a>
+            <a href="about.html" class="button2">Our Coaches</a>
+          </div>
+        </div>
+
+        <!-- Floating scroll indicator -->
+        <a href="#dates" class="scroll-hint">
+          <span class="scroll-hint-text">Important Dates</span>
+          <span class="scroll-hint-arrow"
+            ><i class="fas fa-chevron-down"></i
+          ></span>
         </a>
-        <div class="navbar__toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="navbar__menu">
-          <li class="navbar__item"><a href="index.html" class="navbar__links">Home </a></li>
-          <li class="navbar__item"><a href="info.html" class="navbar__links">Information </a></li>
-          <li class="navbar__item"><a href="resources.html" class="navbar__links">Resources </a></li>
-          <li class="navbar__item"><a href="about.html" class="navbar__links">About Us </a></li>
-          <li class="navbar__item"><a href="support.html" class="navbar__links">Support Us </a></li>
-          <li class="navbar__button"><a href="register.html" class="button">Register</a></li>
-        </ul>
       </div>
-    </nav>
 
-    <div class="main">
-      <div class="main__container">
-
-        <!-- Desktop -->
-        <p class="main__header desktop-only">
-          <span>-</span> CARMEL VALLEY MIDDLE SCHOOL <span>-</span>
-        </p>
-        <h1 class="desktop-only main__h1">Building New</h1>
-        <h2 class="desktop-only main__h2">Problem Solvers</h2>
-
-        <!-- Mobile -->
-        <h1 class="mobile-only mobile__h1">CVMS</h1>
-        <h2 class="mobile-only mobile__h2">Math League</h2>
-
-        <div class="buttons">
-          <a href="register.html" class="button1">Registration</a>
-          <a href="about.html" class="button2">Our Coaches</a>
+      <!-- Testimonial band -->
+      <div class="quote-band">
+        <div class="quote-item">
+          <div class="quote-icon">"</div>
+          <div class="quote-text">
+            Math League completely changed how my daughter sees math. She used
+            to dread it — now it's her favorite part of the week.
+          </div>
+          <div class="quote-author">— Jennifer Park, Parent</div>
         </div>
+        <div class="quote-item">
+          <div class="quote-icon">"</div>
+          <div class="quote-text">
+            I joined not knowing anyone, and by the end of the year I'd made
+            some of my closest friends. The coaches genuinely care.
+          </div>
+          <div class="quote-author">— Maya R., 7th Grade Student</div>
+        </div>
+        <div class="quote-item">
+          <div class="quote-icon">"</div>
+          <div class="quote-text">
+            Coaching here has been one of the most rewarding parts of high
+            school. Watching students grow is incredible.
+          </div>
+          <div class="quote-author">— Erica Dong, Coach</div>
+        </div>
+      </div>
+
+      <!-- Upcoming dates -->
+      <div class="dates-card-wrap" id="dates">
+        <div class="dates-card">
+          <div class="dates-header">
+            <div class="dates-eyebrow">What's Next</div>
+            <h2 class="dates-title">Upcoming Dates</h2>
+          </div>
+          <div class="dates-body">
+            <div class="dates-grid">
+              <div class="date-chip">
+                <div class="date-chip-day">SEP 20</div>
+                <div class="date-chip-label">First Class</div>
+              </div>
+              <div class="date-chip">
+                <div class="date-chip-day">OCT 14</div>
+                <div class="date-chip-label">CAML #1</div>
+              </div>
+              <div class="date-chip">
+                <div class="date-chip-day">NOV 5</div>
+                <div class="date-chip-label">AMC 10 A</div>
+              </div>
+              <div class="date-chip">
+                <div class="date-chip-day">NOV 11</div>
+                <div class="date-chip-label">CAML #2</div>
+              </div>
+              <div class="date-chip">
+                <div class="date-chip-day">NOV 13</div>
+                <div class="date-chip-label">AMC 10 B</div>
+              </div>
+              <div class="date-chip">
+                <div class="date-chip-day">DEC 9</div>
+                <div class="date-chip-label">CAML #3</div>
+              </div>
+              <div class="date-chip">
+                <div class="date-chip-day">JAN 22</div>
+                <div class="date-chip-label">AMC 8</div>
+              </div>
+              <div class="date-chip">
+                <div class="date-chip-day">JAN 27</div>
+                <div class="date-chip-label">CAML #4</div>
+              </div>
+              <div class="date-chip">
+                <div class="date-chip-day">FEB 6</div>
+                <div class="date-chip-label">AIME</div>
+              </div>
+              <div class="date-chip">
+                <div class="date-chip-day">FEB 10</div>
+                <div class="date-chip-label">CAML #5</div>
+              </div>
+              <div class="date-chip">
+                <div class="date-chip-day">MAR 7</div>
+                <div class="date-chip-label">MC Chapter</div>
+              </div>
+              <div class="date-chip">
+                <div class="date-chip-day">APR 10</div>
+                <div class="date-chip-label">MC State</div>
+              </div>
+              <div class="date-chip">
+                <div class="date-chip-day">MAY 5</div>
+                <div class="date-chip-label">Last Class</div>
+              </div>
+              <div class="date-chip">
+                <div class="date-chip-day">MAY 7</div>
+                <div class="date-chip-label">Closing Party</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dates-bubble dates-bubble--1"></div>
+        <div class="dates-bubble dates-bubble--2"></div>
+        <div class="dates-bubble dates-bubble--3"></div>
       </div>
     </div>
-
-  </div>
-  <script src="home.js"></script>
-</body>
+    <script src="home.js"></script>
+  </body>
 </html>
