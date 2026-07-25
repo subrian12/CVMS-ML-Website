@@ -111,13 +111,23 @@
 }
 
 /* ── Show/hide ── */
-.mobile-only { display: none !important; }
-.desktop-only { display: block !important; }
+.mobile-only {
+    display: none !important;
+}
+
+.desktop-only {
+    display: block !important;
+}
 
 /* ── Mobile ── */
 @media screen and (max-width: 800px) {
-    .desktop-only { display: none !important; }
-    .mobile-only { display: block !important; }
+    .desktop-only {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: block !important;
+    }
 
     .main {
         height: calc(100dvh - 64px);
@@ -179,16 +189,20 @@
 }
 
 @media screen and (max-width: 400px) {
-    .mobile__h1 { font-size: 58px !important; }
-    .mobile__h2 { font-size: 52px !important; }
+    .mobile__h1 {
+        font-size: 58px !important;
+    }
+
+    .mobile__h2 {
+        font-size: 52px !important;
+    }
 }
 
 /* ── Scroll hint ── */
 .scroll-hint {
     position: absolute;
     bottom: 36px;
-    left: 85%;
-    transform: translateX(-50%);
+    right: 24px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -200,6 +214,7 @@
     backdrop-filter: blur(4px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     animation: scrollHintBounce 2.2s ease-in-out infinite;
+    white-space: nowrap;
     z-index: 2;
 }
 
@@ -209,6 +224,7 @@
     font-weight: 500;
     letter-spacing: 0.04rem;
     color: #6b6255;
+    white-space: nowrap;
 }
 
 .scroll-hint-arrow {
@@ -217,20 +233,36 @@
 }
 
 @keyframes scrollHintBounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(8px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
 }
 
+/* Mobile — smaller, tighter to corner, text hidden to save space */
 @media screen and (max-width: 800px) {
     .scroll-hint {
-        bottom: 20px;
-        padding: 11px 18px;
+        bottom: 30px;
+        right: 30px;
+        padding: 12px;
+        gap: 0;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        justify-content: center;
     }
+
     .scroll-hint-text {
-        font-size: 0.82rem;
+        display: none;
     }
+
     .scroll-hint-arrow {
-        font-size: 0.8rem;
+        font-size: 0.95rem;
     }
 }
 
@@ -287,7 +319,7 @@
 
 .test-card {
     background: white;
-    border: 0.5px solid rgba(109,109,109,0.2);
+    border: 0.5px solid rgba(109, 109, 109, 0.2);
     border-radius: 20px;
     padding: 1.8rem 1.6rem;
     display: flex;
@@ -310,7 +342,7 @@
 
 .test-footer {
     padding-top: 1rem;
-    border-top: 0.5px solid rgba(109,109,109,0.12);
+    border-top: 0.5px solid rgba(109, 109, 109, 0.12);
 }
 
 .test-author {
@@ -322,16 +354,20 @@
 
 .test-role {
     font-size: 0.75rem;
-    color: rgba(0,0,0,0.4);
+    color: rgba(0, 0, 0, 0.4);
     margin-top: 2px;
 }
 
 @media screen and (max-width: 900px) {
-    .test-grid { grid-template-columns: 1fr; }
+    .test-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .testimonials { padding: 5vh 6vw; }
+    .testimonials {
+        padding: 5vh 6vw;
+    }
 }
 
 /* ── Testimonial band ── */
@@ -375,6 +411,13 @@
     margin-top: 0.2rem;
 }
 
+@media screen and (max-width: 900px) {
+    .quote-band {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
 /* ── Upcoming dates ── */
 .dates-card-wrap {
     padding: 7vh 12.5vw;
@@ -387,7 +430,7 @@
     background: white;
     border-radius: 24px;
     overflow: hidden;
-    border: 0.5px solid rgba(109,109,109,0.2);
+    border: 0.5px solid rgba(109, 109, 109, 0.2);
     position: relative;
     z-index: 1;
 }
@@ -401,7 +444,7 @@
     font-family: 'DM Sans', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.15em;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
     margin-bottom: 4px;
 }
@@ -426,7 +469,7 @@
 
 .date-chip {
     background: #f8f8f8;
-    border: 0.5px solid rgba(109,109,109,0.15);
+    border: 0.5px solid rgba(109, 109, 109, 0.15);
     border-radius: 12px;
     padding: 0.75rem 1rem;
 }
@@ -440,7 +483,7 @@
 
 .date-chip-label {
     font-size: 0.72rem;
-    color: rgba(0,0,0,0.4);
+    color: rgba(0, 0, 0, 0.4);
     margin-top: 0.2rem;
 }
 
@@ -466,21 +509,35 @@
     bottom: 100px;
     background: rgba(246, 220, 91, 0.3);
 }
+
 .dates-bubble--3 {
     width: 420px;
     height: 420px;
     right: -140px;
-    bottom:-90px;
+    bottom: -90px;
     background: rgba(246, 220, 91, 0.3);
 }
 
 @media screen and (max-width: 900px) {
-    .dates-grid { grid-template-columns: repeat(2, 1fr); }
+    .dates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .dates-card-wrap { padding: 4vh 6vw; }
-    .dates-header { padding: 1.5rem 1.5rem; }
-    .dates-body { padding: 1.5rem; }
-    .dates-grid { grid-template-columns: 1fr; }
+    .dates-card-wrap {
+        padding: 4vh 6vw;
+    }
+
+    .dates-header {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .dates-body {
+        padding: 1.5rem;
+    }
+
+    .dates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
