@@ -142,9 +142,10 @@
         justify-content: center;
         gap: 0;
         background-image:
-            radial-gradient(circle at 105% 5%, rgba(246, 220, 91, 0.35) 160px, transparent 160px),
-            radial-gradient(circle at 80% -10%, rgba(247, 229, 138, 0.3) 140px, transparent 130px),
-            radial-gradient(circle at -5% 72%, rgba(138, 232, 157, 0.3) 130px, transparent 130px);
+        radial-gradient(circle at 105% 5%, rgba(246, 220, 91, 0.35) 160px, transparent 160px),
+        radial-gradient(circle at 80% -10%, rgba(247, 229, 138, 0.3) 140px, transparent 130px),
+        radial-gradient(circle at -5% 72%, rgba(138, 232, 157, 0.3) 130px, transparent 130px),
+        radial-gradient(circle at 10% 100%, rgba(178, 238, 169, 0.45) 140px, transparent 140px);
     }
 
     .mobile__h1 {

@@ -1,0 +1,286 @@
+.section1 {
+    padding: 7vh 12.5vw;
+    background-color: #f8f8f8;
+    border-bottom: 0.5px solid rgba(109, 109, 109, 0.241);
+    background-image:
+        radial-gradient(circle at 110% -7%, rgba(246, 220, 91, 0.296) 25rem, transparent 25rem),
+        radial-gradient(circle at 78% -27%, rgba(244, 225, 131, 0.296) 20rem, transparent 20rem),
+        radial-gradient(circle at -2% 45%, rgba(178, 238, 169, 0.451) 12rem, transparent 12rem),
+        radial-gradient(circle at -10% 70%, rgba(138, 232, 157, 0.277) 15rem, transparent 15rem);
+}
+
+.timeline-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 1.5rem;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 39px;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    border-radius: 3px;
+}
+
+/* Column 1 — years 2026 down to 2023 (gold through mid-green) */
+.timeline-cols .timeline:nth-child(1)::before {
+    background: linear-gradient(to bottom, #dec64e, #cdb938, #a3b04a, #7fae54);
+}
+
+/* Column 2 — years 2022 down to 2020 (continues mid-green to dark green) */
+.timeline-cols .timeline:nth-child(2)::before {
+    background: linear-gradient(to bottom, #5a9c5e, #357f4a, #195923);
+}
+
+@media screen and (max-width: 900px) {
+    .timeline-cols {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .timeline-cols .timeline:nth-child(1) .year-entry:last-child {
+        padding-bottom: 30px;
+        /* match the normal entry spacing */
+    }
+
+    /* On mobile the two columns stack into one continuous timeline,
+       so use one full gradient spanning all 7 years instead of two separate ones */
+    .timeline-cols .timeline:nth-child(1)::before {
+        background: linear-gradient(to bottom, #dec64e, #cdb938, #a3b04a, #7fae54);
+    }
+
+    .timeline-cols .timeline:nth-child(2)::before {
+        
+        background: linear-gradient(to bottom, #5a9c5e, #357f4a, #195923);
+    }
+}
+
+.year-entry {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 22px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.year-entry:last-child {
+    padding-bottom: 0;
+}
+
+.year-marker {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.year-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid;
+    margin-top: 4px;
+    box-shadow: 0 0 0 4px #f8f8f8;
+}
+
+.year-num {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.year-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.year-item {
+    font-size: clamp(0.78rem, 1vw, 0.85rem);
+    color: #333;
+    line-height: 1.55;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.year-item-bullet {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+/* Color progression: gold -> green */
+.dot-1,
+.bullet-1 {
+    border-color: #dec64e;
+    background: #dec64e;
+}
+
+.dot-2,
+.bullet-2 {
+    border-color: #cdb938;
+    background: #cdb938;
+}
+
+.dot-3,
+.bullet-3 {
+    border-color: #a3b04a;
+    background: #a3b04a;
+}
+
+.dot-4,
+.bullet-4 {
+    border-color: #7fae54;
+    background: #7fae54;
+}
+
+.dot-5,
+.bullet-5 {
+    border-color: #5a9c5e;
+    background: #5a9c5e;
+}
+
+.dot-6,
+.bullet-6 {
+    border-color: #357f4a;
+    background: #357f4a;
+}
+
+.dot-7,
+.bullet-7 {
+    border-color: #195923;
+    background: #195923;
+}
+
+.num-1 {
+    color: #dec64e;
+}
+
+.num-2 {
+    color: #cdb938;
+}
+
+.num-3 {
+    color: #a3b04a;
+}
+
+.num-4 {
+    color: #7fae54;
+}
+
+.num-5 {
+    color: #5a9c5e;
+}
+
+.num-6 {
+    color: #357f4a;
+}
+
+.num-7 {
+    color: #195923;
+}
+
+@media screen and (max-width: 900px) {
+    .section1 {
+        padding: 6vh 8vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section1 {
+        padding: 5vh 6vw;
+    }
+
+    .year-entry {
+        grid-template-columns: 50px 1fr;
+        gap: 14px;
+    }
+
+    .timeline::before {
+        left: 24px;
+    }
+}
+
+/* ── Slideshows ── */
+.section2 {
+    padding: 7vh 12.5vw;
+    background-color: #f8f8f8;
+    background-image:
+        radial-gradient(circle at 105% 83%, rgba(246, 213, 51, 0.296) 13rem, transparent 13rem),
+        radial-gradient(circle at 110% 67%, rgba(244, 225, 131, 0.296) 14rem, transparent 14rem),
+        radial-gradient(circle at -10% 55%, rgba(178, 238, 169, 0.451) 12rem, transparent 12rem),
+        radial-gradient(circle at -4% 74%, rgba(138, 232, 157, 0.277) 14rem, transparent 14rem);
+}
+
+.slide-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.slide-card {
+    background: linear-gradient(135deg, #205228b7, #1f702bc1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.slide-card:hover {
+    opacity: 0.9;
+}
+
+.slide-year {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 900;
+    color: white;
+}
+
+.slide-sub {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.slide-sub i {
+    font-size: 0.7em;
+}
+
+@media screen and (max-width: 900px) {
+    .slide-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section2 {
+        padding: 5vh 6vw;
+    }
+
+    .slide-grid {
+        grid-template-columns: 1fr;
+    }
+}
