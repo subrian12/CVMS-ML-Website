@@ -202,35 +202,26 @@
 /* ── Scroll hint ── */
 .scroll-hint {
     position: absolute;
-    bottom: 36px;
-    right: 24px;
+    bottom: 40px;
+    right: 40px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1.5px solid rgba(191, 170, 114, 0.5);
+    border-radius: 50%;
+    font-size: 1rem;
+    color: #bfaa72;
     text-decoration: none;
-    padding: 14px 24px;
-    border-radius: 28px;
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(191, 170, 114, 0.4);
-    backdrop-filter: blur(4px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-    animation: scrollHintBounce 2.2s ease-in-out infinite;
-    white-space: nowrap;
+    animation: scrollHintBounce 2s ease-in-out infinite;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
     z-index: 2;
 }
 
-.scroll-hint-text {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 500;
-    letter-spacing: 0.04rem;
-    color: #6b6255;
-    white-space: nowrap;
-}
-
-.scroll-hint-arrow {
-    font-size: 0.9rem;
-    color: #bfaa72;
+.scroll-hint:hover {
+    border-color: #bfaa72;
+    background-color: rgba(191, 170, 114, 0.08);
 }
 
 @keyframes scrollHintBounce {
@@ -245,25 +236,16 @@
     }
 }
 
-/* Mobile — smaller, tighter to corner, text hidden to save space */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-hint {
+        animation: none;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .scroll-hint {
-        bottom: 30px;
-        right: 30px;
-        padding: 12px;
-        gap: 0;
-        border-radius: 50%;
-        width: 44px;
-        height: 44px;
-        justify-content: center;
-    }
-
-    .scroll-hint-text {
-        display: none;
-    }
-
-    .scroll-hint-arrow {
-        font-size: 0.95rem;
+        bottom: 26px;
+        right: 26px;
     }
 }
 
@@ -464,28 +446,52 @@
 
 .dates-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
 }
 
 .date-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
     background: #f8f8f8;
     border: 0.5px solid rgba(109, 109, 109, 0.15);
     border-radius: 12px;
-    padding: 0.75rem 1rem;
+    padding: 0.6rem 1rem;
 }
 
-.date-chip-day {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(0.85rem, 1.2vw, 1rem);
+.date-chip-date {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    line-height: 1;
+    /* padding-right: 0.9rem;
+    border-right: 1px solid rgba(109, 109, 109, 0.2); */
+}
+
+.date-chip-month {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: #205228;
-    letter-spacing: 0.05rem;
+}
+
+.date-chip-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    color: #205228;
+    margin-top: 0.15rem;
 }
 
 .date-chip-label {
-    font-size: 0.72rem;
-    color: rgba(0, 0, 0, 0.4);
-    margin-top: 0.2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.75);
 }
 
 .dates-bubble {

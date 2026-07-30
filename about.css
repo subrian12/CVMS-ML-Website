@@ -12,8 +12,9 @@
 .coaches-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.25rem;
     margin-top: 2rem;
+    align-items: stretch;
 }
 
 .coach-card {
@@ -23,39 +24,41 @@
     padding: 1.5rem 1.2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: stretch;
+    text-align: left;
     gap: 0.6rem;
     transition: box-shadow 0.2s ease;
 }
 
-.coach-card:hover {
-    box-shadow: 0 4px 16px rgba(25,89,35,0.08);
+.coach-info {
+    width: 100%;
 }
 
-.coach-avatar {
+/* .coach-card:hover {
+    box-shadow: 0 4px 16px rgba(25,89,35,0.08);
+} */
+
+/* .coach-avatar {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-}
+} */
 
 .coach-name {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    font-size: clamp(0.9rem, 1.1vw, 1.2rem);
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
     color: #195923c1;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    line-height: 1.2;
-    margin-bottom: 0.2rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.3;
+    margin-bottom: 0.4rem;
 }
 
 .coach-desc {
-    font-size: 0.78rem;
-    color: rgba(0,0,0,0.45);
-    line-height: 1.55;
-    text-align: left;
+    font-size: clamp(0.8rem, 1.1vw, 0.9rem);
+    color: #444;
+    line-height: 1.6;
 }
 
 @media screen and (max-width: 900px) {

@@ -97,10 +97,6 @@
     border-bottom: none;
 }
 
-.block:nth-child(3) {
-    border-bottom: none;
-}
-
 .section__content2 {
     padding-bottom: 1.5rem;
     display: grid;
@@ -231,10 +227,6 @@
 @media screen and (max-width: 900px) {
     .section1__blocks {
         grid-template-columns: 1fr;
-    }
-
-    .block:nth-child(3) {
-        border-bottom: 0.5px solid rgba(109, 109, 109, 0.241);
     }
 
     .block:last-child {
