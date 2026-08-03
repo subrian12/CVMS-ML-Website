@@ -10,9 +10,6 @@
 }
 
 .timeline-cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
     margin-top: 1.5rem;
 }
 
@@ -29,39 +26,7 @@
     bottom: 10px;
     width: 3px;
     border-radius: 3px;
-}
-
-/* Column 1 — years 2026 down to 2023 (gold through mid-green) */
-.timeline-cols .timeline:nth-child(1)::before {
     background: linear-gradient(to bottom, #dec64e, #cdb938, #a3b04a, #7fae54);
-}
-
-/* Column 2 — years 2022 down to 2020 (continues mid-green to dark green) */
-.timeline-cols .timeline:nth-child(2)::before {
-    background: linear-gradient(to bottom, #5a9c5e, #357f4a, #195923);
-}
-
-@media screen and (max-width: 900px) {
-    .timeline-cols {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .timeline-cols .timeline:nth-child(1) .year-entry:last-child {
-        padding-bottom: 30px;
-        /* match the normal entry spacing */
-    }
-
-    /* On mobile the two columns stack into one continuous timeline,
-       so use one full gradient spanning all 7 years instead of two separate ones */
-    .timeline-cols .timeline:nth-child(1)::before {
-        background: linear-gradient(to bottom, #dec64e, #cdb938, #a3b04a, #7fae54);
-    }
-
-    .timeline-cols .timeline:nth-child(2)::before {
-        
-        background: linear-gradient(to bottom, #5a9c5e, #357f4a, #195923);
-    }
 }
 
 .year-entry {
@@ -148,24 +113,6 @@
     background: #7fae54;
 }
 
-.dot-5,
-.bullet-5 {
-    border-color: #5a9c5e;
-    background: #5a9c5e;
-}
-
-.dot-6,
-.bullet-6 {
-    border-color: #357f4a;
-    background: #357f4a;
-}
-
-.dot-7,
-.bullet-7 {
-    border-color: #195923;
-    background: #195923;
-}
-
 .num-1 {
     color: #dec64e;
 }
@@ -180,18 +127,6 @@
 
 .num-4 {
     color: #7fae54;
-}
-
-.num-5 {
-    color: #5a9c5e;
-}
-
-.num-6 {
-    color: #357f4a;
-}
-
-.num-7 {
-    color: #195923;
 }
 
 @media screen and (max-width: 900px) {
