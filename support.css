@@ -84,8 +84,7 @@
     line-height: 1.6;
 }
 
-.step-text a,
-.volunteer-block-text a {
+p a {
     color: #205228b7;
     text-decoration: underline;
     text-underline-offset: 2px;
