@@ -1,3 +1,56 @@
+/* ── Announcement banner ── */
+.announcement-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    padding: 0.65rem 3rem;
+    background-color: #d9bb6e;
+    border-bottom: 1px solid rgba(157, 122, 24, 0.4);
+    text-align: center;
+}
+
+.announcement-banner__text {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: clamp(0.75rem, 1.5vw, 0.95rem);
+    letter-spacing: 0.02rem;
+    color: #1c1a16;
+}
+
+.announcement-banner__text i {
+    color: #7a5c12;
+}
+
+.announcement-banner__close {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1c1a16;
+    opacity: 0.6;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    line-height: 1;
+}
+
+.announcement-banner__close:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+    .announcement-banner {
+        padding: 0.6rem 2.5rem 0.6rem 1.25rem;
+        justify-content: flex-start;
+        text-align: left;
+    }
+}
+
 /* ── Base ── */
 .main {
     background-color: #faf8f3;

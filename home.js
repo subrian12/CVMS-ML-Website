@@ -7,7 +7,17 @@ menu.addEventListener('click', function(){
     menu.classList.toggle('is-active')
     menuLinks.classList.toggle('active')
     navbar.classList.toggle('menu-open');
-}) 
+})
+
+
+const banner = document.querySelector('#announcement-banner');
+const bannerClose = document.querySelector('#announcement-close');
+
+if (bannerClose) {
+  bannerClose.addEventListener('click', function () {
+    banner.style.display = 'none';
+  });
+}
 
 
 function switchTab(num) {
