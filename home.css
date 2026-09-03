@@ -24,6 +24,16 @@
     color: #7a5c12;
 }
 
+.announcement-banner__text a {
+    color: #1c1a16;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.announcement-banner__text a:hover {
+    color: #7a5c12;
+}
+
 .announcement-banner__close {
     position: absolute;
     right: 1rem;
