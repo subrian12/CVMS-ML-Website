@@ -1,284 +1,353 @@
-.section1 {
-    padding: 7vh 12.5vw;
-    background-color: #f8f8f8;
-    border-bottom: 0.5px solid rgba(109, 109, 109, 0.241);
-    background-image:
-        radial-gradient(circle at 110% -7%, rgba(246, 220, 91, 0.296) 25rem, transparent 25rem),
-        radial-gradient(circle at 78% -27%, rgba(244, 225, 131, 0.296) 20rem, transparent 20rem),
-        radial-gradient(circle at -2% 45%, rgba(178, 238, 169, 0.451) 12rem, transparent 12rem),
-        radial-gradient(circle at -10% 64%, rgba(138, 232, 157, 0.277) 15rem, transparent 15rem);
+/* ==========================================================================
+   Information page — academic / course-handbook style
+   Scoped under body.math-page so global.css's shared navbar/header
+   rules are overridden only here, without touching global.css itself.
+   ========================================================================== */
+
+body.math-page {
+    background-color: #fbfaf7;
+    color: #22262e;
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
 }
 
-.section1__images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin: 1.5rem 0;
-    align-items: start;
+body.math-page html,
+body.math-page {
+    scroll-behavior: smooth;
 }
 
-.section1__blocks {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 3rem;
-}
-
-.image__card {
-    border-radius: 16px;
-    overflow: hidden;
-    border: 0.5px solid rgba(109, 109, 109, 0.241);
-    height: 220px;
-}
-
-.image__card:last-child {
-    height: auto;
-}
-
-.image__card iframe {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border: none;
-}
-
-#main__img {
-    width: 100%;
-    height: auto;
-    max-height: 280px;
-    display: block;
-    object-fit: cover;
-}
-
-.img__caption {
-    background: #64946b;
-    color: white;
-    font-family: 'DM Sans', sans-serif;
-    font-size: clamp(0.85rem, 1.2vw, 1rem);
-    letter-spacing: 0.05rem;
-    text-align: center;
-    padding: 0.5rem;
-}
-
-.section2 {
-    padding: 7vh 12.5vw;
-    background-color: #f8f8f8;
-    border-bottom: 0.5px solid rgba(109, 109, 109, 0.241);
-    background-image:
-        radial-gradient(circle at 108% 43%, rgba(246, 213, 51, 0.296) 15rem, transparent 15rem),
-        radial-gradient(circle at 101% 67%, rgba(244, 225, 131, 0.296) 14rem, transparent 14rem),
-        radial-gradient(circle at -10% 55%, rgba(178, 238, 169, 0.451) 15rem, transparent 15rem),
-        radial-gradient(circle at -4% 34%, rgba(138, 232, 157, 0.277) 14rem, transparent 14rem);
-}
-
-.section3 {
-    padding: 7vh 12.5vw;
-    background-color: #f8f8f8;
-    background-image:
-        radial-gradient(circle at 105% 65%, rgba(178, 238, 169, 0.451) 15rem, transparent 15rem),
-        radial-gradient(circle at 100% 94%, rgba(138, 232, 157, 0.277) 16rem, transparent 16rem);
-}
-
-/* .section__caption {
-    font-family: 'DM Sans', sans-serif;
-    font-size: clamp(0.75rem, 1vw, 0.85rem);
-    color: rgba(0, 0, 0, 0.4);
-    letter-spacing: 0.03rem;
-    line-height: 1.5;
-    margin-top: 0.4rem;
-    margin-bottom: 0;
-} */
-
-.block {
-    padding: 1rem 0;
-    border-bottom: 0.5px solid rgba(109, 109, 109, 0.241);
-}
-
-.block:last-child {
+/* ── Navbar override ── */
+body.math-page .navbar {
+    background-color: #fdfcfa;
     border-bottom: none;
 }
 
-.section__content2 {
-    padding-bottom: 1.5rem;
-    display: grid;
-    grid-template-columns: auto auto;
+body.math-page .navbar__container {
+    border-bottom: 2px solid #1c2b45;
 }
 
-.section__content3 {
-    gap: 5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+body.math-page .navbar__logo-text {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 600;
+    color: #1c2b45;
+    letter-spacing: 0.02em;
 }
 
-.class__block {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 0;
-    padding-right: 2.5rem;
-    width: 33.5vw;
+body.math-page .navbar__links {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #3a3f47;
 }
 
-.classes__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
+body.math-page .navbar__links:hover {
+    color: #1c2b45;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
-.class__card {
-    width: auto;
-    border: 0.5px solid rgb(0, 0, 0);
-    border-radius: 28px;
-    padding: 1.5rem;
-    justify-items: center;
-    height: auto;
+body.math-page .button {
+    background: #ffffff;
+    color: #1c2b45;
+    border: 1.5px solid #1c2b45;
+    border-radius: 3px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 
-.class__number {
-    font-family: 'Bebas Neue', serif;
-    font-size: clamp(1rem, 10vw, 2rem);
-    font-weight: 900;
-    letter-spacing: 0.2rem;
+body.math-page .button:hover {
+    background: #1c2b45;
+    color: #ffffff;
+    border: 1.5px solid #1c2b45;
 }
 
-.class__title {
-    font-family: 'Playfair Display', sans-serif;
-    font-size: clamp(1rem, 10vw, 2rem);
-    font-weight: 900;
-    letter-spacing: 0.2rem;
+@media screen and (max-width: 1000px) {
+    body.math-page .navbar__menu {
+        background-color: #fdfcfa;
+    }
+
+    body.math-page .navbar__links {
+        border-bottom: 0.5px solid rgba(28, 43, 69, 0.15);
+    }
+
+    body.math-page .button {
+        border-radius: 3px;
+    }
 }
 
-.class__card:nth-child(1) {
-    border: 2px solid #195936c1;
-}
-
-.class__card:nth-child(1) .class__number,
-.class__card:nth-child(1) .class__title {
-    color: #195936c1;
-}
-
-.class__card:nth-child(2) {
-    border: 2px solid #1f702bc1;
-}
-
-.class__card:nth-child(2) .class__number,
-.class__card:nth-child(2) .class__title {
-    color: #1f702bc1;
-}
-
-.class__card:nth-child(3) {
-    border: 2px solid #4b9b20c1;
-}
-
-.class__card:nth-child(3) .class__number,
-.class__card:nth-child(3) .class__title {
-    color: #4b9b20c1;
-}
-
-.class__card:nth-child(4) {
-    border: 2px solid #63561365;
-}
-
-.class__card:nth-child(4) .class__number,
-.class__card:nth-child(4) .class__title {
-    color: #cdb938;
-}
-
-.date__title {
-    margin-top: 1rem;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: clamp(1rem, 10vw, 2rem);
-    font-weight: 900;
-    letter-spacing: 0.2rem;
-    line-height: 1.5;
-    text-align: left;
-    color: #1b6927a9;
-    margin-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(91, 91, 91, 0.57);
-}
-
-.date__item {
+/* ── Document header ── */
+body.math-page .header,
+body.math-page .doc-header {
+    background-color: #fbfaf7;
+    background-image: none;
+    border-bottom: 1px solid #d8d4c8;
+    border-top: 4px solid #1c2b45;
+    padding: 5vh 6vw 4vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top: 0.8rem;
-    gap: 1rem;
+    text-align: center;
+    gap: 0.75rem;
 }
 
-.date__item .number {
-    border-radius: 16px;
-    padding: 0.3rem 0.7rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: clamp(0.85rem, 1.2vw, 1rem);
-    letter-spacing: 0.05rem;
-    background-color: #205228b7;
-    color: white;
-    text-align: center;
-    width: 150px;
+body.math-page .doc-header__kicker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #7a1f2b;
+}
+
+body.math-page h1 {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2.4rem, 6vw, 3.4rem);
+    letter-spacing: 0;
+    color: #1c2b45;
+    text-transform: none;
+}
+
+body.math-page .doc-header__desc {
+    max-width: 46rem;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    line-height: 1.65;
+    color: #4a4f57;
+    font-style: italic;
+}
+
+/* ── Two-column document layout ── */
+body.math-page .doc-layout {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 0;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ── Table of contents sidebar ── */
+body.math-page .toc {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 3.5rem 1.75rem 2rem 2.5rem;
+    border-right: 1px solid #d8d4c8;
+}
+
+body.math-page .toc__title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #7a1f2b;
+    margin-bottom: 0.9rem;
+}
+
+body.math-page .toc__list,
+body.math-page .toc__list ol {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+body.math-page .toc__list > li {
+    margin-bottom: 0.65rem;
+}
+
+body.math-page .toc__list ol {
+    margin: 0.35rem 0 0.65rem 0.9rem;
+}
+
+body.math-page .toc__list ol li {
+    margin-bottom: 0.4rem;
+}
+
+body.math-page .toc a {
+    display: block;
+    font-family: 'Lora', Georgia, serif;
+    font-size: 0.92rem;
+    color: #33363d;
+    text-decoration: none;
+    line-height: 1.4;
+    border-left: 2px solid transparent;
+    padding-left: 0.6rem;
+}
+
+body.math-page .toc__list ol a {
+    font-size: 0.85rem;
+    color: #565a62;
+}
+
+body.math-page .toc a:hover {
+    color: #7a1f2b;
+    border-left: 2px solid #7a1f2b;
+}
+
+/* ── Main content column ── */
+body.math-page .doc-content {
+    padding: 3.5rem 4vw 6vh 3.5rem;
+    max-width: 760px;
+}
+
+body.math-page .doc-section + .doc-section {
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid #d8d4c8;
+}
+
+body.math-page h2 {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.7rem, 3vw, 2.1rem);
+    letter-spacing: 0;
+    color: #1c2b45;
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #1c2b45;
+}
+
+body.math-page h3 {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: 0;
+    color: #22262e;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-top: 2rem;
+    margin-bottom: 0.6rem;
+}
+
+body.math-page .sec-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    color: #7a1f2b;
     flex-shrink: 0;
 }
 
-.dates:last-child .date__title {
-    color: #beab32;
+body.math-page h2 .sec-num {
+    font-size: 1.1rem;
 }
 
-.dates:last-child .date__item .number {
-    background-color: #cdb938;
+body.math-page h3 .sec-num {
+    font-size: 0.85rem;
 }
 
-/* Responsive */
+body.math-page .section-intro {
+    color: #4a4f57;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+body.math-page p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: #2c2f36;
+}
+
+/* ── Rules callout ── */
+body.math-page .note-box {
+    border-left: 3px solid #7a1f2b;
+    background-color: #f6efe9;
+    padding: 1rem 1.25rem;
+    margin-top: 0.5rem;
+}
+
+body.math-page .note-box p {
+    margin: 0;
+}
+
+/* ── Class offerings table ── */
+body.math-page .table-wrap {
+    overflow-x: auto;
+    margin-top: 1rem;
+    border: 1px solid #d8d4c8;
+}
+
+body.math-page .class-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 620px;
+}
+
+body.math-page .class-table th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: left;
+    background-color: #1c2b45;
+    color: #f5f3ec;
+    padding: 0.75rem 1rem;
+}
+
+body.math-page .class-table td {
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    vertical-align: top;
+    border-top: 1px solid #d8d4c8;
+}
+
+body.math-page .class-table tbody tr:nth-child(even) {
+    background-color: #f6f4ee;
+}
+
+body.math-page .class-table__num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    color: #7a1f2b;
+    white-space: nowrap;
+}
+
+body.math-page .class-table__name {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 600;
+    color: #1c2b45;
+    white-space: nowrap;
+}
+
+/* ── Responsive ── */
 @media screen and (max-width: 900px) {
-    .section1__blocks {
+    body.math-page .doc-layout {
         grid-template-columns: 1fr;
     }
 
-    .block:last-child {
-        border-bottom: none;
+    body.math-page .toc {
+        position: static;
+        height: auto;
+        overflow-y: visible;
+        border-right: none;
+        border-bottom: 1px solid #d8d4c8;
+        padding: 1.75rem 6vw;
     }
 
-    .section__content2 {
-        grid-template-columns: 1fr;
+    body.math-page .toc__list ol {
+        margin-left: 1rem;
     }
 
-    .class__block {
-        width: 100%;
-        padding-right: 0;
-    }
-
-    .classes__grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-
-    .section__content3 {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .date__item .number {
-        width: 110px;
+    body.math-page .doc-content {
+        padding: 2.5rem 6vw 5vh;
+        max-width: 100%;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .section1 {
-        padding: 5vh 6vw;
+    body.math-page h1 {
+        font-size: clamp(2rem, 10vw, 2.6rem);
     }
 
-    .section2 {
-        padding: 5vh 6vw;
-    }
-
-    .section3 {
-        padding: 5vh 6vw;
-    }
-
-    .section1__images {
-        grid-template-columns: 1fr;
-    }
-
-    .classes__grid {
-        grid-template-columns: 1fr;
-    }
-
-    h2 {
-        font-size: clamp(2rem, 8vw, 2.5rem);
+    body.math-page h2 {
+        font-size: 1.5rem;
     }
 }

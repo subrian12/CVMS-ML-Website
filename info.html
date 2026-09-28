@@ -16,30 +16,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="info.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-    />
   </head>
 
-  <body>
+  <body class="math-page">
     <div class="container">
       <!--Navbar section -->
       <nav class="navbar">
@@ -79,220 +63,178 @@
         </div>
       </nav>
 
-      <div class="header">
+      <header class="doc-header">
+        <div class="doc-header__kicker">CVMS Math League &middot; Program Handbook</div>
         <h1>Information</h1>
-        <div class="header__links">
-          <a href="#general">General Information</a>
-          <a href="#classes">Class Information</a>
-          <!-- <a href="#dates">Important Dates</a> -->
-        </div>
-        <div class="subtext">
+        <p class="doc-header__desc">
           An overview of our program, covering general meeting information,
           classes, and important dates for the upcoming academic year.
-        </div>
-      </div>
+        </p>
+      </header>
 
-      <div class="main">
-        <div class="section1" id="general">
-          <div class="eyebrow">01 - GENERAL</div>
-          <h2>General Information</h2>
-          <h4>
-            All the logistics behind our weekly classes — where and when we
-            meet, how dropoff and pickup works, and how to reach us if you have
-            any questions.
-          </h4>
+      <div class="doc-layout">
+        <aside class="toc" aria-label="Table of contents">
+          <div class="toc__title">Contents</div>
+          <ol class="toc__list">
+            <li>
+              <a href="#general">1&ensp;General Information</a>
+              <ol>
+                <li><a href="#time-date">1.1&ensp;Time and Date</a></li>
+                <li><a href="#location">1.2&ensp;Location</a></li>
+                <li><a href="#dropoff">1.3&ensp;Dropoff and Pickup</a></li>
+                <li><a href="#contact">1.4&ensp;Contact / Questions</a></li>
+                <li><a href="#rules">1.5&ensp;Rules</a></li>
+              </ol>
+            </li>
+            <li>
+              <a href="#classes">2&ensp;Class Information</a>
+              <ol>
+                <li><a href="#placement">2.1&ensp;Class Placement</a></li>
+                <li><a href="#program">2.2&ensp;Class Program</a></li>
+                <li><a href="#offerings">2.3&ensp;Class Offerings</a></li>
+              </ol>
+            </li>
+          </ol>
+        </aside>
 
-          <!-- <div class="section1__images">
-            <div class="image__card">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1591.2355869974506!2d-117.23184973996851!3d32.94746989499975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc0628683d3e69%3A0x1271816c8196027!2sCarmel%20Valley%20Middle%20School!5e1!3m2!1sen!2sus!4v1778392759456!5m2!1sen!2sus"
-                title="Carmel Valley Middle School location"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                style="border: none; display: block; width: 100%"
-              ></iframe>
-              <div class="img__caption">School Location</div>
-            </div>
-            <div class="image__card">
-              <img src="/images/map.jpg" alt="Campus map" id="main__img" />
-              <div class="img__caption">Campus Map</div>
-            </div>
-          </div> -->
+        <main class="doc-content">
+          <section class="doc-section" id="general">
+            <h2><span class="sec-num">1</span>General Information</h2>
+            <p class="section-intro">
+              All the logistics behind our weekly classes — where and when we
+              meet, how dropoff and pickup works, and how to reach us if you
+              have any questions.
+            </p>
 
-          <div class="section1__blocks">
-            <div class="block">
-              <h3>Time and Date:</h3>
-              <p>
-                Our math league typically meets weekly in person on Wednesday
-                evenings from 6:30 pm to 8:00 pm. You will be notified by email
-                if there are any changes to the schedule.
-              </p>
-            </div>
-            <div class="block">
-              <h3>Location:</h3>
-              <p>
-                We will be using rooms 601 (Infinity class), 603 (Integral
-                class), 605 (Power class), and 308 (Factorial class) on the CVMS
-                campus.
-              </p>
-            </div>
-            <div class="block">
-              <h3>Dropoff and Pickup:</h3>
-              <p>
-                The only gate for students to leave at 8pm is the gate by the
-                gym. Parents can wait at the Administration parking lot. No
-                parents or siblings are allowed on campus during 6:30–8pm.
-              </p>
-            </div>
-            <div class="block">
-              <h3>Contact / Questions:</h3>
-              <p>
-                Email us at math.league.cvms@gmail.com or feel free to ask our
-                coaches/volunteers during class. If you missed the placement
-                test and are joining late, please reach out as well.
-              </p>
-            </div>
-            <div class="block" style="grid-column: 1 / -1">
-              <h3>Rules:</h3>
-              <p>
-                No one should enter the classroom until the parent volunteer for
-                that room is present. Please also leave the room as you found it
-                — chairs pushed back in, trash collected, and any borrowed
-                pencils replaced, etc.
-              </p>
-            </div>
-          </div>
-        </div>
+            <h3 id="time-date"><span class="sec-num">1.1</span>Time and Date</h3>
+            <p>
+              Our math league typically meets weekly in person on Wednesday
+              evenings from 6:30 pm to 8:00 pm. You will be notified by email
+              if there are any changes to the schedule.
+            </p>
 
-        <div class="section2" id="classes">
-          <div class="eyebrow">02 - CLASS</div>
-          <h2>Class Information</h2>
-          <h4>
-            More details about the class placement test, our regular class
-            structure, and the classes we offer to accomodate for all students.
-          </h4>
-          <div class="section__content2">
-            <div class="class__block">
-              <h3>Class Placement:</h3>
-              <p>
-                Our coaches will conduct a placement test in order to find out
-                the right level of challenge for our students. The exam will be
-                held in-person during our first class. Students must bring their
-                Chromebooks, as they may have to use them to submit their exams.
-                If you are unable to take the exam, please email us.
-              </p>
-            </div>
-            <div class="class__block">
-              <h3>Class Program:</h3>
-              <p>
-                Most classes, our coaches will deliver a short lecture on a new
-                topic followed by problem-solving practice. The problem-solving
-                sessions will allow students to apply what they've learned and
-                develop their critical thinking skills. Other classes, we will
-                have friendly class competitions to prepare students for
-                competitive environments.
-              </p>
-            </div>
-          </div>
+            <h3 id="location"><span class="sec-num">1.2</span>Location</h3>
+            <p>
+              We will be using rooms 601 (Infinity class), 603 (Integral
+              class), 605 (Power class), and 308 (Factorial class) on the CVMS
+              campus.
+            </p>
 
-          <div class="classes__grid">
-            <div class="class__card">
-              <div class="class__number">01</div>
-              <div class="class__title">Factorial</div>
+            <h3 id="dropoff"><span class="sec-num">1.3</span>Dropoff and Pickup</h3>
+            <p>
+              The only gate for students to leave at 8pm is the gate by the
+              gym. Parents can wait at the Administration parking lot. No
+              parents or siblings are allowed on campus during 6:30–8pm.
+            </p>
+
+            <h3 id="contact"><span class="sec-num">1.4</span>Contact / Questions</h3>
+            <p>
+              Email us at math.league.cvms@gmail.com or feel free to ask our
+              coaches/volunteers during class. If you missed the placement
+              test and are joining late, please reach out as well.
+            </p>
+
+            <h3 id="rules"><span class="sec-num">1.5</span>Rules</h3>
+            <div class="note-box">
               <p>
-                Factorial is our beginner-friendly class, and no prior
-                competition experience is required. Coaches guide students
-                through core fundamentals like basic algebra and logical
-                thinking, while gradually introducing them to the
-                problem-solving mindset that makes math exciting.
+                No one should enter the classroom until the parent volunteer
+                for that room is present. Please also leave the room as you
+                found it — chairs pushed back in, trash collected, and any
+                borrowed pencils replaced, etc.
               </p>
             </div>
-            <div class="class__card">
-              <div class="class__number">02</div>
-              <div class="class__title">Power</div>
-              <p>
-                Power is ideal for students who excel in school math and are
-                curious about what lies beyond the standard curriculum. This
-                class bridges the gap between classroom math and competition
-                math, introducing students to creative problem-solving
-                strategies and mathematical reasoning.
-              </p>
+          </section>
+
+          <section class="doc-section" id="classes">
+            <h2><span class="sec-num">2</span>Class Information</h2>
+            <p class="section-intro">
+              More details about the class placement test, our regular class
+              structure, and the classes we offer to accomodate for all
+              students.
+            </p>
+
+            <h3 id="placement"><span class="sec-num">2.1</span>Class Placement</h3>
+            <p>
+              Our coaches will conduct a placement test in order to find out
+              the right level of challenge for our students. The exam will be
+              held in-person during our first class. Students must bring
+              their Chromebooks, as they may have to use them to submit their
+              exams. If you are unable to take the exam, please email us.
+            </p>
+
+            <h3 id="program"><span class="sec-num">2.2</span>Class Program</h3>
+            <p>
+              Most classes, our coaches will deliver a short lecture on a new
+              topic followed by problem-solving practice. The problem-solving
+              sessions will allow students to apply what they've learned and
+              develop their critical thinking skills. Other classes, we will
+              have friendly class competitions to prepare students for
+              competitive environments.
+            </p>
+
+            <h3 id="offerings"><span class="sec-num">2.3</span>Class Offerings</h3>
+            <div class="table-wrap">
+              <table class="class-table">
+                <thead>
+                  <tr>
+                    <th>Level</th>
+                    <th>Class</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="class-table__num">01</td>
+                    <td class="class-table__name">Factorial</td>
+                    <td>
+                      Factorial is our beginner-friendly class, and no prior
+                      competition experience is required. Coaches guide
+                      students through core fundamentals like basic algebra
+                      and logical thinking, while gradually introducing them
+                      to the problem-solving mindset that makes math
+                      exciting.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="class-table__num">02</td>
+                    <td class="class-table__name">Power</td>
+                    <td>
+                      Power is ideal for students who excel in school math and
+                      are curious about what lies beyond the standard
+                      curriculum. This class bridges the gap between classroom
+                      math and competition math, introducing students to
+                      creative problem-solving strategies and mathematical
+                      reasoning.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="class-table__num">03</td>
+                    <td class="class-table__name">Integral</td>
+                    <td>
+                      Integral is designed for students who have some
+                      exposure to competitive math and are ready to take the
+                      next step. Topics include intermediate algebra,
+                      counting and probability, and basic geometry. Students
+                      who have taken the AMC 8 or are preparing for the AMC
+                      10 will find this class to be the perfect challenge.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="class-table__num">04</td>
+                    <td class="class-table__name">Infinity</td>
+                    <td>
+                      Infinity is our most advanced class. Students dive deep
+                      into topics such as advanced algebra, Euclidean
+                      geometry, combinatorics, and number theory. Students are
+                      expected to have a solid foundation in competitive math
+                      and the drive to tackle challenging problems.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="class__card">
-              <div class="class__number">03</div>
-              <div class="class__title">Integral</div>
-              <p>
-                Integral is designed for students who have some exposure to
-                competitive math and are ready to take the next step. Topics
-                include intermediate algebra, counting and probability, and
-                basic geometry. Students who have taken the AMC 8 or are
-                preparing for the AMC 10 will find this class to be the perfect
-                challenge.
-              </p>
-            </div>
-            <div class="class__card">
-              <div class="class__number">04</div>
-              <div class="class__title">Infinity</div>
-              <p>
-                Infinity is our most advanced class. Students dive deep into
-                topics such as advanced algebra, Euclidean geometry,
-                combinatorics, and number theory. Students are expected to have
-                a solid foundation in competitive math and the drive to tackle
-                challenging problems.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="section3" id="dates">
-          <div class="eyebrow">03 - Dates</div>
-          <h2>Important Dates</h2>
-          <h4>
-            All important dates for the 2026-2027 school year, including
-            important class and competition dates. Note that dates will
-            potentially be added or altered.
-          </h4>
-          <div class="section__content3">
-            <div class="dates">
-              <div class="date__title">Class Dates</div>
-              <div class="date__item">
-                <div class="number">Sep 20, 2026</div>
-                <p>First day of class / Entrance test</p>
-              </div>
-              <div class="date__item">
-                <div class="number">May 05, 2027</div>
-                <p>Last day of class</p>
-              </div>
-              <div class="date__item">
-                <div class="number">May 07, 2027</div>
-                <p>Closing party and ceremony</p>
-              </div>
-            </div>
-            <div class="dates">
-              <div class="date__title">Competition Dates</div>
-              <div class="date__item">
-                <div class="number">Nov 05, 2026</div>
-                <p>AMC 10A</p>
-              </div>
-              <div class="date__item">
-                <div class="number">Nov 13, 2026</div>
-                <p>AMC 10B</p>
-              </div>
-              <div class="date__item">
-                <div class="number">Jan 21-27, 2027</div>
-                <p>AMC 8</p>
-              </div>
-              <div class="date__item">
-                <div class="number">Feb 2027</div>
-                <p>Mathcounts Chapter</p>
-              </div>
-              <div class="date__item">
-                <div class="number">Mar 2027</div>
-                <p>Mathcounts State</p>
-              </div>
-            </div>
-          </div>
-        </div> -->
+          </section>
+        </main>
       </div>
     </div>
     <script src="home.js"></script>
