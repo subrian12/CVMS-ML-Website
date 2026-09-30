@@ -37,3 +37,95 @@ body.math-page .name-grid li:nth-last-child(-n+2) {
         border-bottom: none;
     }
 }
+
+/* ── Coach roster cards ── */
+body.math-page .coach-grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+}
+
+body.math-page .coach-card {
+    background: #ffffff;
+    border: 1px solid #d8d4c8;
+    border-top: 3px solid #1c4b3a;
+    padding: 1.25rem 1.25rem 1.1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+body.math-page .coach-card:hover {
+    transform: translateY(-4px);
+    border-top-color: #96751c;
+    box-shadow: 6px 6px 0 #f0e6c8;
+}
+
+body.math-page .coach-card__head {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 0.85rem;
+}
+
+body.math-page .coach-card__mono {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    background: #1c4b3a;
+    color: #f0e6c8;
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    border-radius: 50%;
+    outline: 1.5px solid #96751c;
+    outline-offset: 3px;
+    transition: transform 0.3s ease;
+}
+
+body.math-page .coach-card:hover .coach-card__mono {
+    transform: rotate(-8deg) scale(1.05);
+}
+
+body.math-page .coach-card__name {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1c4b3a;
+    line-height: 1.25;
+}
+
+body.math-page .coach-card__meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #96751c;
+    margin-top: 0.2rem;
+}
+
+body.math-page .coach-card__bio {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.math-page .coach-card,
+    body.math-page .coach-card__mono {
+        transition: none;
+    }
+
+    body.math-page .coach-card:hover,
+    body.math-page .coach-card:hover .coach-card__mono {
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body.math-page .coach-grid {
+        grid-template-columns: 1fr;
+    }
+}
