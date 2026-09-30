@@ -16,30 +16,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="docs.css" />
     <link rel="stylesheet" href="support.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-    />
   </head>
 
-  <body>
+  <body class="math-page">
     <div class="container">
       <nav class="navbar">
         <div class="navbar__container">
@@ -78,117 +63,127 @@
         </div>
       </nav>
 
-      <div class="header">
+      <header class="doc-header">
+        <div class="doc-header__kicker">Carmel Valley Middle School Math League</div>
         <h1>Support Us</h1>
-        <div class="header__links">
-          <a href="#volunteers">Become a Volunteer</a>
-          <a href="#donations">Donations</a>
-        </div>
-        <div class="subtext">
-          Volunteer, donate, and support opportunities for students to explore
-          the beauty and challenge of mathematics.
-        </div>
-      </div>
+        <p class="doc-header__desc">
+          Volunteer, donate, and support opportunities for students to
+          explore the beauty and challenge of mathematics.
+        </p>
+      </header>
 
-      <div class="main">
-        <div class="section1" id="volunteers">
-          <div class="eyebrow">01 - BECOME A VOLUNTEER</div>
-          <h2>Become a Volunteer</h2>
-          <h4>
-            Parent volunteers are essential to our program — from weekly
-            supervision to proctoring competitions throughout the year.
-          </h4>
+      <div class="doc-layout">
+        <aside class="toc" aria-label="Table of contents">
+          <div class="toc__title">Contents</div>
+          <ol class="toc__list">
+            <li>
+              <a href="#volunteers">1&ensp;Become a Volunteer</a>
+              <ol>
+                <li><a href="#weekly">1.1&ensp;Weekly Commitment</a></li>
+                <li><a href="#proctoring">1.2&ensp;Competition Proctoring</a></li>
+                <li><a href="#volunteer-form">1.3&ensp;Volunteer Form</a></li>
+              </ol>
+            </li>
+            <li>
+              <a href="#donations">2&ensp;Donations</a>
+              <ol>
+                <li><a href="#why">2.1&ensp;Why We Need Your Support</a></li>
+                <li><a href="#where">2.2&ensp;Where Your Money Goes</a></li>
+                <li><a href="#how">2.3&ensp;How to Donate</a></li>
+              </ol>
+            </li>
+          </ol>
+        </aside>
 
-          <div class="volunteer-blocks">
-            <div class="volunteer-block">
-              <h3>Weekly Commitment</h3>
-              <p>
-                Each Wednesday evening requires at least one parent volunteer
-                per classroom — a minimum of four volunteers every week.
-                Volunteers do not play an active role during class, they are
-                there for adult supervision.
-              </p>
-            </div>
-            <div class="volunteer-block">
-              <h3>Competition Proctoring</h3>
-              <p>
-                Throughout the year we need volunteers to help proctor
-                competitions including the AMC 8 and AMC 10.
-              </p>
-            </div>
-            <div class="volunteer-block">
-              <h3>Volunteer Form</h3>
-              <p>
-                If you are interested in volunteering for math league, please
-                fill out
+        <main class="doc-content">
+          <section class="doc-section" id="volunteers">
+            <h2><span class="sec-num">1</span>Become a Volunteer</h2>
+            <p class="section-intro">
+              Parent volunteers are essential to our program — from weekly
+              supervision to proctoring competitions throughout the year.
+            </p>
+
+            <h3 id="weekly"><span class="sec-num">1.1</span>Weekly Commitment</h3>
+            <p>
+              Each Wednesday evening requires at least one parent volunteer
+              per classroom — a minimum of four volunteers every week.
+              Volunteers do not play an active role during class, they are
+              there for adult supervision.
+            </p>
+
+            <h3 id="proctoring"><span class="sec-num">1.2</span>Competition Proctoring</h3>
+            <p>
+              Throughout the year we need volunteers to help proctor
+              competitions including the AMC 8 and AMC 10.
+            </p>
+
+            <h3 id="volunteer-form"><span class="sec-num">1.3</span>Volunteer Form</h3>
+            <p>
+              If you are interested in volunteering for math league, please
+              fill out
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdlw8403FWsutKXgKo3f3Xsfxh5Pnldhzr0Y65NrXgsiidwFQ/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
+                >this google form</a
+              >.
+            </p>
+          </section>
+
+          <section class="doc-section" id="donations">
+            <h2><span class="sec-num">2</span>Donations</h2>
+            <p class="section-intro">
+              Your generosity directly supports our students and keeps our
+              program accessible to everyone.
+            </p>
+
+            <h3 id="why"><span class="sec-num">2.1</span>Why We Need Your Support</h3>
+            <p>
+              Running a competitive math program involves real costs.
+              Competition registration fees, printed materials, classroom
+              supplies, and event costs all add up over the course of the
+              year. Your donations help ensure that every student —
+              regardless of financial situation — can fully participate in
+              everything Math League has to offer.
+            </p>
+
+            <h3 id="where"><span class="sec-num">2.2</span>Where Your Money Goes</h3>
+            <p>
+              Donations go directly toward AMC and Mathcounts registration
+              fees, printed handouts and worksheets for all four class
+              levels, supplies for our end-of-year closing party and
+              ceremony, and any additional materials our coaches need
+              throughout the year.
+            </p>
+
+            <h3 id="how"><span class="sec-num">2.3</span>How to Donate</h3>
+            <p>
+              Every dollar goes directly toward supporting our students. No
+              donation is too small — we are deeply grateful for any support
+              you can offer. You can donate by check (see the registration
+              page for details) or online through the CVMS PTSA.
+            </p>
+            <ul class="resource-list">
+              <li class="resource-list__item">
                 <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdlw8403FWsutKXgKo3f3Xsfxh5Pnldhzr0Y65NrXgsiidwFQ/viewform?usp=header"
+                  class="resource-list__action"
+                  href="register.html"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  >this google form</a
-                >.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="section2" id="donations">
-          <div class="eyebrow">02 - DONATIONS</div>
-          <h2>Donations</h2>
-          <h4>
-            Your generosity directly supports our students and keeps our program
-            accessible to everyone.
-          </h4>
-
-          <div class="donation-blocks">
-            <div class="volunteer-block">
-              <h3>Why We Need Your Support</h3>
-              <p>
-                Running a competitive math program involves real costs.
-                Competition registration fees, printed materials, classroom
-                supplies, and event costs all add up over the course of the
-                year. Your donations help ensure that every student — regardless
-                of financial situation — can fully participate in everything
-                Math League has to offer.
-              </p>
-            </div>
-            <div class="volunteer-block">
-              <h3>Where Your Money Goes</h3>
-              <p>
-                Donations go directly toward AMC and Mathcounts registration
-                fees, printed handouts and worksheets for all four class levels,
-                supplies for our end-of-year closing party and ceremony, and any
-                additional materials our coaches need throughout the year.
-              </p>
-            </div>
-            <div class="volunteer-block" style="border-bottom: none">
-              <h3>How to Donate</h3>
-              <p>
-                Every dollar goes directly toward supporting our students. No
-                donation is too small — we are deeply grateful for any support
-                you can offer. You can donate by check (see the registration
-                page for details) or online through the CVMS PTSA. <br />
-                <a href="register.html" target="_blank" class="donate-link">
-                  <span class="donate-link-text"
-                    >See the registration page for more details about
-                    donation</span
-                  >
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-                <br />
+                  >See the registration page for donation details &#8599;</a
+                >
+              </li>
+              <li class="resource-list__item">
                 <a
+                  class="resource-list__action"
                   href="https://cvmsptsa.square.site/math"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="donate-link"
+                  >Donate online through CVMS PTSA &#8599;</a
                 >
-                  <span class="donate-link-text">Donate online through CVMS PTSA</span>
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
+              </li>
+            </ul>
+          </section>
+        </main>
       </div>
     </div>
     <script src="home.js"></script>

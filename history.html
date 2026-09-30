@@ -16,30 +16,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="docs.css" />
     <link rel="stylesheet" href="history.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-    />
   </head>
 
-  <body>
+  <body class="math-page">
     <div class="container">
       <!--Navbar section -->
       <nav class="navbar">
@@ -79,147 +64,135 @@
         </div>
       </nav>
 
-      <div class="header">
+      <header class="doc-header">
+        <div class="doc-header__kicker">Carmel Valley Middle School Math League</div>
         <h1>History</h1>
-        <div class="header__links">
-          <a href="#achievements">Achievements</a>
-          <a href="#slideshows">Slideshows</a>
-        </div>
-        <div class="subtext">
-          A look back at our students' accomplishments and memories from years
-          past.
-        </div>
-      </div>
+        <p class="doc-header__desc">
+          A look back at our students' accomplishments and memories from
+          years past.
+        </p>
+      </header>
 
-      <div class="main">
-        <div class="section1" id="achievements">
-          <div class="eyebrow">01 - ACHIEVEMENTS</div>
-          <h2>Year by Year</h2>
-          <h4>Notable results from our students, organized by school year.</h4>
+      <div class="doc-layout">
+        <aside class="toc" aria-label="Table of contents">
+          <div class="toc__title">Contents</div>
+          <ol class="toc__list">
+            <li><a href="#achievements">1&ensp;Year by Year</a></li>
+            <li><a href="#slideshows">2&ensp;End of Year Slideshows</a></li>
+          </ol>
+        </aside>
 
-          <div class="timeline-cols">
-            <div class="timeline">
-              <div class="year-entry">
-                <div class="year-marker">
-                  <div class="year-dot dot-1"></div>
-                </div>
-                <div class="year-content">
-                  <div class="year-num num-1">2025-2026</div>
-                  <div class="year-list">
-                    <div class="year-item">
-                      <span class="year-item-bullet bullet-1"></span>4th place
-                      team finish at the Southern California Mathcounts State
-                      competition.
-                    </div>
-                    <div class="year-item">
-                      <span class="year-item-bullet bullet-1"></span>Ranked 3rd
-                      in San Diego County for CAML and 17th in the state.
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <main class="doc-content">
+          <section class="doc-section" id="achievements">
+            <h2><span class="sec-num">1</span>Year by Year</h2>
+            <p class="section-intro">
+              Notable results from our students, organized by school year.
+            </p>
 
-              <div class="year-entry">
-                <div class="year-marker">
-                  <div class="year-dot dot-2"></div>
-                </div>
-                <div class="year-content">
-                  <div class="year-num num-2">2024-2025</div>
-                  <div class="year-list">
-                    <div class="year-item">
-                      <span class="year-item-bullet bullet-2"></span>Mathcounts
-                      team places 5th in the Southern California Mathcounts
-                      State competition.
-                    </div>
-                    <div class="year-item">
-                      <span class="year-item-bullet bullet-2"></span>Two DHR
-                      (Distinguished Honor Roll) students on the AMC 8.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="year-entry">
-                <div class="year-marker">
-                  <div class="year-dot dot-3"></div>
-                </div>
-                <div class="year-content">
-                  <div class="year-num num-3">2023-2024</div>
-                  <div class="year-list">
-                    <div class="year-item">
-                      <span class="year-item-bullet bullet-3"></span>5+ students
-                      qualified for the AIME (American Invitational Mathematics
-                      Examination).
-                    </div>
-                    <div class="year-item">
-                      <span class="year-item-bullet bullet-3"></span>Sepehr
-                      Golsefidy gets 1st place in Mathcounts State countdown
-                      round.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="year-entry">
-                <div class="year-marker">
-                  <div class="year-dot dot-4"></div>
-                </div>
-                <div class="year-content">
-                  <div class="year-num num-4">2022-2023</div>
-                  <div class="year-list">
-                    <div class="year-item">
-                      <span class="year-item-bullet bullet-4"></span>Mathcounts
-                      team placed 3rd in the Southern California Mathcounts
-                      State competition.
-                    </div>
-                    <div class="year-item">
-                      <span class="year-item-bullet bullet-4"></span>5 students
-                      qualified for the AIME (American Invitational Mathematics
-                      Examination).
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="table-wrap">
+              <table class="doc-table">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Highlights</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="doc-table__label">2025&ndash;2026</td>
+                    <td>
+                      <ul>
+                        <li>
+                          4th place team finish at the Southern California
+                          Mathcounts State competition.
+                        </li>
+                        <li>
+                          Ranked 3rd in San Diego County for CAML and 17th in
+                          the state.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="doc-table__label">2024&ndash;2025</td>
+                    <td>
+                      <ul>
+                        <li>
+                          Mathcounts team places 5th in the Southern
+                          California Mathcounts State competition.
+                        </li>
+                        <li>
+                          Two DHR (Distinguished Honor Roll) students on the
+                          AMC 8.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="doc-table__label">2023&ndash;2024</td>
+                    <td>
+                      <ul>
+                        <li>
+                          5+ students qualified for the AIME (American
+                          Invitational Mathematics Examination).
+                        </li>
+                        <li>
+                          Mathcounts team places 2nd at the Mathcounts State
+                          competition.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="doc-table__label">2022&ndash;2023</td>
+                    <td>
+                      <ul>
+                        <li>
+                          Mathcounts team placed 3rd in the Southern
+                          California Mathcounts State competition.
+                        </li>
+                        <li>
+                          5 students qualified for the AIME (American
+                          Invitational Mathematics Examination).
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </div>
-        </div>
+          </section>
 
-        <div class="section2" id="slideshows">
-          <div class="eyebrow">02 - SLIDESHOWS</div>
-          <h2>End of Year Slideshows</h2>
-          <h4>
-            Look back at our closing ceremonies and year-end celebrations.
-          </h4>
+          <section class="doc-section" id="slideshows">
+            <h2><span class="sec-num">2</span>End of Year Slideshows</h2>
+            <p class="section-intro">
+              Look back at our closing ceremonies and year-end celebrations.
+            </p>
 
-          <div class="slide-grid">
-            <a
-              href="https://docs.google.com/presentation/d/1OP9tsbbwEr4UaB503OooIVibgv7t0LUrCSiivFZe1Ao/edit?usp=sharing"
-              target="_blank"
-              class="slide-card"
-            >
-              <div class="slide-year">2025-2026</div>
-              <div class="slide-sub">
-                View Slideshow <i class="fas fa-external-link-alt"></i>
-              </div>
-            </a>
-            <a
-              href="https://docs.google.com/presentation/d/1dPL5C4x513CVCRyppWPj1Grq1ZHej3jZdp7_Tz5NSwo/edit?usp=sharing"
-              target="_blank"
-              class="slide-card"
-            >
-              <div class="slide-year">2024-2025</div>
-              <div class="slide-sub">
-                View Slideshow <i class="fas fa-external-link-alt"></i>
-              </div>
-            </a>
-            <!-- <a href="#" target="_blank" class="slide-card">
-              <div class="slide-year">2023-2024</div>
-              <div class="slide-sub">
-                View Slideshow <i class="fas fa-external-link-alt"></i>
-              </div>
-            </a> -->
-          </div>
-        </div>
+            <ul class="resource-list">
+              <li class="resource-list__item">
+                <div class="resource-list__title">2025&ndash;2026</div>
+                <a
+                  class="resource-list__action"
+                  href="https://docs.google.com/presentation/d/1OP9tsbbwEr4UaB503OooIVibgv7t0LUrCSiivFZe1Ao/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Slideshow &#8599;</a
+                >
+              </li>
+              <li class="resource-list__item">
+                <div class="resource-list__title">2024&ndash;2025</div>
+                <a
+                  class="resource-list__action"
+                  href="https://docs.google.com/presentation/d/1dPL5C4x513CVCRyppWPj1Grq1ZHej3jZdp7_Tz5NSwo/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Slideshow &#8599;</a
+                >
+              </li>
+            </ul>
+          </section>
+        </main>
       </div>
     </div>
     <script src="home.js"></script>

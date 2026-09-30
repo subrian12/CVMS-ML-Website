@@ -16,29 +16,16 @@
   <title>CVMS Math League</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="docs.css" />
   <link rel="stylesheet" href="home.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
 </head>
 
-<body>
+<body class="math-page">
   <div class="container">
-    <div class="announcement-banner" id="announcement-banner">
-      <p class="announcement-banner__text">
-        <i class="fas fa-bullhorn"></i>
-        <span><strong>First Class / Placement Test</strong> &mdash; Moved to September 23, 2026</span>
-      </p>
-      <button class="announcement-banner__close" id="announcement-close" aria-label="Dismiss announcement">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-
     <nav class="navbar">
       <div class="navbar__container">
         <a href="index.html" id="navbar__logo">
@@ -76,164 +63,139 @@
       </div>
     </nav>
 
-    <div class="main">
-      <div class="main__container">
-        <!-- Desktop -->
-        <p class="main__header desktop-only">
-          <span>-</span> CARMEL VALLEY MIDDLE SCHOOL <span>-</span>
-        </p>
-        <h1 class="desktop-only main__h1">Building New</h1>
-        <h2 class="desktop-only main__h2">Problem Solvers</h2>
+    <header class="home-hero">
+      <div class="home-hero__kicker">Carmel Valley Middle School</div>
+      <h1 class="home-hero__title">Math League</h1>
+      <p class="home-hero__tagline">
+        Building confident problem solvers through mathematics &mdash; one
+        class, one contest, one proof at a time.
+      </p>
+      <div class="home-hero__actions">
+        <a href="register.html" class="cta-primary">Register for 2026&ndash;2027</a>
+        <a href="about.html" class="cta-secondary">Meet Our Coaches</a>
+      </div>
+    </header>
 
-        <!-- Mobile -->
-        <h1 class="mobile-only mobile__h1">CVMS</h1>
-        <h2 class="mobile-only mobile__h2">Math League</h2>
-
-        <div class="buttons">
-          <a href="register.html" class="button1">Registration</a>
-          <a href="about.html" class="button2">Our Coaches</a>
+    <section class="home-section home-chapters">
+      <div class="home-section__inner">
+        <h2>Explore the Website</h2>
+        <div class="chapters-grid">
+          <a class="chapter-card" href="info.html">
+            <span class="chapter-card__num">01</span>
+            <span class="chapter-card__title">Information</span>
+            <span class="chapter-card__desc">Meeting times, location, and class placement.</span>
+          </a>
+          <a class="chapter-card" href="resources.html">
+            <span class="chapter-card__num">02</span>
+            <span class="chapter-card__title">Resources</span>
+            <span class="chapter-card__desc">Class material and a guide to our competitions.</span>
+          </a>
+          <a class="chapter-card" href="about.html">
+            <span class="chapter-card__num">03</span>
+            <span class="chapter-card__title">About Us</span>
+            <span class="chapter-card__desc">Our coaches, staff, and volunteers.</span>
+          </a>
+          <a class="chapter-card" href="history.html">
+            <span class="chapter-card__num">04</span>
+            <span class="chapter-card__title">History</span>
+            <span class="chapter-card__desc">Past results and end-of-year slideshows.</span>
+          </a>
+          <a class="chapter-card" href="support.html">
+            <span class="chapter-card__num">05</span>
+            <span class="chapter-card__title">Support Us</span>
+            <span class="chapter-card__desc">Volunteer opportunities and donations.</span>
+          </a>
+          <a class="chapter-card" href="register.html">
+            <span class="chapter-card__num">06</span>
+            <span class="chapter-card__title">Register</span>
+            <span class="chapter-card__desc">Sign up for the 2026&ndash;2027 season.</span>
+          </a>
         </div>
       </div>
+    </section>
 
-      <!-- Floating scroll indicator -->
-      <a href="#dates" class="scroll-hint" aria-label="Jump to Important Dates">
-        <i class="fas fa-chevron-down"></i>
-      </a>
-    </div>
+    <section class="home-section home-quotes">
+      <div class="home-section__inner">
+        <h2>Testimonials</h2>
+        <div class="quotes-grid">
+          <blockquote class="quote-card">
+            <p>
+              I am really grateful for math league for providing my children
+              with a fun and engaging environment to learn math.
+            </p>
+            <cite>&mdash; Michael W., Parent</cite>
+          </blockquote>
+          <blockquote class="quote-card">
+            <p>
+              Math league is great because I get to learn new things and
+              meet new friends.
+            </p>
+            <cite>&mdash; Anees D., 7th Grade Student</cite>
+          </blockquote>
+          <blockquote class="quote-card">
+            <p>
+              It's been amazing to see the students develop new skills, and
+              I'm really grateful to be coaching them.
+            </p>
+            <cite>&mdash; Matthew H., Coach</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
 
-    <!-- Testimonial band -->
-    <div class="quote-band">
-      <div class="quote-item">
-        <div class="quote-icon">"</div>
-        <div class="quote-text">
-          I am really grateful for math league for providing my
-          children with a fun and engaging environment to learn math.
-        </div>
-        <div class="quote-author">— Michael W., Parent</div>
-      </div>
-      <div class="quote-item">
-        <div class="quote-icon">"</div>
-        <div class="quote-text">
-          Math league is great because I get to learn new things and meet new
-          friends.
-        </div>
-        <div class="quote-author">— Anees D., 7th Grade Student</div>
-      </div>
-      <div class="quote-item">
-        <div class="quote-icon">"</div>
-        <div class="quote-text">
-          It's been amazing to see the students develop new skills, and I'm
-          really grateful to be coaching them.
-        </div>
-        <div class="quote-author">— Matthew H., Coach</div>
-      </div>
-    </div>
-
-    <!-- Upcoming dates -->
-    <div class="dates-card-wrap" id="dates">
-      <div class="dates-card">
-        <div class="dates-header">
-          <div class="dates-eyebrow">What's Next</div>
-          <h2 class="dates-title">Upcoming Dates</h2>
-        </div>
-        <div class="dates-body">
-          <div class="dates-grid">
-            <div class="date-chip">
-              <div class="date-chip-date">
-                <span class="date-chip-month">Sep</span><span class="date-chip-num">23</span>
-              </div>
-              <div class="date-chip-label">First Class / Placement Test</div>
-            </div>
-            <div class="date-chip">
-              <div class="date-chip-date">
-                <span class="date-chip-month">Oct</span><span class="date-chip-num">20</span>
-              </div>
-              <div class="date-chip-label">CAML #1</div>
-            </div>
-            <div class="date-chip">
-              <div class="date-chip-date">
-                <span class="date-chip-month">Nov</span><span class="date-chip-num">5</span>
-              </div>
-              <div class="date-chip-label">AMC 10 A</div>
-            </div>
-            <div class="date-chip">
-              <div class="date-chip-date">
-                <span class="date-chip-month">Nov</span><span class="date-chip-num">17</span>
-              </div>
-              <div class="date-chip-label">CAML #2</div>
-            </div>
-            <div class="date-chip">
-              <div class="date-chip-date">
-                <span class="date-chip-month">Nov</span><span class="date-chip-num">13</span>
-              </div>
-              <div class="date-chip-label">AMC 10 B</div>
-            </div>
-            <div class="date-chip">
-              <div class="date-chip-date">
-                <span class="date-chip-month">Dec</span><span class="date-chip-num">15</span>
-              </div>
-              <div class="date-chip-label">CAML #3</div>
-            </div>
-            <div class="date-chip">
-              <div class="date-chip-date">
-                <span class="date-chip-month">Jan</span><span class="date-chip-num">21-27</span>
-              </div>
-              <div class="date-chip-label">AMC 8</div>
-            </div>
-            <div class="date-chip">
-              <div class="date-chip-date">
-                <span class="date-chip-month">Jan</span><span class="date-chip-num">12</span>
-              </div>
-              <div class="date-chip-label">CAML #4</div>
-            </div>
-            <!-- <div class="date-chip">
-                <div class="date-chip-date">
-                  <span class="date-chip-month">Feb</span
-                  ><span class="date-chip-num">5-6</span>
-                </div>
-                <div class="date-chip-label">AIME</div>
-              </div> -->
-            <div class="date-chip">
-              <div class="date-chip-date">
-                <span class="date-chip-month">Feb</span><span class="date-chip-num">10</span>
-              </div>
-              <div class="date-chip-label">CAML #5</div>
-            </div>
-            <!-- <div class="date-chip">
-                <div class="date-chip-date">
-                  <span class="date-chip-month">Feb</span
-                  ><span class="date-chip-num">TBD</span>
-                </div>
-                <div class="date-chip-label">MC Chapter</div>
-              </div> -->
-            <!-- <div class="date-chip">
-                <div class="date-chip-date">
-                  <span class="date-chip-month">Mar</span
-                  ><span class="date-chip-num">TBD</span>
-                </div>
-                <div class="date-chip-label">MC State</div>
-              </div> -->
-            <!-- <div class="date-chip">
-                <div class="date-chip-date">
-                  <span class="date-chip-month">May</span
-                  ><span class="date-chip-num">5</span>
-                </div>
-                <div class="date-chip-label">Last Class</div>
-              </div>
-              <div class="date-chip">
-                <div class="date-chip-date">
-                  <span class="date-chip-month">May</span
-                  ><span class="date-chip-num">7</span>
-                </div>
-                <div class="date-chip-label">Closing Party</div>
-              </div> -->
-          </div>
+    <section class="home-section home-dates" id="dates">
+      <div class="home-section__inner">
+        <h2>Upcoming Dates</h2>
+        <div class="table-wrap">
+          <table class="doc-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Event</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="doc-table__label">Sep 23, 2026</td>
+                <td>First Class / Placement Test</td>
+              </tr>
+              <tr>
+                <td class="doc-table__label">Oct 20, 2026</td>
+                <td>CAML #1</td>
+              </tr>
+              <tr>
+                <td class="doc-table__label">Nov 5, 2026</td>
+                <td>AMC 10A</td>
+              </tr>
+              <tr>
+                <td class="doc-table__label">Nov 13, 2026</td>
+                <td>AMC 10B</td>
+              </tr>
+              <tr>
+                <td class="doc-table__label">Nov 17, 2026</td>
+                <td>CAML #2</td>
+              </tr>
+              <tr>
+                <td class="doc-table__label">Dec 15, 2026</td>
+                <td>CAML #3</td>
+              </tr>
+              <tr>
+                <td class="doc-table__label">Jan 12, 2027</td>
+                <td>CAML #4</td>
+              </tr>
+              <tr>
+                <td class="doc-table__label">Jan 21&ndash;27, 2027</td>
+                <td>AMC 8</td>
+              </tr>
+              <tr>
+                <td class="doc-table__label">Feb 10, 2027</td>
+                <td>CAML #5</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div class="dates-bubble dates-bubble--1"></div>
-      <div class="dates-bubble dates-bubble--2"></div>
-      <div class="dates-bubble dates-bubble--3"></div>
-    </div>
+    </section>
   </div>
   <script src="home.js"></script>
 </body>

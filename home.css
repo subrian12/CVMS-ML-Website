@@ -1,613 +1,239 @@
-/* ── Announcement banner ── */
-.announcement-banner {
+/* ==========================================================================
+   Home page — handbook cover.
+   Shared navbar/typography scaffold lives in docs.css. This file only
+   covers the hero, chapter index, testimonials, and dates schedule.
+   ========================================================================== */
+
+body.math-page .home-hero {
+    background-color: #fbfaf7;
+    border-bottom: 4px solid #1c4b3a;
+    padding: 11vh 6vw 8vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+body.math-page .home-hero__kicker {
+    width: 100%;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #96751c;
+}
+
+body.math-page .home-hero__title {
+    width: 100%;
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(3rem, 9vw, 5.5rem);
+    color: #1c4b3a;
+    line-height: 1.1;
+}
+
+body.math-page .home-hero__tagline {
+    width: 100%;
+    max-width: 40rem;
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    font-style: italic;
+    line-height: 1.65;
+    color: #4a4f57;
+}
+
+body.math-page .home-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    position: relative;
-    padding: 0.65rem 3rem;
-    background-color: #d9bb6e;
-    border-bottom: 1px solid rgba(157, 122, 24, 0.4);
-    text-align: center;
+    margin-top: 0.75rem;
 }
 
-.announcement-banner__text {
-    display: flex;
+body.math-page .cta-primary,
+body.math-page .cta-secondary {
+    display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
-    font-size: clamp(0.75rem, 1.5vw, 0.95rem);
-    letter-spacing: 0.02rem;
-    color: #1c1a16;
-}
-
-.announcement-banner__text i {
-    color: #7a5c12;
-}
-
-.announcement-banner__text a {
-    color: #1c1a16;
-    text-decoration: underline;
-    font-weight: 600;
-}
-
-.announcement-banner__text a:hover {
-    color: #7a5c12;
-}
-
-.announcement-banner__close {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #1c1a16;
-    opacity: 0.6;
-    font-size: 0.9rem;
-    padding: 0.3rem;
-    line-height: 1;
-}
-
-.announcement-banner__close:hover {
-    opacity: 1;
-}
-
-@media screen and (max-width: 1000px) {
-    .announcement-banner {
-        padding: 0.6rem 2.5rem 0.6rem 1.25rem;
-        justify-content: flex-start;
-        text-align: left;
-    }
-}
-
-/* ── Base ── */
-.main {
-    background-color: #faf8f3;
-    height: 90vh;
-    position: relative;
-    overflow: visible;
-    z-index: 1;
-}
-
-.main__container {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    height: 90vh;
-    display: grid;
-    grid-template-rows: auto auto auto auto;
-    align-items: center;
-    justify-items: center;
     justify-content: center;
-    width: 100%;
-    background-color: #faf8f3;
-    background-image:
-        radial-gradient(circle at 98% 7%, rgba(246, 220, 91, 0.296) 380px, transparent 380px),
-        radial-gradient(circle at 69% -29%, rgba(247, 229, 138, 0.327) 360px, transparent 360px),
-        radial-gradient(circle at 22% 103%, rgba(178, 238, 169, 0.451) 260px, transparent 260px),
-        radial-gradient(circle at 5% 54%, rgba(138, 232, 157, 0.277) 300px, transparent 300px);
-}
-
-/* ── Desktop text ── */
-.main__h1 {
-    font-family: 'Playfair Display', sans-serif !important;
-    font-size: clamp(4rem, 10vw, 6rem) !important;
-    font-weight: 900 !important;
-    letter-spacing: 0.3rem !important;
-    line-height: 1.5 !important;
-    text-align: center !important;
-    background: linear-gradient(to right, #dec64e, #e1b659) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    color: transparent !important;
-}
-
-.main__h2 {
-    font-family: 'Bebas Neue', serif !important;
-    font-size: clamp(5rem, 10vw, 7.5rem) !important;
-    letter-spacing: 0.6rem !important;
-    line-height: 0.9 !important;
-    text-align: center !important;
-    background: linear-gradient(to right, #4a9460, #88c17a) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    color: transparent !important;
-}
-
-.main__header {
-    color: #1c1a16;
-    font-family: 'DM Sans', sans-serif;
-    font-size: clamp(1rem, 1vw, 1.5rem);
-    font-weight: 500;
-    letter-spacing: 0.25em;
-    text-align: center;
+    padding: 0.85rem 1.75rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    white-space: nowrap;
-}
-
-.main__header span {
-    display: inline-block;
-    width: 5vw;
-    max-width: 100px;
-    font-size: clamp(1rem, 4vw, 1.5rem);
-    color: #1c1a16;
-    white-space: nowrap;
-}
-
-.main__container .buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-}
-
-.main__container .buttons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    letter-spacing: 0.06em;
     text-decoration: none;
-    padding: 2vh 3vw;
-    margin: 0 2vh;
-    border: 2px solid white;
-    border-radius: 15px;
-    background: #bfaa72;
-    color: white;
-    white-space: nowrap;
+    border-radius: 3px;
+    border: 1.5px solid #1c4b3a;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.main__container .buttons .button1 {
-    border-color: #bfaa72;
-    color: #bfaa72;
-    background: white;
+body.math-page .cta-primary {
+    background: #1c4b3a;
+    color: #fdfcfa;
 }
 
-.main__container .buttons .button1:hover {
-    border-color: white;
-    color: white;
-    background: #bfaa72;
+body.math-page .cta-primary:hover {
+    background: #96751c;
+    border-color: #96751c;
+    color: #fdfcfa;
 }
 
-.main__container .buttons .button2:hover {
-    border-color: #bfaa72;
-    color: #bfaa72;
-    background: white;
+body.math-page .cta-secondary {
+    background: transparent;
+    color: #1c4b3a;
 }
 
-/* ── Show/hide ── */
-.mobile-only {
-    display: none !important;
+body.math-page .cta-secondary:hover {
+    background: #96751c;
+    border-color: #96751c;
+    color: #fdfcfa;
 }
 
-.desktop-only {
-    display: block !important;
+/* ── Shared section chrome ── */
+body.math-page .home-section {
+    padding: 6vh 6vw;
+    border-bottom: 1px solid #d8d4c8;
 }
 
-/* ── Mobile ── */
-@media screen and (max-width: 800px) {
-    .desktop-only {
-        display: none !important;
-    }
-
-    .mobile-only {
-        display: block !important;
-    }
-
-    .main {
-        height: calc(100dvh - 64px);
-    }
-
-    .main__container {
-        height: 100%;
-        padding: 0 24px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 0;
-        background-image:
-        radial-gradient(circle at 105% 5%, rgba(246, 220, 91, 0.35) 160px, transparent 160px),
-        radial-gradient(circle at 80% -10%, rgba(247, 229, 138, 0.3) 140px, transparent 130px),
-        radial-gradient(circle at -5% 72%, rgba(138, 232, 157, 0.3) 130px, transparent 130px),
-        radial-gradient(circle at 10% 100%, rgba(178, 238, 169, 0.45) 140px, transparent 140px);
-    }
-
-    .mobile__h1 {
-        font-family: 'Playfair Display', sans-serif !important;
-        font-size: 72px !important;
-        font-weight: 900 !important;
-        letter-spacing: -0.01em !important;
-        line-height: 1.2 !important;
-        text-align: left !important;
-        background: linear-gradient(to right, #dec64e, #c9a832) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        color: transparent !important;
-    }
-
-    .mobile__h2 {
-        font-family: 'Playfair Display', sans-serif !important;
-        font-size: 64px !important;
-        font-weight: 900 !important;
-        letter-spacing: -0.01em !important;
-        line-height: 1.2 !important;
-        text-align: left !important;
-        background: linear-gradient(to right, #4a9460, #6bb87e) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        color: transparent !important;
-        margin-bottom: 0;
-    }
-
-    .main__container .buttons {
-        padding: 1.5rem 0 0;
-        gap: 0.6rem;
-        justify-content: flex-start;
-    }
-
-    .main__container .buttons a {
-        padding: 0.65rem 1.3rem;
-        font-size: 0.9rem;
-        margin: 0;
-        border-radius: 12px;
-    }
+body.math-page .home-section:last-child {
+    border-bottom: none;
 }
 
-@media screen and (max-width: 400px) {
-    .mobile__h1 {
-        font-size: 58px !important;
-    }
-
-    .mobile__h2 {
-        font-size: 52px !important;
-    }
+body.math-page .home-section__inner {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* ── Scroll hint ── */
-.scroll-hint {
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-    display: flex;
-    align-items: center;
+body.math-page .home-section h2 {
     justify-content: center;
-    width: 44px;
-    height: 44px;
-    border: 1.5px solid rgba(191, 170, 114, 0.5);
-    border-radius: 50%;
-    font-size: 1rem;
-    color: #bfaa72;
-    text-decoration: none;
-    animation: scrollHintBounce 2s ease-in-out infinite;
-    transition: border-color 0.25s ease, background-color 0.25s ease;
-    z-index: 2;
+    text-align: center;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0.5rem;
 }
 
-.scroll-hint:hover {
-    border-color: #bfaa72;
-    background-color: rgba(191, 170, 114, 0.08);
+body.math-page .home-chapters {
+    background-color: #fbfaf7;
 }
 
-@keyframes scrollHintBounce {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(8px);
-    }
+body.math-page .home-quotes {
+    background-color: #f6f4ee;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .scroll-hint {
-        animation: none;
-    }
+body.math-page .home-dates {
+    background-color: #fbfaf7;
 }
 
-@media screen and (max-width: 800px) {
-    .scroll-hint {
-        bottom: 26px;
-        right: 26px;
-    }
-}
-
-/* ── Divider ── */
-.section-divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 1.2rem 0;
-    background-color: #faf8f3;
-    position: relative;
-    z-index: 1;
-}
-
-.divider-line {
-    width: 60px;
-    height: 1px;
-    background: rgba(191, 170, 114, 0.4);
-}
-
-.divider-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #bfaa72;
-}
-
-/* ── Testimonials ── */
-.testimonials {
-    padding: 7vh 12.5vw;
-    background-color: #faf8f3;
-    border-bottom: 0.5px solid rgba(109, 109, 109, 0.241);
-}
-
-.testimonials .eyebrow {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(1.2rem, 2vw, 1.9rem);
-    font-weight: 900;
-    letter-spacing: 0.2rem;
-    color: #195923c1;
-}
-
-.testimonials h2 {
-    margin-bottom: 0.3rem;
-}
-
-.test-grid {
+/* ── Chapter index ── */
+body.math-page .chapters-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 1.1rem;
     margin-top: 2rem;
 }
 
-.test-card {
-    background: white;
-    border: 0.5px solid rgba(109, 109, 109, 0.2);
-    border-radius: 20px;
-    padding: 1.8rem 1.6rem;
+body.math-page .chapter-card {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.35rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #d8d4c8;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
-.quote-icon {
-    font-size: 1.3rem;
-    color: #cda63ba9;
+body.math-page .chapter-card:hover {
+    background: #1c4b3a;
+    border-color: #1c4b3a;
 }
 
-.test-text {
-    font-size: clamp(0.85rem, 1.1vw, 0.95rem);
-    color: #333;
-    line-height: 1.7;
-    font-style: italic;
-    flex: 1;
+body.math-page .chapter-card:hover .chapter-card__num {
+    color: #cda63b;
 }
 
-.test-footer {
-    padding-top: 1rem;
-    border-top: 0.5px solid rgba(109, 109, 109, 0.12);
+body.math-page .chapter-card:hover .chapter-card__title,
+body.math-page .chapter-card:hover .chapter-card__desc {
+    color: #fdfcfa;
 }
 
-.test-author {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #1c1a16;
+body.math-page .chapter-card__num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: #96751c;
 }
 
-.test-role {
-    font-size: 0.75rem;
-    color: rgba(0, 0, 0, 0.4);
-    margin-top: 2px;
-}
-
-@media screen and (max-width: 900px) {
-    .test-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .testimonials {
-        padding: 5vh 6vw;
-    }
-}
-
-/* ── Testimonial band ── */
-.quote-band {
-    background-color: #f5f2e9;
-    background-image: radial-gradient(circle, rgba(180, 150, 80, 0.5) 1px, transparent 1px);
-    background-size: 20px 20px;
-    border-bottom: 0.5px solid rgba(109, 109, 109, 0.241);
-    padding: 4vh 12.5vw;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    position: relative;
-    z-index: 1;
-}
-
-.quote-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.quote-icon {
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 1.6rem;
-    color: #bfaa72;
-    line-height: 0.6;
-}
-
-.quote-text {
-    font-size: clamp(0.8rem, 1vw, 0.9rem);
-    color: #1c1a16;
-    font-style: italic;
-    line-height: 1.6;
-}
-
-.quote-author {
-    font-size: 0.78rem;
-    color: #6b6255;
-    font-weight: 500;
-    margin-top: 0.2rem;
-}
-
-@media screen and (max-width: 900px) {
-    .quote-band {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-}
-
-/* ── Upcoming dates ── */
-.dates-card-wrap {
-    padding: 7vh 12.5vw;
-    background-color: #f8f8f8;
-    position: relative;
-    overflow: hidden;
-}
-
-.dates-card {
-    background: white;
-    border-radius: 24px;
-    overflow: hidden;
-    border: 0.5px solid rgba(109, 109, 109, 0.2);
-    position: relative;
-    z-index: 1;
-}
-
-.dates-header {
-    background: #205228b7;
-    padding: 2rem 2.2rem;
-}
-
-.dates-eyebrow {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    color: rgba(255, 255, 255, 0.7);
-    text-transform: uppercase;
-    margin-bottom: 4px;
-}
-
-.dates-title {
-    font-family: 'Playfair Display', sans-serif;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 900;
-    color: white;
-    margin-bottom: 0;
-}
-
-.dates-body {
-    padding: 2rem 2.2rem;
-}
-
-.dates-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
-}
-
-.date-chip {
-    display: flex;
-    align-items: center;
-    gap: 0.9rem;
-    background: #f8f8f8;
-    border: 0.5px solid rgba(109, 109, 109, 0.15);
-    border-radius: 12px;
-    padding: 0.6rem 1rem;
-}
-
-.date-chip-date {
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    line-height: 1;
-    /* padding-right: 0.9rem;
-    border-right: 1px solid rgba(109, 109, 109, 0.2); */
-}
-
-.date-chip-month {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.65rem;
+body.math-page .chapter-card__title {
+    font-family: 'Lora', Georgia, serif;
     font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #205228;
-}
-
-.date-chip-num {
-    font-family: 'Bebas Neue', sans-serif;
     font-size: 1.2rem;
-    color: #205228;
-    margin-top: 0.15rem;
+    color: #1c4b3a;
 }
 
-.date-chip-label {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.75);
+body.math-page .chapter-card__desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #4a4f57;
 }
 
-.dates-bubble {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 0;
+/* ── Testimonials ── */
+body.math-page .quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 2rem;
 }
 
-.dates-bubble--1 {
-    width: 380px;
-    height: 380px;
-    left: -70px;
-    bottom: -100px;
-    background: rgba(178, 238, 169, 0.4);
+body.math-page .quote-card {
+    background: #fbfaf7;
+    border-left: 3px solid #96751c;
+    padding: 1.25rem 1.5rem;
+    margin: 0;
 }
 
-.dates-bubble--2 {
-    width: 320px;
-    height: 320px;
-    right: -110px;
-    bottom: 100px;
-    background: rgba(246, 220, 91, 0.3);
+body.math-page .quote-card p {
+    font-style: italic;
+    color: #2c2f36;
+    margin-bottom: 0.85rem;
 }
 
-.dates-bubble--3 {
-    width: 420px;
-    height: 420px;
-    right: -140px;
-    bottom: -90px;
-    background: rgba(246, 220, 91, 0.3);
+body.math-page .quote-card cite {
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: normal;
+    font-size: 0.78rem;
+    color: #1c4b3a;
 }
 
+/* ── Dates schedule ── */
+body.math-page .home-dates .table-wrap {
+    margin-top: 1.5rem;
+}
+
+body.math-page .home-dates .doc-table {
+    min-width: 0;
+}
+
+/* ── Responsive ── */
 @media screen and (max-width: 900px) {
-    .dates-grid {
+    body.math-page .chapters-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    body.math-page .quotes-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .dates-card-wrap {
-        padding: 4vh 6vw;
+    body.math-page .home-hero {
+        padding: 8vh 6vw 6vh;
     }
 
-    .dates-header {
-        padding: 1.5rem 1.5rem;
+    body.math-page .chapters-grid {
+        grid-template-columns: 1fr;
     }
 
-    .dates-body {
-        padding: 1.5rem;
-    }
-
-    .dates-grid {
-        grid-template-columns: repeat(2, 1fr);
+    body.math-page .home-section {
+        padding: 5vh 6vw;
     }
 }
